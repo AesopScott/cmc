@@ -15,11 +15,29 @@ const path = Astro.url.pathname;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <title>{title} | Community Medical Centers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <div class="utility-bar-inner">
+      <a href="tel:2099444700">(209) 944-4700</a>
+      <span class="util-divider">|</span>
+      <a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a>
+      <span class="util-divider">|</span>
+      <a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a>
+    </div>
+  </div>
+
+  <!-- Main Nav -->
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">CMC <span>Centers</span></a>
+      <a href="/" class="nav-logo" aria-label="Community Medical Centers home">
+        <img src="/img/cmc-logo.svg" alt="Community Medical Centers" />
+      </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -41,7 +59,9 @@ const path = Astro.url.pathname;
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-brand">
-          <a href="/" class="nav-logo">CMC <span>Centers</span></a>
+          <a href="/" aria-label="Community Medical Centers home">
+            <img src="/img/cmc-logo.svg" alt="Community Medical Centers" style="height:48px;width:auto" />
+          </a>
           <p>Providing quality, compassionate healthcare to all patients regardless of their ability to pay since 1968.</p>
         </div>
         <div class="footer-col">
@@ -69,7 +89,7 @@ const path = Astro.url.pathname;
           <ul>
             <li><a href="tel:2099444700">(209) 944-4700</a></li>
             <li><a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
-          <li><a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a></li>
+            <li><a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a></li>
           </ul>
         </div>
       </div>

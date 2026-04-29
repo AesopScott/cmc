@@ -11,23 +11,44 @@ const recentPosts = posts.slice(0, 3);
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
+
+// Pick a hero photo from available images
+const heroPhoto = featuredLocations[0]?.thumbnail || '/img/2024__03__0D2A1867-scaled.jpg';
 ---
 <Base title="Home" description="Community Medical Centers — Quality, compassionate healthcare for all in the Central Valley since 1968.">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <span class="hero-eyebrow">Serving the Central Valley since 1968</span>
-      <h1>Healthcare for <em>every</em> member of our community</h1>
-      <p>Community Medical Centers provides quality, compassionate care to all patients — regardless of their ability to pay.</p>
-      <div class="hero-actions">
-        <a href="/locations" class="btn btn-primary">Find a Location</a>
-        <a href="/providers" class="btn btn-outline">Meet Our Providers</a>
+  <!-- Hero: split layout matching live site -->
+  <section style="background:var(--teal);overflow:hidden">
+    <div style="display:grid;grid-template-columns:1fr 1fr;min-height:520px" class="hero-split">
+      <!-- Photo side -->
+      <div style="position:relative;overflow:hidden;min-height:320px">
+        <img
+          src={heroPhoto}
+          alt="Community Medical Centers — caring for our community"
+          style="width:100%;height:100%;object-fit:cover;display:block"
+          loading="eager"
+        />
+      </div>
+      <!-- Content side -->
+      <div style="display:flex;align-items:center;padding:4rem 3.5rem;background:var(--teal)">
+        <div>
+          <span class="hero-eyebrow">Serving the Central Valley since 1968</span>
+          <h1 style="font-size:clamp(1.9rem,3.5vw,2.9rem);color:var(--navy-footer);margin-bottom:1.25rem;font-weight:700;line-height:1.2">
+            Healthcare for <em style="font-style:normal;color:#fff">every</em> member of our community
+          </h1>
+          <p style="font-size:1.05rem;color:rgba(26,54,79,0.8);margin-bottom:2rem;line-height:1.7;max-width:480px">
+            Community Medical Centers provides quality, compassionate care to all patients — regardless of their ability to pay.
+          </p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="/locations" class="btn btn-primary">Find a Location</a>
+            <a href="/providers" class="btn btn-outline">Meet Our Providers</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats -->
+  <!-- Stats bar -->
   <div class="stats-bar">
     <div class="container">
       <div class="stats-grid">
@@ -61,7 +82,7 @@ function formatDate(dateStr) {
       </div>
       <div class="grid-3">
         {featuredServices.map(svc => (
-          <a href={`/services/${svc.slug}`} class="card" style="display:block">
+          <a href={`/services/${svc.slug}`} class="card" style="display:block;color:inherit">
             {svc.thumbnail && <img class="card-img" src={svc.thumbnail} alt={svc.title} loading="lazy" />}
             <div class="card-body">
               <h3>{svc.title}</h3>
@@ -69,7 +90,7 @@ function formatDate(dateStr) {
           </a>
         ))}
       </div>
-      <div style="text-align:center; margin-top:2.5rem">
+      <div style="text-align:center;margin-top:2.5rem">
         <a href="/services" class="btn btn-outline">View All Services</a>
       </div>
     </div>
@@ -87,7 +108,7 @@ function formatDate(dateStr) {
       </div>
       <div class="grid-3">
         {featuredLocations.map(loc => (
-          <a href={`/locations/${loc.slug}`} class="card" style="display:block">
+          <a href={`/locations/${loc.slug}`} class="card" style="display:block;color:inherit">
             {loc.thumbnail && <img class="card-img" src={loc.thumbnail} alt={loc.title} loading="lazy" />}
             <div class="card-body">
               <h3>{loc.title}</h3>
@@ -97,13 +118,13 @@ function formatDate(dateStr) {
                 </div>
               )}
               {loc.meta?.ignyte_location_address && (
-                <div class="location-info-row" style="font-size:0.82rem;margin-top:0.25rem;color:var(--muted)">{loc.meta.ignyte_location_address}</div>
+                <div class="location-info-row" style="font-size:0.82rem;margin-top:0.25rem">{loc.meta.ignyte_location_address}</div>
               )}
             </div>
           </a>
         ))}
       </div>
-      <div style="text-align:center; margin-top:2.5rem">
+      <div style="text-align:center;margin-top:2.5rem">
         <a href="/locations" class="btn btn-outline">View All Locations</a>
       </div>
     </div>
@@ -121,18 +142,18 @@ function formatDate(dateStr) {
         </div>
         <div class="grid-3">
           {recentPosts.map(post => (
-            <a href={`/news/${post.slug}`} class="card" style="display:block">
+            <a href={`/news/${post.slug}`} class="card" style="display:block;color:inherit">
               {post.thumbnail && <img class="card-img" src={post.thumbnail} alt={post.title} loading="lazy" />}
               <div class="card-body">
                 {post.terms?.category?.[0] && <div class="card-eyebrow">{post.terms.category[0]}</div>}
                 <h3>{post.title}</h3>
                 {post.excerpt && <p style="margin-top:0.5rem">{post.excerpt}</p>}
-                <div style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem">{formatDate(post.date)}</div>
+                <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.75rem">{formatDate(post.date)}</div>
               </div>
             </a>
           ))}
         </div>
-        <div style="text-align:center; margin-top:2.5rem">
+        <div style="text-align:center;margin-top:2.5rem">
           <a href="/news" class="btn btn-outline">All News &amp; Events</a>
         </div>
       </div>
@@ -140,12 +161,22 @@ function formatDate(dateStr) {
   )}
 
   <!-- CTA Banner -->
-  <section style="background:var(--navy-light);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0;text-align:center">
+  <section style="background:var(--teal);padding:4rem 0;text-align:center">
     <div class="container">
-      <h2 style="margin-bottom:1rem">Ready to schedule an appointment?</h2>
-      <p style="color:var(--muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">We welcome new patients and accept most insurance plans, including Medi-Cal and Medicare.</p>
+      <h2 style="color:var(--navy-footer);margin-bottom:1rem;font-size:clamp(1.5rem,3vw,2rem)">Ready to schedule an appointment?</h2>
+      <p style="color:rgba(26,54,79,0.8);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">
+        We welcome new patients and accept most insurance plans, including Medi-Cal and Medicare.
+      </p>
       <a href="tel:2099444700" class="btn btn-primary" style="font-size:1.05rem">(209) 944-4700</a>
     </div>
   </section>
 
 </Base>
+
+<style>
+  @media (max-width: 768px) {
+    .hero-split {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
