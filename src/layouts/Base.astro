@@ -26,6 +26,7 @@ const path = Astro.url.pathname;
         <li><a href="/services" class={path.startsWith('/services') ? 'active' : ''}>Services</a></li>
         <li><a href="/locations" class={path.startsWith('/locations') ? 'active' : ''}>Locations</a></li>
         <li><a href="/providers" class={path.startsWith('/providers') ? 'active' : ''}>Providers</a></li>
+        <li><a href="/patients" class={path.startsWith('/patients') ? 'active' : ''}>Patients</a></li>
         <li><a href="/about" class={path === '/about/' || path === '/about' ? 'active' : ''}>About</a></li>
         <li><a href="/news" class={path.startsWith('/news') ? 'active' : ''}>News</a></li>
       </ul>
@@ -57,6 +58,7 @@ const path = Astro.url.pathname;
           <ul>
             <li><a href="/locations">Find a Location</a></li>
             <li><a href="/providers">Find a Provider</a></li>
+            <li><a href="/patients">Patient Resources</a></li>
             <li><a href="/about">About CMC</a></li>
             <li><a href="/news">News &amp; Events</a></li>
           </ul>
