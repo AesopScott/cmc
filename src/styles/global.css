@@ -270,3 +270,13 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* Reduced motion (WCAG 2.3.3 / AAA, best practice for AA) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
