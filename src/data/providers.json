@@ -8,7 +8,7 @@
         "modified": "2024-04-11 16:25:24",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Alberto ",
             "ignyte-provider-lname": "Sandoval ",
@@ -18,8 +18,8 @@
             "_thumbnail_id": "1912",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "626": "CMC St. Mary",
-                "611": "CMC Channel"
+                "611": "CMC Channel",
+                "626": "CMC St. Mary"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "FNP",
@@ -51,7 +51,7 @@
         "modified": "2024-04-11 12:03:55",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/JACKSON_Alexandra-scaled.jpg",
+        "thumbnail": "/img/2023__11__JACKSON_Alexandra-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Alexandra",
             "ignyte-provider-lname": "Jackson",
@@ -94,7 +94,7 @@
         "modified": "2026-03-18 14:22:42",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/PANH_Amanda-scaled.jpg",
+        "thumbnail": "/img/2026__03__PANH_Amanda-scaled.jpg",
         "meta": {
             "_edit_lock": "1773868828:8",
             "_edit_last": "8",
@@ -137,7 +137,7 @@
         "modified": "2024-04-11 17:44:52",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/PATRICK_Amy-scaled.jpg",
+        "thumbnail": "/img/2023__11__PATRICK_Amy-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Amy",
             "ignyte-provider-lname": "Patrick",
@@ -178,7 +178,7 @@
         "modified": "2025-11-12 16:24:55",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CHILDERS_Andrea-DDS.jpg",
+        "thumbnail": "/img/2023__11__CHILDERS_Andrea-DDS.jpg",
         "meta": {
             "ignyte-provider-fname": "Andrea",
             "ignyte-provider-lname": "Childers",
@@ -220,7 +220,7 @@
         "modified": "2024-04-11 17:06:00",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CHEUNG_Angela.png",
+        "thumbnail": "/img/2023__11__CHEUNG_Angela.png",
         "meta": {
             "ignyte-provider-fname": "Angela ",
             "ignyte-provider-lname": "Cheung ",
@@ -261,7 +261,7 @@
         "modified": "2026-03-18 11:34:17",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Angie",
             "ignyte-provider-lname": "Main",
@@ -273,10 +273,10 @@
                 "371": "371"
             },
             "ignyte_locations[]": {
-                "634": "CMC Waterloo",
-                "628": "CMC Tracy Central",
+                "620": "CMC Lodi Turner",
                 "623": "CMC Manteca",
-                "620": "CMC Lodi Turner"
+                "628": "CMC Tracy Central",
+                "634": "CMC Waterloo"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "LCSW",
@@ -309,7 +309,7 @@
         "modified": "2026-03-18 11:42:19",
         "excerpt": "",
         "content": "Dr. Anil Andani, MD is a health care provider primarily located in Stockton, CA, with another office in Chicago, IL. He has 7 years of experience. His specialties include Family Medicine. He speaks English.",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ANDANI_Anil-scaled.jpg",
+        "thumbnail": "/img/2023__11__ANDANI_Anil-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Anil ",
             "ignyte-provider-lname": "Andani",
@@ -353,7 +353,7 @@
         "modified": "2025-11-12 16:26:42",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/THOR_Annie-scaled.jpg",
+        "thumbnail": "/img/2023__11__THOR_Annie-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Annie",
             "ignyte-provider-lname": "Thor",
@@ -396,7 +396,7 @@
         "modified": "2026-03-18 11:48:21",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/YADATORE_Aparna-scaled.jpg",
+        "thumbnail": "/img/2026__03__YADATORE_Aparna-scaled.jpg",
         "meta": {
             "_edit_lock": "1773859562:8",
             "_edit_last": "8",
@@ -442,7 +442,7 @@
         "modified": "2024-04-12 14:46:02",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/RASA_Ashley.png",
+        "thumbnail": "/img/2023__11__RASA_Ashley.png",
         "meta": {
             "ignyte-provider-fname": "Ashley",
             "ignyte-provider-lname": "Rasa",
@@ -484,7 +484,7 @@
         "modified": "2026-03-18 11:53:01",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/KHAMBATI_Aziz-1-scaled.jpg",
+        "thumbnail": "/img/2023__11__KHAMBATI_Aziz-1-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Aziz",
             "ignyte-provider-lname": "Khambati",
@@ -530,7 +530,7 @@
         "modified": "2026-03-18 11:54:09",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MORRISON_Benjamin.jpg",
+        "thumbnail": "/img/2023__11__MORRISON_Benjamin.jpg",
         "meta": {
             "ignyte-provider-fname": "Benjamin",
             "ignyte-provider-lname": "Morrison",
@@ -572,7 +572,7 @@
         "modified": "2025-11-12 16:29:00",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/NANGYALAI_Sydney-1-scaled.jpg",
+        "thumbnail": "/img/2023__11__NANGYALAI_Sydney-1-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Bilkese",
             "ignyte-provider-lname": "Nangyalai",
@@ -584,8 +584,8 @@
                 "371": "371"
             },
             "ignyte_locations[]": {
-                "629": "CMC Tracy Grant Line",
-                "628": "CMC Tracy"
+                "628": "CMC Tracy",
+                "629": "CMC Tracy Grant Line"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "ASW",
@@ -618,7 +618,7 @@
         "modified": "2024-04-11 12:15:42",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/TESKA_Candace-scaled.jpg",
+        "thumbnail": "/img/2023__11__TESKA_Candace-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Candace",
             "ignyte-provider-lname": "Teska",
@@ -662,7 +662,7 @@
         "modified": "2024-04-11 12:28:47",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Caroline",
             "ignyte-provider-lname": "Dornbush",
@@ -703,7 +703,7 @@
         "modified": "2024-04-11 16:17:47",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/WU_Casey-scaled.jpg",
+        "thumbnail": "/img/2023__11__WU_Casey-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Casey",
             "ignyte-provider-lname": "Wu",
@@ -713,8 +713,8 @@
             "_thumbnail_id": "1772",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "635": "CMC Weberstown Medical",
-                "634": "CMC Waterloo"
+                "634": "CMC Waterloo",
+                "635": "CMC Weberstown Medical"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "DMD",
@@ -746,7 +746,7 @@
         "modified": "2024-04-11 18:09:52",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MATHIS_Catherine-scaled.jpg",
+        "thumbnail": "/img/2023__11__MATHIS_Catherine-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Catherine ",
             "ignyte-provider-lname": "Mathis ",
@@ -756,8 +756,8 @@
             "_thumbnail_id": "1727",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "624": "CMC Mariposa",
-                "616": "CMC E. March Lane - Primary Care"
+                "616": "CMC E. March Lane - Primary Care",
+                "624": "CMC Mariposa"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "MD",
@@ -788,7 +788,7 @@
         "modified": "2025-11-12 16:30:56",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/DAVIS_Catherine-scaled.jpeg",
+        "thumbnail": "/img/2023__11__DAVIS_Catherine-scaled.jpeg",
         "meta": {
             "ignyte-provider-fname": "Catherine",
             "ignyte-provider-lname": "Davis",
@@ -831,7 +831,7 @@
         "modified": "2026-03-18 13:25:32",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/PABUSTAN_Cesar-scaled.jpg",
+        "thumbnail": "/img/2023__11__PABUSTAN_Cesar-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Cesar",
             "ignyte-provider-lname": "Pabustan",
@@ -877,7 +877,7 @@
         "modified": "2026-02-02 10:21:20",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/01/LABAU_Christian-scaled.jpg",
+        "thumbnail": "/img/2026__01__LABAU_Christian-scaled.jpg",
         "meta": {
             "_edit_lock": "1770056406:8",
             "_edit_last": "8",
@@ -917,7 +917,7 @@
         "modified": "2024-11-01 23:36:28",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/HENDERSON-PETERSON_Christy-scaled.jpg",
+        "thumbnail": "/img/2023__11__HENDERSON-PETERSON_Christy-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Christy",
             "ignyte-provider-lname": "Peterson",
@@ -958,7 +958,7 @@
         "modified": "2026-03-18 13:34:41",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/VAID_Daksha-scaled.jpg",
+        "thumbnail": "/img/2023__11__VAID_Daksha-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Daksha",
             "ignyte-provider-lname": "Vaid",
@@ -1005,7 +1005,7 @@
         "modified": "2024-04-11 12:39:49",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CHENG_Daniel-scaled.jpg",
+        "thumbnail": "/img/2023__11__CHENG_Daniel-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Daniel",
             "ignyte-provider-lname": "Cheng",
@@ -1017,8 +1017,8 @@
                 "2099": "2099"
             },
             "ignyte_locations[]": {
-                "635": "CMC Weberstown Medical",
-                "634": "CMC Waterloo"
+                "634": "CMC Waterloo",
+                "635": "CMC Weberstown Medical"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "DDS",
@@ -1049,15 +1049,15 @@
         "modified": "2026-03-18 14:14:21",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/ARAIZA_David_MD-scaled.jpg",
+        "thumbnail": "/img/2026__03__ARAIZA_David_MD-scaled.jpg",
         "meta": {
             "_edit_lock": "1773868325:8",
             "_edit_last": "8",
             "_thumbnail_id": "3559",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "626": "CMC St. Mary",
-                "618": "CMC Gleason House"
+                "618": "CMC Gleason House",
+                "626": "CMC St. Mary"
             },
             "ignyte_gender": "1",
             "ignyte-provider-displayed-name": null,
@@ -1092,7 +1092,7 @@
         "modified": "2024-04-11 17:12:34",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/GRAHAM_David.png",
+        "thumbnail": "/img/2023__11__GRAHAM_David.png",
         "meta": {
             "ignyte-provider-fname": "David",
             "ignyte-provider-lname": "Graham",
@@ -1133,7 +1133,7 @@
         "modified": "2024-04-12 14:54:07",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MENEZES_Davina.png",
+        "thumbnail": "/img/2023__11__MENEZES_Davina.png",
         "meta": {
             "ignyte-provider-fname": "Davina",
             "ignyte-provider-lname": "Menezes",
@@ -1177,7 +1177,7 @@
         "modified": "2025-11-12 16:32:24",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/DAMIEN_Deepthy-1-scaled.jpg",
+        "thumbnail": "/img/2023__11__DAMIEN_Deepthy-1-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Deepthy",
             "ignyte-provider-lname": "Damien",
@@ -1221,7 +1221,7 @@
         "modified": "2024-04-11 12:07:33",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Denise ",
             "ignyte-provider-lname": "Mendez ",
@@ -1264,7 +1264,7 @@
         "modified": "2024-04-11 12:24:47",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/WATSON_Denise-scaled.jpg",
+        "thumbnail": "/img/2023__11__WATSON_Denise-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Denise",
             "ignyte-provider-lname": "Watson",
@@ -1307,7 +1307,7 @@
         "modified": "2024-04-11 18:14:56",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Diana",
             "ignyte-provider-lname": "Enrile",
@@ -1317,8 +1317,8 @@
             "_thumbnail_id": "1912",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "627": "CMC Sutter Street",
-                "610": "CMC California Street"
+                "610": "CMC California Street",
+                "627": "CMC Sutter Street"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "MD",
@@ -1350,7 +1350,7 @@
         "modified": "2024-04-12 14:45:05",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ARYAL_Dikshya-scaled.jpg",
+        "thumbnail": "/img/2023__11__ARYAL_Dikshya-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Dikshya ",
             "ignyte-provider-lname": "Aryal",
@@ -1393,7 +1393,7 @@
         "modified": "2024-04-10 13:33:09",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Dolores",
             "ignyte-provider-lname": "Cardona",
@@ -1436,7 +1436,7 @@
         "modified": "2025-07-15 11:12:02",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SMALLIE_Don_DC-scaled.jpg",
+        "thumbnail": "/img/2023__11__SMALLIE_Don_DC-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Don",
             "ignyte-provider-lname": "Smallie",
@@ -1480,7 +1480,7 @@
         "modified": "2026-03-23 10:39:46",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/HO_Elaine-scaled.jpg",
+        "thumbnail": "/img/2026__03__HO_Elaine-scaled.jpg",
         "meta": {
             "_edit_lock": "1774287452:8",
             "_edit_last": "8",
@@ -1523,7 +1523,7 @@
         "modified": "2025-11-12 16:34:13",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CASTILLO_Elizabeth-1-scaled.jpg",
+        "thumbnail": "/img/2023__11__CASTILLO_Elizabeth-1-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Elizabeth",
             "ignyte-provider-lname": "Castillo",
@@ -1566,7 +1566,7 @@
         "modified": "2024-04-11 17:48:51",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SIMMONS_Elizabeth-scaled.jpg",
+        "thumbnail": "/img/2023__11__SIMMONS_Elizabeth-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Elizabeth",
             "ignyte-provider-lname": "Simmons",
@@ -1607,7 +1607,7 @@
         "modified": "2024-04-11 18:05:57",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Erin",
             "ignyte-provider-lname": "Garcia",
@@ -1617,9 +1617,9 @@
             "_thumbnail_id": "1912",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "636": "CMC West Lane",
+                "611": "CMC Channel",
                 "620": "CMC Lodi",
-                "611": "CMC Channel"
+                "636": "CMC West Lane"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "RD",
@@ -1650,7 +1650,7 @@
         "modified": "2026-03-18 14:32:18",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ALMENDAREZ_Ernest.png",
+        "thumbnail": "/img/2023__11__ALMENDAREZ_Ernest.png",
         "meta": {
             "ignyte-provider-fname": "Ernest",
             "ignyte-provider-lname": "Almendarez",
@@ -1693,7 +1693,7 @@
         "modified": "2024-04-11 16:56:52",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ALI_Farzana-scaled.jpg",
+        "thumbnail": "/img/2023__11__ALI_Farzana-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Farzana",
             "ignyte-provider-lname": "Ali",
@@ -1736,7 +1736,7 @@
         "modified": "2026-03-18 14:40:10",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/TEJADA_Flexiberto-scaled.jpg",
+        "thumbnail": "/img/2026__03__TEJADA_Flexiberto-scaled.jpg",
         "meta": {
             "_edit_lock": "1773870028:8",
             "_edit_last": "8",
@@ -1779,7 +1779,7 @@
         "modified": "2025-11-12 16:35:28",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/KAUSHIK_Gayathri-1-scaled.jpg",
+        "thumbnail": "/img/2023__11__KAUSHIK_Gayathri-1-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Gayathri",
             "ignyte-provider-lname": "Kaushik",
@@ -1823,7 +1823,7 @@
         "modified": "2024-04-11 18:04:50",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/TAY_YONG_Gisella-scaled.jpg",
+        "thumbnail": "/img/2023__11__TAY_YONG_Gisella-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Gisella",
             "ignyte-provider-lname": "Tay Yong",
@@ -1865,7 +1865,7 @@
         "modified": "2026-03-23 11:09:44",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/KAUR_Garjit-scaled.jpg",
+        "thumbnail": "/img/2026__03__KAUR_Garjit-scaled.jpg",
         "meta": {
             "_edit_lock": "1774289241:8",
             "_edit_last": "8",
@@ -1907,7 +1907,7 @@
         "modified": "2024-04-11 16:16:03",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Gurmeet",
             "ignyte-provider-lname": "Singh",
@@ -1951,7 +1951,7 @@
         "modified": "2024-04-11 16:14:18",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MEHANZEL_Hailu-scaled.jpg",
+        "thumbnail": "/img/2023__11__MEHANZEL_Hailu-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Hailu",
             "ignyte-provider-lname": "Mehanzel",
@@ -1992,7 +1992,7 @@
         "modified": "2024-04-11 17:08:25",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Hannah ",
             "ignyte-provider-lname": "Crowl",
@@ -2033,7 +2033,7 @@
         "modified": "2025-10-02 14:21:23",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/AGUILAR_Hermes-scaled.jpg",
+        "thumbnail": "/img/2023__11__AGUILAR_Hermes-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Hermes",
             "ignyte-provider-lname": "Aguilar",
@@ -2076,7 +2076,7 @@
         "modified": "2026-03-18 15:46:34",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MANN_Hershminder.png",
+        "thumbnail": "/img/2023__11__MANN_Hershminder.png",
         "meta": {
             "ignyte-provider-fname": "Hershminder",
             "ignyte-provider-lname": "Mann",
@@ -2123,7 +2123,7 @@
         "modified": "2026-03-18 16:09:28",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/KENCHEY_Himaja-scaled.jpg",
+        "thumbnail": "/img/2026__03__KENCHEY_Himaja-scaled.jpg",
         "meta": {
             "_edit_lock": "1773956776:8",
             "_edit_last": "8",
@@ -2168,7 +2168,7 @@
         "modified": "2024-04-11 17:16:44",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Huma ",
             "ignyte-provider-lname": "Hussain ",
@@ -2209,7 +2209,7 @@
         "modified": "2024-04-11 16:21:32",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/RYMERS_Imma-scaled.jpg",
+        "thumbnail": "/img/2023__11__RYMERS_Imma-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Irma",
             "ignyte-provider-lname": "Rymers",
@@ -2250,7 +2250,7 @@
         "modified": "2026-03-19 14:50:45",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/AUTAR_Jai-MD-scaled.jpg",
+        "thumbnail": "/img/2026__03__AUTAR_Jai-MD-scaled.jpg",
         "meta": {
             "_edit_lock": "1773957064:8",
             "_edit_last": "8",
@@ -2292,7 +2292,7 @@
         "modified": "2024-04-11 12:04:54",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "James",
             "ignyte-provider-lname": "Long",
@@ -2335,7 +2335,7 @@
         "modified": "2024-04-10 13:30:51",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ARENAL_Jasmine-scaled.jpg",
+        "thumbnail": "/img/2023__11__ARENAL_Jasmine-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Jasmin",
             "ignyte-provider-lname": "Arenal",
@@ -2378,7 +2378,7 @@
         "modified": "2026-03-19 14:54:03",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/GHUMAN_Jasmine-scaled.jpg",
+        "thumbnail": "/img/2023__11__GHUMAN_Jasmine-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Jasmine",
             "ignyte-provider-lname": "Ghuman",
@@ -2422,7 +2422,7 @@
         "modified": "2026-03-19 14:56:58",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CHIEN_Jerry-scaled.jpg",
+        "thumbnail": "/img/2023__11__CHIEN_Jerry-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Jerry",
             "ignyte-provider-lname": "Chien",
@@ -2467,7 +2467,7 @@
         "modified": "2026-03-19 15:01:07",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/HALLORAN_John-T-scaled.jpg",
+        "thumbnail": "/img/2026__03__HALLORAN_John-T-scaled.jpg",
         "meta": {
             "_edit_lock": "1773957691:8",
             "_edit_last": "8",
@@ -2510,15 +2510,15 @@
         "modified": "2026-03-23 11:31:22",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/PINCHES_John-scaled.jpg",
+        "thumbnail": "/img/2026__03__PINCHES_John-scaled.jpg",
         "meta": {
             "_edit_lock": "1774290543:8",
             "_edit_last": "8",
             "_thumbnail_id": "3612",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "623": "CMC Manteca",
-                "611": "CMC Channel"
+                "611": "CMC Channel",
+                "623": "CMC Manteca"
             },
             "ignyte_gender": "1",
             "ignyte-provider-displayed-name": null,
@@ -2553,7 +2553,7 @@
         "modified": "2026-03-19 15:06:51",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/LYNN_Joshua-M-scaled.jpg",
+        "thumbnail": "/img/2023__11__LYNN_Joshua-M-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Joshua ",
             "ignyte-provider-lname": "Lynn ",
@@ -2595,7 +2595,7 @@
         "modified": "2026-03-19 15:09:18",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/SOLORZA_Juan_Lopez-scaled.jpg",
+        "thumbnail": "/img/2026__03__SOLORZA_Juan_Lopez-scaled.jpg",
         "meta": {
             "_edit_lock": "1773958147:8",
             "_edit_last": "8",
@@ -2637,7 +2637,7 @@
         "modified": "2024-04-11 17:41:42",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/O_MEANY_Juan-scaled.jpg",
+        "thumbnail": "/img/2023__11__O_MEANY_Juan-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Juan",
             "ignyte-provider-lname": "O'Meany",
@@ -2679,7 +2679,7 @@
         "modified": "2025-10-02 14:15:02",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MANGONDATO_Jussein-scaled.jpg",
+        "thumbnail": "/img/2023__11__MANGONDATO_Jussein-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Jussein",
             "ignyte-provider-lname": "Mangondato",
@@ -2723,16 +2723,16 @@
         "modified": "2026-03-19 15:20:49",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/GUEVARRA_Justine-Carlo-scaled.jpg",
+        "thumbnail": "/img/2026__03__GUEVARRA_Justine-Carlo-scaled.jpg",
         "meta": {
             "_edit_lock": "1773960095:8",
             "_edit_last": "8",
             "_thumbnail_id": "3575",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "634": "CMC Waterloo",
+                "604": "CMC 747 Channel",
                 "611": "CMC Channel",
-                "604": "CMC 747 Channel"
+                "634": "CMC Waterloo"
             },
             "ignyte_gender": "1",
             "ignyte-provider-displayed-name": null,
@@ -2767,7 +2767,7 @@
         "modified": "2024-04-11 17:52:36",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SPRAGUE_Karen-scaled.jpg",
+        "thumbnail": "/img/2023__11__SPRAGUE_Karen-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Karen",
             "ignyte-provider-lname": "Sprague",
@@ -2808,7 +2808,7 @@
         "modified": "2024-04-11 12:22:54",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/GARCIA_PORTALATIN_Karla-scaled.jpg",
+        "thumbnail": "/img/2023__11__GARCIA_PORTALATIN_Karla-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Karla ",
             "ignyte-provider-lname": "Garcia Portalatin",
@@ -2820,9 +2820,9 @@
                 "676": "676"
             },
             "ignyte_locations[]": {
-                "617": "CMC E. March Lane - CareToday",
+                "611": "CMC Channel",
                 "616": "CMC E. March Lane - Primary Care",
-                "611": "CMC Channel"
+                "617": "CMC E. March Lane - CareToday"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "DC",
@@ -2854,7 +2854,7 @@
         "modified": "2026-01-27 10:12:54",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/KETZ_Katherine-scaled.jpg",
+        "thumbnail": "/img/2023__11__KETZ_Katherine-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Katherine",
             "ignyte-provider-lname": "Ketz",
@@ -2896,7 +2896,7 @@
         "modified": "2024-04-11 17:28:14",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/NGUYEN_Katrina.jpg",
+        "thumbnail": "/img/2023__11__NGUYEN_Katrina.jpg",
         "meta": {
             "ignyte-provider-fname": "Katrina ",
             "ignyte-provider-lname": "Nguyen",
@@ -2937,7 +2937,7 @@
         "modified": "2024-04-11 18:13:22",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/DIJAMCO_Katrina-scaled.jpg",
+        "thumbnail": "/img/2023__11__DIJAMCO_Katrina-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Katrina",
             "ignyte-provider-lname": "Dijamco",
@@ -2979,7 +2979,7 @@
         "modified": "2026-01-27 10:14:19",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/Henriquez_Kelly-scaled.jpg",
+        "thumbnail": "/img/2023__11__Henriquez_Kelly-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Kelly",
             "ignyte-provider-lname": "Henriquez Esparza",
@@ -3023,7 +3023,7 @@
         "modified": "2024-04-12 14:41:53",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SANFORD_Kia-scaled.jpg",
+        "thumbnail": "/img/2023__11__SANFORD_Kia-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Kia ",
             "ignyte-provider-lname": "Sanford ",
@@ -3064,7 +3064,7 @@
         "modified": "2026-01-27 10:15:50",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MOUA_KongPeng_RD-scaled.jpg",
+        "thumbnail": "/img/2023__11__MOUA_KongPeng_RD-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "KongPeng",
             "ignyte-provider-lname": "Moua",
@@ -3106,7 +3106,7 @@
         "modified": "2024-04-11 12:37:38",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Kristen",
             "ignyte-provider-lname": "Riley",
@@ -3149,7 +3149,7 @@
         "modified": "2024-04-11 17:10:51",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/DEOL_Kulwinder-scaled.jpg",
+        "thumbnail": "/img/2023__11__DEOL_Kulwinder-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Kulwinder",
             "ignyte-provider-lname": "Deol",
@@ -3193,7 +3193,7 @@
         "modified": "2026-03-19 15:46:19",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/Huang_Kun-MANTECA-scaled.jpg",
+        "thumbnail": "/img/2023__11__Huang_Kun-MANTECA-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Kun",
             "ignyte-provider-lname": "Huang",
@@ -3236,7 +3236,7 @@
         "modified": "2026-03-19 15:48:55",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ADUBOFOUR_Kwabena.png",
+        "thumbnail": "/img/2023__11__ADUBOFOUR_Kwabena.png",
         "meta": {
             "ignyte-provider-fname": "Kwabena",
             "ignyte-provider-lname": "Adubofour",
@@ -3280,7 +3280,7 @@
         "modified": "2024-04-11 12:12:10",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "La Roy'a",
             "ignyte-provider-lname": "Peace",
@@ -3323,7 +3323,7 @@
         "modified": "2024-04-11 16:12:16",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Lais ",
             "ignyte-provider-lname": "Lodin",
@@ -3364,7 +3364,7 @@
         "modified": "2026-01-27 10:18:37",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MCMILLER_Leihua_LMFT-scaled.jpg",
+        "thumbnail": "/img/2023__11__MCMILLER_Leihua_LMFT-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Leihua ",
             "ignyte-provider-lname": "McMiller ",
@@ -3408,7 +3408,7 @@
         "modified": "2024-04-11 16:09:25",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/DELUCA_Linh-1-scaled.jpg",
+        "thumbnail": "/img/2023__11__DELUCA_Linh-1-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Linh",
             "ignyte-provider-lname": "DeLuca",
@@ -3449,7 +3449,7 @@
         "modified": "2024-04-11 16:26:21",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Lori ",
             "ignyte-provider-lname": "Eanes ",
@@ -3490,7 +3490,7 @@
         "modified": "2024-04-10 13:40:06",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/HERZOG_Louis-1.png",
+        "thumbnail": "/img/2023__11__HERZOG_Louis-1.png",
         "meta": {
             "ignyte-provider-fname": "Louis",
             "ignyte-provider-lname": "Herzog",
@@ -3502,9 +3502,9 @@
                 "371": "371"
             },
             "ignyte_locations[]": {
-                "636": "CMC West Lane",
+                "620": "CMC Lodi",
                 "634": "CMC Waterloo",
-                "620": "CMC Lodi"
+                "636": "CMC West Lane"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "NP",
@@ -3575,7 +3575,7 @@
         "modified": "2026-03-23 11:39:12",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SHARMA_Luna-scaled.jpg",
+        "thumbnail": "/img/2023__11__SHARMA_Luna-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Luna",
             "ignyte-provider-lname": "Sharma",
@@ -3621,7 +3621,7 @@
         "modified": "2026-01-23 16:00:52",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2025/10/DILLIS_Mackenzie-scaled.jpg",
+        "thumbnail": "/img/2025__10__DILLIS_Mackenzie-scaled.jpg",
         "meta": {
             "_edit_lock": "1769539587:8",
             "_edit_last": "14",
@@ -3656,7 +3656,7 @@
         "modified": "2026-03-19 15:54:11",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/DHINDSA_Mandeep_MD-scaled.jpg",
+        "thumbnail": "/img/2023__11__DHINDSA_Mandeep_MD-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Mandeep",
             "ignyte-provider-lname": "Dhindsa",
@@ -3668,8 +3668,8 @@
                 "367": "367"
             },
             "ignyte_locations[]": {
-                "611": "CMC Channel",
-                "604": "CMC 747 Channel"
+                "604": "CMC 747 Channel",
+                "611": "CMC Channel"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "MD",
@@ -3702,7 +3702,7 @@
         "modified": "2024-04-11 12:30:53",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Maria ",
             "ignyte-provider-lname": "Guzman Silva",
@@ -3714,8 +3714,8 @@
                 "2099": "2099"
             },
             "ignyte_locations[]": {
-                "635": "CMC Weberstown Medical",
-                "634": "CMC Waterloo"
+                "634": "CMC Waterloo",
+                "635": "CMC Weberstown Medical"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "RDH",
@@ -3747,7 +3747,7 @@
         "modified": "2024-04-11 17:17:29",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/LOPEZ_Danette-scaled.jpg",
+        "thumbnail": "/img/2023__11__LOPEZ_Danette-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Maria ",
             "ignyte-provider-lname": "Infante Lopez",
@@ -3832,7 +3832,7 @@
         "modified": "2026-03-19 16:00:22",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/MCCARRON_Maria-Catrina-V-scaled.jpg",
+        "thumbnail": "/img/2026__03__MCCARRON_Maria-Catrina-V-scaled.jpg",
         "meta": {
             "_edit_lock": "1773961081:8",
             "_edit_last": "8",
@@ -3873,7 +3873,7 @@
         "modified": "2024-04-10 13:32:05",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Maribel",
             "ignyte-provider-lname": "Arroyo",
@@ -3917,7 +3917,7 @@
         "modified": "2024-04-11 17:57:19",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/BERNARDO_Marinette-scaled.jpg",
+        "thumbnail": "/img/2023__11__BERNARDO_Marinette-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Marinette",
             "ignyte-provider-lname": "Bernardo ",
@@ -4001,7 +4001,7 @@
         "modified": "2024-04-10 13:35:32",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Melanie",
             "ignyte-provider-lname": "Deschine",
@@ -4044,7 +4044,7 @@
         "modified": "2026-03-19 16:12:44",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/COBLE_Michelle_LCSW-scaled.jpg",
+        "thumbnail": "/img/2023__11__COBLE_Michelle_LCSW-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Michelle",
             "ignyte-provider-lname": "Coble",
@@ -4088,7 +4088,7 @@
         "modified": "2024-04-11 17:19:34",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Miriam",
             "ignyte-provider-lname": "Lakes",
@@ -4129,7 +4129,7 @@
         "modified": "2024-04-11 12:38:41",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ANSARI_Moham-scaled.jpg",
+        "thumbnail": "/img/2023__11__ANSARI_Moham-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Moham",
             "ignyte-provider-lname": "Ansari",
@@ -4173,7 +4173,7 @@
         "modified": "2026-01-27 10:26:33",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SHEPARD_Mridu-NP-scaled.jpg",
+        "thumbnail": "/img/2023__11__SHEPARD_Mridu-NP-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Mridu",
             "ignyte-provider-lname": "Shepard",
@@ -4216,7 +4216,7 @@
         "modified": "2024-04-11 18:12:00",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CHITTA_Naga-scaled.jpg",
+        "thumbnail": "/img/2023__11__CHITTA_Naga-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Naga",
             "ignyte-provider-lname": "Chitta",
@@ -4259,7 +4259,7 @@
         "modified": "2026-01-27 10:27:43",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CHUCKS-ORJI_Nancy-scaled.jpg",
+        "thumbnail": "/img/2023__11__CHUCKS-ORJI_Nancy-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Nancy",
             "ignyte-provider-lname": "Chuks-Orji",
@@ -4302,7 +4302,7 @@
         "modified": "2024-04-10 13:29:29",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ANZAR_Napoleon-scaled.jpg",
+        "thumbnail": "/img/2023__11__ANZAR_Napoleon-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Napeleon",
             "ignyte-provider-lname": "Anzar",
@@ -4345,7 +4345,7 @@
         "modified": "2026-01-27 10:28:59",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ROBLES_Nashma_ASW-scaled.jpg",
+        "thumbnail": "/img/2023__11__ROBLES_Nashma_ASW-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Nashma",
             "ignyte-provider-lname": "Robles",
@@ -4390,7 +4390,7 @@
         "modified": "2024-04-11 16:10:48",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/HAN_Pamela-1-scaled.jpg",
+        "thumbnail": "/img/2023__11__HAN_Pamela-1-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Pamela",
             "ignyte-provider-lname": "Han",
@@ -4432,7 +4432,7 @@
         "modified": "2026-01-27 10:30:10",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/RAMIREZ_Paula_RD-scaled.jpg",
+        "thumbnail": "/img/2023__11__RAMIREZ_Paula_RD-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Paula ",
             "ignyte-provider-lname": "Ramirez",
@@ -4475,7 +4475,7 @@
         "modified": "2024-04-11 18:15:33",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/GOSWAMI_Pinki-scaled.jpg",
+        "thumbnail": "/img/2023__11__GOSWAMI_Pinki-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Pinki",
             "ignyte-provider-lname": "Goswami",
@@ -4518,7 +4518,7 @@
         "modified": "2026-03-19 17:51:55",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/PATIL_Pratibha-scaled.jpg",
+        "thumbnail": "/img/2023__11__PATIL_Pratibha-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Pratibha ",
             "ignyte-provider-lname": "Patil ",
@@ -4563,7 +4563,7 @@
         "modified": "2026-03-19 17:56:04",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/AGRAWAL_Prerna-scaled.jpg",
+        "thumbnail": "/img/2026__03__AGRAWAL_Prerna-scaled.jpg",
         "meta": {
             "_edit_lock": "1773968027:8",
             "_edit_last": "8",
@@ -4604,7 +4604,7 @@
         "modified": "2026-03-19 17:59:22",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/NGUYEN_Princess-scaled.jpg",
+        "thumbnail": "/img/2026__03__NGUYEN_Princess-scaled.jpg",
         "meta": {
             "_edit_lock": "1773968429:8",
             "_edit_last": "8",
@@ -4647,7 +4647,7 @@
         "modified": "2026-03-19 18:04:40",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/RAJPUT_Priyanka-scaled.jpg",
+        "thumbnail": "/img/2026__03__RAJPUT_Priyanka-scaled.jpg",
         "meta": {
             "_edit_lock": "1773968781:8",
             "_edit_last": "8",
@@ -4690,7 +4690,7 @@
         "modified": "2024-04-11 16:56:06",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/AKHTAR_Rabia-scaled.jpg",
+        "thumbnail": "/img/2023__11__AKHTAR_Rabia-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Rabia",
             "ignyte-provider-lname": "Akhtar",
@@ -4732,7 +4732,7 @@
         "modified": "2026-03-19 18:58:06",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/YERUVA_Rajashekar-scaled.jpg",
+        "thumbnail": "/img/2026__03__YERUVA_Rajashekar-scaled.jpg",
         "meta": {
             "_edit_lock": "1773971748:8",
             "_edit_last": "8",
@@ -4775,7 +4775,7 @@
         "modified": "2025-10-02 14:18:52",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/WONG_Regina-scaled.jpg",
+        "thumbnail": "/img/2023__11__WONG_Regina-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Regina",
             "ignyte-provider-lname": "Wong",
@@ -4817,15 +4817,15 @@
         "modified": "2026-03-19 19:33:14",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/CRUZ_Richelle-scaled.jpg",
+        "thumbnail": "/img/2026__03__CRUZ_Richelle-scaled.jpg",
         "meta": {
             "_edit_lock": "1773974152:8",
             "_edit_last": "8",
             "_thumbnail_id": "3591",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "623": "CMC Manteca",
-                "611": "CMC Channel"
+                "611": "CMC Channel",
+                "623": "CMC Manteca"
             },
             "ignyte_gender": "2",
             "ignyte-provider-displayed-name": null,
@@ -4860,7 +4860,7 @@
         "modified": "2024-04-12 14:35:06",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/BRAUHER_Rodney-scaled.jpg",
+        "thumbnail": "/img/2023__11__BRAUHER_Rodney-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Rodney ",
             "ignyte-provider-lname": "Brauher ",
@@ -4901,7 +4901,7 @@
         "modified": "2026-03-06 08:35:59",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/DAMIANO_Ronald-scaled.jpg",
+        "thumbnail": "/img/2023__11__DAMIANO_Ronald-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Ronald",
             "ignyte-provider-lname": "Damiano",
@@ -4943,7 +4943,7 @@
         "modified": "2026-03-19 19:38:59",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/DAVIS_Rosemary-scaled.jpg",
+        "thumbnail": "/img/2023__11__DAVIS_Rosemary-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Rosemary ",
             "ignyte-provider-lname": "Nunez Davis ",
@@ -4986,7 +4986,7 @@
         "modified": "2026-01-27 10:35:34",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/COHEN_Rowena_DDS-scaled.jpg",
+        "thumbnail": "/img/2023__11__COHEN_Rowena_DDS-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Rowena",
             "ignyte-provider-lname": "Cohen",
@@ -5028,15 +5028,15 @@
         "modified": "2026-03-20 08:39:05",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/CABRERA-BROWN_Roxana-scaled.jpg",
+        "thumbnail": "/img/2026__03__CABRERA-BROWN_Roxana-scaled.jpg",
         "meta": {
             "_edit_lock": "1774024531:8",
             "_edit_last": "8",
             "_thumbnail_id": "3593",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "611": "CMC Channel",
-                "604": "CMC 747 Channel"
+                "604": "CMC 747 Channel",
+                "611": "CMC Channel"
             },
             "ignyte_gender": "2",
             "ignyte-provider-displayed-name": null,
@@ -5113,7 +5113,7 @@
         "modified": "2024-04-11 12:18:37",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Sarah ",
             "ignyte-provider-lname": "Vang ",
@@ -5156,7 +5156,7 @@
         "modified": "2024-04-12 14:35:47",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/VAILLANCOURT_Sarah-scaled.jpg",
+        "thumbnail": "/img/2023__11__VAILLANCOURT_Sarah-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Sarah",
             "ignyte-provider-lname": "Vaillancourt",
@@ -5165,12 +5165,12 @@
             "_edit_last": "1",
             "_thumbnail_id": "1769",
             "ignyte_services[]": {
-                "376": "376",
-                "371": "371"
+                "371": "371",
+                "376": "376"
             },
             "ignyte_locations[]": {
-                "624": "CMC Mariposa",
-                "623": "CMC Manteca"
+                "623": "CMC Manteca",
+                "624": "CMC Mariposa"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "NP",
@@ -5201,7 +5201,7 @@
         "modified": "2024-04-11 12:15:01",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SILVA_Sarina-scaled.jpg",
+        "thumbnail": "/img/2023__11__SILVA_Sarina-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Sarina",
             "ignyte-provider-lname": "Silva",
@@ -5244,7 +5244,7 @@
         "modified": "2026-03-20 09:41:50",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/HOWARD_Scott-scaled.jpg",
+        "thumbnail": "/img/2023__11__HOWARD_Scott-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Scott",
             "ignyte-provider-lname": "Howard",
@@ -5256,8 +5256,8 @@
                 "371": "371"
             },
             "ignyte_locations[]": {
-                "618": "CMC Gleason House",
-                "611": "CMC Channel"
+                "611": "CMC Channel",
+                "618": "CMC Gleason House"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "Psychologist",
@@ -5289,7 +5289,7 @@
         "modified": "2026-03-20 09:45:56",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SINGH_Shailinder-scaled.jpg",
+        "thumbnail": "/img/2023__11__SINGH_Shailinder-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Shailinder",
             "ignyte-provider-lname": "Singh",
@@ -5333,7 +5333,7 @@
         "modified": "2024-04-11 17:45:29",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/PRASAD-CLERVE_Shami-scaled.jpg",
+        "thumbnail": "/img/2023__11__PRASAD-CLERVE_Shami-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Shami",
             "ignyte-provider-lname": "Prasad-Clerve",
@@ -5375,7 +5375,7 @@
         "modified": "2026-01-27 10:37:57",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CORBIN_Sharon-scaled.jpg",
+        "thumbnail": "/img/2023__11__CORBIN_Sharon-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Sharon",
             "ignyte-provider-lname": "Corbin",
@@ -5417,7 +5417,7 @@
         "modified": "2024-04-12 14:43:53",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SAMMETA_Shilpa-scaled.jpg",
+        "thumbnail": "/img/2023__11__SAMMETA_Shilpa-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Shilpa ",
             "ignyte-provider-lname": "Sammeta ",
@@ -5458,7 +5458,7 @@
         "modified": "2024-04-12 14:53:12",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/NALLAM_Siva-scaled.jpg",
+        "thumbnail": "/img/2023__11__NALLAM_Siva-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Siva",
             "ignyte-provider-lname": "Nallam",
@@ -5500,7 +5500,7 @@
         "modified": "2024-04-11 18:16:44",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/JAYAPRAKASH_Smija-scaled.jpg",
+        "thumbnail": "/img/2023__11__JAYAPRAKASH_Smija-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Smija",
             "ignyte-provider-lname": "Jayaprakash",
@@ -5543,15 +5543,15 @@
         "modified": "2026-03-20 10:25:15",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/GHUMAN_Sukhreet-scaled.jpg",
+        "thumbnail": "/img/2026__03__GHUMAN_Sukhreet-scaled.jpg",
         "meta": {
             "_edit_lock": "1774027463:8",
             "_edit_last": "8",
             "_thumbnail_id": "3597",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "634": "CMC Waterloo",
-                "623": "CMC Manteca"
+                "623": "CMC Manteca",
+                "634": "CMC Waterloo"
             },
             "ignyte_gender": null,
             "ignyte-provider-displayed-name": null,
@@ -5586,7 +5586,7 @@
         "modified": "2026-01-27 10:40:09",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/RAMIREDDY_Sumitra-scaled.jpg",
+        "thumbnail": "/img/2023__11__RAMIREDDY_Sumitra-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Sumitra",
             "ignyte-provider-lname": "Ramireddy",
@@ -5629,7 +5629,7 @@
         "modified": "2024-04-11 17:23:14",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MORRISON_Susan-scaled.jpg",
+        "thumbnail": "/img/2023__11__MORRISON_Susan-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Susan",
             "ignyte-provider-lname": "Morrison",
@@ -5670,7 +5670,7 @@
         "modified": "2024-04-11 17:53:21",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/TRAN_Tai-scaled.jpg",
+        "thumbnail": "/img/2023__11__TRAN_Tai-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Tai",
             "ignyte-provider-lname": "Tran",
@@ -5713,7 +5713,7 @@
         "modified": "2024-04-11 12:34:57",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Tanya",
             "ignyte-provider-lname": "Jones",
@@ -5756,7 +5756,7 @@
         "modified": "2026-01-27 10:42:57",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/SOE_Than-scaled.jpg",
+        "thumbnail": "/img/2023__11__SOE_Than-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Than",
             "ignyte-provider-lname": "Soe",
@@ -5801,7 +5801,7 @@
         "modified": "2026-01-27 10:44:14",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/PIASECKI_Torrie-scaled.jpg",
+        "thumbnail": "/img/2023__11__PIASECKI_Torrie-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Torrie",
             "ignyte-provider-lname": "Piasecki",
@@ -5845,7 +5845,7 @@
         "modified": "2026-03-20 11:20:52",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/HEBBAR_Vaishali_Beneka-scaled.jpg",
+        "thumbnail": "/img/2026__03__HEBBAR_Vaishali_Beneka-scaled.jpg",
         "meta": {
             "_edit_lock": "1774030784:8",
             "_edit_last": "8",
@@ -5888,7 +5888,7 @@
         "modified": "2026-03-20 11:28:53",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/ARMENDARIZ_Vanessa-scaled.jpg",
+        "thumbnail": "/img/2026__03__ARMENDARIZ_Vanessa-scaled.jpg",
         "meta": {
             "_edit_lock": "1774031192:8",
             "_edit_last": "8",
@@ -5929,7 +5929,7 @@
         "modified": "2026-01-27 10:45:55",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/ROMO_Vanessa_RD-scaled.jpg",
+        "thumbnail": "/img/2023__11__ROMO_Vanessa_RD-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Vanessa",
             "ignyte-provider-lname": "Romo",
@@ -5939,8 +5939,8 @@
             "_thumbnail_id": "3310",
             "ignyte_services[]": null,
             "ignyte_locations[]": {
-                "624": "CMC Mariposa",
-                "611": "CMC Channel"
+                "611": "CMC Channel",
+                "624": "CMC Mariposa"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "RD",
@@ -5972,7 +5972,7 @@
         "modified": "2026-03-20 11:30:27",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/BABU_Vedesh-Kumar-scaled.jpg",
+        "thumbnail": "/img/2026__03__BABU_Vedesh-Kumar-scaled.jpg",
         "meta": {
             "_edit_lock": "1774031652:8",
             "_edit_last": "8",
@@ -6019,7 +6019,7 @@
         "modified": "2024-04-11 16:11:25",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/headshot-placeholder@2x.jpg",
+        "thumbnail": "/img/2024__02__headshot-placeholder@2x.jpg",
         "meta": {
             "ignyte-provider-fname": "Vijayalakshmi",
             "ignyte-provider-lname": "Katragadda",
@@ -6062,7 +6062,7 @@
         "modified": "2024-04-12 14:42:41",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/IP_Wing-scaled.jpg",
+        "thumbnail": "/img/2023__11__IP_Wing-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Wing",
             "ignyte-provider-lname": "Ip",
@@ -6104,7 +6104,7 @@
         "modified": "2024-04-11 17:58:50",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/CHA_Yeji-scaled.jpg",
+        "thumbnail": "/img/2023__11__CHA_Yeji-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Yeji ",
             "ignyte-provider-lname": "Cha ",
@@ -6146,7 +6146,7 @@
         "modified": "2026-03-23 12:02:34",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/PINCHES_Yiuing-scaled.jpg",
+        "thumbnail": "/img/2026__03__PINCHES_Yiuing-scaled.jpg",
         "meta": {
             "_edit_lock": "1774299570:8",
             "_edit_last": "8",
@@ -6189,7 +6189,7 @@
         "modified": "2026-03-20 11:50:27",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2026/03/SINGH_Yuvraj-MD-scaled.jpg",
+        "thumbnail": "/img/2026__03__SINGH_Yuvraj-MD-scaled.jpg",
         "meta": {
             "_edit_lock": "1774032650:8",
             "_edit_last": "8",
@@ -6234,7 +6234,7 @@
         "modified": "2026-01-27 10:47:26",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/IZMARAI_Zelikha-LCSW-scaled.jpg",
+        "thumbnail": "/img/2023__11__IZMARAI_Zelikha-LCSW-scaled.jpg",
         "meta": {
             "ignyte-provider-fname": "Zelikha",
             "ignyte-provider-lname": "Izmarai",
@@ -6246,8 +6246,8 @@
                 "371": "371"
             },
             "ignyte_locations[]": {
-                "631": "CMC Vacaville",
-                "613": "CMC Dixon"
+                "613": "CMC Dixon",
+                "631": "CMC Vacaville"
             },
             "ignyte-provider-displayed-name": null,
             "ignyte-provider-position": "ASW",
@@ -6279,7 +6279,7 @@
         "modified": "2024-04-11 16:13:06",
         "excerpt": "",
         "content": "",
-        "thumbnail": "https://cmcenters.org/wp-content/uploads/2023/11/MARASHI_Zohreh.png",
+        "thumbnail": "/img/2023__11__MARASHI_Zohreh.png",
         "meta": {
             "ignyte-provider-fname": "Zohreh",
             "ignyte-provider-lname": "Marashi",
