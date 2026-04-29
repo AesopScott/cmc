@@ -21,13 +21,16 @@ const path = Astro.url.pathname;
 </head>
 <body>
 
+  <!-- Skip link (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Utility Bar -->
   <div class="utility-bar">
     <div class="utility-bar-inner">
       <a href="tel:2099444700">(209) 944-4700</a>
-      <span class="util-divider">|</span>
+      <span class="util-divider" aria-hidden="true">|</span>
       <a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a>
-      <span class="util-divider">|</span>
+      <span class="util-divider" aria-hidden="true">|</span>
       <a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a>
     </div>
   </div>
@@ -38,8 +41,8 @@ const path = Astro.url.pathname;
       <a href="/" class="nav-logo" aria-label="Community Medical Centers home">
         <img src="/img/cmc-logo.svg" alt="Community Medical Centers" />
       </a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="/services" class={path.startsWith('/services') ? 'active' : ''}>Services</a></li>
@@ -53,7 +56,9 @@ const path = Astro.url.pathname;
     </div>
   </nav>
 
-  <slot />
+  <main id="main-content" tabindex="-1">
+    <slot />
+  </main>
 
   <footer class="site-footer">
     <div class="container">
@@ -103,7 +108,17 @@ const path = Astro.url.pathname;
   <script>
     const toggle = document.getElementById('nav-toggle');
     const links = document.getElementById('nav-links');
-    toggle?.addEventListener('click', () => links?.classList.toggle('open'));
+    toggle?.addEventListener('click', () => {
+      const isOpen = links?.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(!!isOpen));
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links?.classList.contains('open')) {
+        links.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+        toggle?.focus();
+      }
+    });
   </script>
 </body>
 </html>
