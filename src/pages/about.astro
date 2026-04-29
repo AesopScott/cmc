@@ -13,22 +13,32 @@ function stripWpBlocks(html) {
   return html.replace(/<!-- \/?wp:[^>]* -->/g, '').replace(/<\/?figure[^>]*>/g, '').trim();
 }
 
+// Words that are role descriptors, not professional credentials
+const NON_CRED_TERMS = new Set(['patient', 'community leader', 'board member']);
+
+// Normalize a raw credential string: split on comma, strip non-cred terms, rejoin with ', '
+function formatCreds(str) {
+  return str
+    .split(',')
+    .map(s => s.trim())
+    .filter(s => s && !NON_CRED_TERMS.has(s.toLowerCase()))
+    .join(', ');
+}
+
 // Parse title and credentials from ignyte_team_title_content and team_location
 function parseMember(member) {
   const raw = member.meta?.ignyte_team_title_content || '';
   const teamLoc = member.meta?.team_location || '';
 
-  // Split title from any embedded credentials (first comma separates them)
+  // Split title from any embedded credentials after the first comma
   const commaIdx = raw.indexOf(',');
   const title = commaIdx > -1 ? raw.slice(0, commaIdx).trim() : raw.trim();
-  const credFromTitle = commaIdx > -1 ? raw.slice(commaIdx + 1).trim() : '';
+  const afterComma = commaIdx > -1 ? raw.slice(commaIdx + 1).trim() : '';
 
-  // team_location is a credential only if it's not a role descriptor
-  const NON_CRED = ['patient', 'community leader', ''];
-  const locCred = teamLoc && !NON_CRED.includes(teamLoc.toLowerCase()) ? teamLoc : '';
+  const credFromTitle = afterComma ? formatCreds(afterComma) : '';
+  const credFromLoc   = teamLoc   ? formatCreds(teamLoc)   : '';
 
-  const credentials = [credFromTitle, locCred].filter(Boolean).join(', ');
-
+  const credentials = [credFromTitle, credFromLoc].filter(Boolean).join(', ');
   return { title, credentials };
 }
 
