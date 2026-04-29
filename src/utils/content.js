@@ -3,6 +3,8 @@ export function stripWpBlocks(html) {
   return html
     .replace(/<!-- \/?wp:[^>]* -->/g, '')
     .replace(/<\/?figure[^>]*>/g, '')
+    // Make all internal cmcenters.org links root-relative so they work on any environment
+    .replace(/https?:\/\/(?:www\.)?cmcenters\.org/g, '')
     .trim();
 }
 
