@@ -6,12 +6,12 @@ import services from '../../data/services.json';
 
   <section class="section" style="padding-top:3rem">
     <div class="container">
-      <div class="grid-3" style="align-items:start">
+      <div class="grid-3">
         {services.map(svc => (
-          <a href={`/services/${svc.slug}`} class="card" style="display:block;color:inherit">
+          <a href={`/services/${svc.slug}`} class="card" style="display:flex;flex-direction:column;color:inherit">
             {svc.thumbnail
               ? <img class="card-img" src={svc.thumbnail} alt={svc.title} loading="lazy" />
-              : <div style="height:6px;background:var(--teal-dark)"></div>
+              : <div style="height:200px;background:var(--teal-light);display:flex;align-items:center;justify-content:center"><span style="color:var(--teal-dark);font-size:2rem">✚</span></div>
             }
             <div class="card-body">
               <h3>{svc.title}</h3>
