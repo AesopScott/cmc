@@ -1,6 +1,6 @@
 export function stripWpBlocks(html) {
   if (!html) return '';
-  return html
+  let result = html
     .replace(/<!-- \/?wp:[^>]* -->/g, '')
     .replace(/<\/?figure[^>]*>/g, '')
     // Make all internal cmcenters.org links root-relative so they work on any environment
@@ -12,6 +12,17 @@ export function stripWpBlocks(html) {
     .replace(/<img\b([^>]*)>/gi, (match, attrs) =>
       /\balt=/i.test(attrs) ? match : `<img${attrs} alt="">`)
     .trim();
+
+  // If content uses h3+ but has no h2, shift heading levels up so the
+  // page heading hierarchy doesn't skip from h1 (page title) to h3+ (WCAG 1.3.1)
+  if (!/<h2[\s>]/i.test(result)) {
+    result = result
+      .replace(/<h5(\s[^>]*)?>/gi, '<h4$1>').replace(/<\/h5>/gi, '</h4>')
+      .replace(/<h4(\s[^>]*)?>/gi, '<h3$1>').replace(/<\/h4>/gi, '</h3>')
+      .replace(/<h3(\s[^>]*)?>/gi, '<h2$1>').replace(/<\/h3>/gi, '</h2>');
+  }
+
+  return result;
 }
 
 export function formatPhone(phone) {
