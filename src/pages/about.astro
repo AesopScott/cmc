@@ -1,0 +1,128 @@
+---
+import Base from '../layouts/Base.astro';
+import team from '../data/team.json';
+import timeline from '../data/timeline.json';
+import faqs from '../data/faqs.json';
+
+const executives = team.filter(m => m.terms?.ignyte_team_type?.includes('Executives'));
+const board = team.filter(m => m.terms?.ignyte_team_type?.includes('Board Members'));
+const aboutFaqs = faqs.filter(f => f.terms?.ignyte_faq_type?.includes('About Page'));
+
+function stripWpBlocks(html) {
+  if (!html) return '';
+  return html.replace(/<!-- \/?wp:[^>]* -->/g, '').replace(/<\/?figure[^>]*>/g, '').trim();
+}
+---
+<Base title="About" description="Learn about Community Medical Centers — our mission, history, leadership, and commitment to the Central Valley.">
+
+  <!-- Hero -->
+  <section class="hero" style="padding:5rem 0 4rem">
+    <div class="container">
+      <span class="hero-eyebrow">Est. 1968</span>
+      <h1>Caring for our <em>community</em> for over 55 years</h1>
+      <p>Community Medical Centers is a Federally Qualified Health Center (FQHC) committed to providing quality healthcare regardless of ability to pay.</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section-sm" style="background:var(--navy-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div class="container" style="max-width:760px;text-align:center">
+      <div class="eyebrow" style="display:inline-block;color:var(--gold);font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.75rem">Our Mission</div>
+      <p style="font-size:1.2rem;line-height:1.7;color:var(--cream)">
+        To provide comprehensive, high quality, culturally sensitive health care to the medically underserved populations of the Central Valley through a network of community health centers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  {timeline.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Our History</span>
+          <h2>A Legacy of Community Care</h2>
+        </div>
+        <div style="max-width:760px;margin:0 auto">
+          {timeline.map(entry => (
+            <div style="display:flex;gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+              <div style="flex-shrink:0;width:80px;text-align:right">
+                <span style="color:var(--gold);font-weight:700;font-size:1.1rem">{entry.meta?.ignyte_timeline_year || ''}</span>
+              </div>
+              <div>
+                <h3 style="font-size:1rem;margin-bottom:0.4rem">{entry.title}</h3>
+                {entry.content && <div style="color:var(--muted);font-size:0.875rem" set:html={stripWpBlocks(entry.content)} />}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <hr class="divider" />
+
+  <!-- Leadership -->
+  {executives.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Leadership</span>
+          <h2>Executive Team</h2>
+        </div>
+        <div class="grid-4">
+          {executives.map(member => (
+            <div class="card">
+              {member.thumbnail && <img class="provider-photo" src={member.thumbnail} alt={member.title} loading="lazy" />}
+              <div class="card-body">
+                <div class="provider-name">{member.title}</div>
+                <div class="provider-title">{member.meta?.ignyte_team_title || ''}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Board -->
+  {board.length > 0 && (
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Governance</span>
+          <h2>Board of Directors</h2>
+        </div>
+        <div class="grid-4">
+          {board.map(member => (
+            <div class="card">
+              {member.thumbnail && <img class="provider-photo" src={member.thumbnail} alt={member.title} loading="lazy" />}
+              <div class="card-body">
+                <div class="provider-name">{member.title}</div>
+                <div class="provider-title">{member.meta?.ignyte_team_title || ''}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQs -->
+  {aboutFaqs.length > 0 && (
+    <section class="section" style="background:var(--navy-mid);border-top:1px solid var(--border)">
+      <div class="container" style="max-width:760px">
+        <div class="section-header">
+          <span class="eyebrow">Questions</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        {aboutFaqs.map(faq => (
+          <details style="border:1px solid var(--border);border-radius:6px;margin-bottom:0.75rem;padding:1.25rem;background:var(--navy)">
+            <summary style="cursor:pointer;font-weight:600;list-style:none;color:var(--cream)">{faq.title}</summary>
+            {faq.content && <div style="margin-top:1rem;color:var(--muted);font-size:0.9rem" set:html={stripWpBlocks(faq.content)} />}
+          </details>
+        ))}
+      </div>
+    </section>
+  )}
+
+</Base>

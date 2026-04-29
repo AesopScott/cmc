@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import providers from '../../data/providers.json';
+import locations from '../../data/locations.json';
+
+export function getStaticPaths() {
+  return providers.map(p => ({ params: { slug: p.slug }, props: { provider: p } }));
+}
+
+const { provider: p } = Astro.props;
+const meta = p.meta || {};
+
+const specialty = p.terms?.ignyte_specialty?.[0] || '';
+const langs = p.terms?.ignyte_lang || [];
+const position = meta['ignyte-provider-position'] || '';
+
+// Resolve location names
+const providerLocations = (() => {
+  const locMap = meta['ignyte_locations[]'];
+  if (!locMap || typeof locMap !== 'object') return [];
+  return Object.values(locMap).filter(Boolean);
+})();
+---
+<Base title={p.title} description={`${p.title}, ${position} — Community Medical Centers provider.`}>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="/providers">Providers</a> / {p.title}</div>
+      <h1>{p.title}</h1>
+      {position && <p style="color:var(--gold);font-size:1.1rem;margin-top:0.5rem">{position}</p>}
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start">
+
+        <!-- Photo -->
+        <div>
+          <img
+            src={p.thumbnail || '/img/placeholder-provider.jpg'}
+            alt={p.title}
+            style="width:100%;border-radius:8px;border:1px solid var(--border)"
+          />
+        </div>
+
+        <!-- Details -->
+        <div>
+          {specialty && (
+            <div style="margin-bottom:1.5rem">
+              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Specialty</div>
+              <div>{specialty}</div>
+            </div>
+          )}
+
+          {langs.length > 0 && (
+            <div style="margin-bottom:1.5rem">
+              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Languages</div>
+              <div class="provider-tags">
+                {langs.map(l => <span class="badge">{l}</span>)}
+              </div>
+            </div>
+          )}
+
+          {providerLocations.length > 0 && (
+            <div style="margin-bottom:1.5rem">
+              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Locations</div>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem">
+                {providerLocations.map(name => <li style="color:var(--muted)">{name}</li>)}
+              </ul>
+            </div>
+          )}
+
+          <div style="margin-top:2rem">
+            <a href="tel:2099444700" class="btn btn-primary">Schedule Appointment</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Base>

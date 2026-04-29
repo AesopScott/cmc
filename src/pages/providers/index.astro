@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import providers from '../../data/providers.json';
+import taxonomies from '../../data/taxonomies.json';
+
+const specialties = taxonomies.ignyte_specialty.filter(s => s.count > 0).map(s => s.name);
+---
+<Base title="Providers" description="Find a Community Medical Centers healthcare provider near you.">
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Our Providers</h1>
+      <p>Meet the dedicated physicians, nurse practitioners, and specialists who serve our community.</p>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <input type="text" id="search" placeholder="Search by name..." style="flex:1;min-width:200px" />
+      <select id="specialty-filter">
+        <option value="">All Specialties</option>
+        {specialties.map(s => <option value={s}>{s}</option>)}
+      </select>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-4" id="provider-grid">
+        {providers.map(p => {
+          const specialty = p.terms?.ignyte_specialty?.[0] || '';
+          const langs = (p.terms?.ignyte_lang || []).join(', ');
+          return (
+            <a href={`/providers/${p.slug}`} class="card" style="display:block"
+               data-name={p.title.toLowerCase()}
+               data-specialty={specialty.toLowerCase()}>
+              <img class="provider-photo" src={p.thumbnail || '/img/placeholder-provider.jpg'} alt={p.title} loading="lazy" />
+              <div class="card-body">
+                <div class="provider-name">{p.title}</div>
+                <div class="provider-title">{p.meta?.['ignyte-provider-position']}</div>
+                {specialty && <div class="badge" style="margin-top:0.5rem">{specialty}</div>}
+                {langs && <div style="font-size:0.75rem;color:var(--muted);margin-top:0.5rem">{langs}</div>}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+      <p id="no-results" style="display:none;text-align:center;color:var(--muted);padding:3rem 0">No providers match your search.</p>
+    </div>
+  </section>
+
+  <script>
+    const search = document.getElementById('search');
+    const specialtyFilter = document.getElementById('specialty-filter');
+    const cards = document.querySelectorAll('#provider-grid .card');
+    const noResults = document.getElementById('no-results');
+
+    function filter() {
+      const q = search.value.toLowerCase();
+      const sp = specialtyFilter.value.toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const matchName = !q || card.dataset.name.includes(q);
+        const matchSpec = !sp || card.dataset.specialty.includes(sp);
+        const show = matchName && matchSpec;
+        card.style.display = show ? 'block' : 'none';
+        if (show) visible++;
+      });
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    search.addEventListener('input', filter);
+    specialtyFilter.addEventListener('change', filter);
+  </script>
+
+</Base>

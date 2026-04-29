@@ -1,0 +1,58 @@
+---
+import Base from '../../layouts/Base.astro';
+import locations from '../../data/locations.json';
+
+function getHours(meta) {
+  const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  const rows = [];
+  for (let i = 1; i <= 7; i++) {
+    if (meta[`enableday${i}`] === '1' || meta[`enableday${i}`] === 1) {
+      rows.push({ day: days[i-1], open: meta[`open${i}`] || '', close: meta[`close${i}`] || '' });
+    }
+  }
+  return rows;
+}
+---
+<Base title="Locations" description="Find a Community Medical Centers clinic near you in the Central Valley.">
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Our Locations</h1>
+      <p>We have clinics throughout the Central Valley — find the one closest to you.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        {locations.map(loc => {
+          const hours = getHours(loc.meta || {});
+          const todayHours = hours[0];
+          return (
+            <a href={`/locations/${loc.slug}`} class="card" style="display:block">
+              {loc.thumbnail && <img class="card-img" src={loc.thumbnail} alt={loc.title} loading="lazy" />}
+              <div class="card-body">
+                {loc.meta?.['offering-type'] && <div class="card-eyebrow">{loc.meta['offering-type']}</div>}
+                <h3>{loc.title}</h3>
+                <div class="location-info">
+                  {loc.meta?.ignyte_location_address && (
+                    <div class="location-info-row">{loc.meta.ignyte_location_address}</div>
+                  )}
+                  {loc.meta?.ignyte_location_phone && (
+                    <div class="location-info-row">{loc.meta.ignyte_location_phone}</div>
+                  )}
+                  {todayHours && (
+                    <div class="location-info-row" style="color:var(--gold);font-size:0.8rem">
+                      Mon–Fri {todayHours.open}–{todayHours.close}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+</Base>

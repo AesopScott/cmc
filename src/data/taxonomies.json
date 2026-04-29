@@ -1,0 +1,595 @@
+{
+    "ignyte_specialty": [
+        {
+            "id": 19,
+            "slug": "behavioral-health",
+            "name": "Behavioral Health",
+            "count": 25,
+            "parent": 0
+        },
+        {
+            "id": 20,
+            "slug": "chiropractic",
+            "name": "Chiropractic",
+            "count": 4,
+            "parent": 0
+        },
+        {
+            "id": 25,
+            "slug": "dental-hygiene",
+            "name": "Dental Hygiene",
+            "count": 5,
+            "parent": 0
+        },
+        {
+            "id": 52,
+            "slug": "dermatalogy",
+            "name": "Dermatalogy",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 53,
+            "slug": "endocrinology",
+            "name": "Endocrinology",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 54,
+            "slug": "family-medicine",
+            "name": "Family Medicine",
+            "count": 44,
+            "parent": 0
+        },
+        {
+            "id": 73,
+            "slug": "family-medicine-urgent-care",
+            "name": "Family Medicine/Urgent Care",
+            "count": 0,
+            "parent": 0
+        },
+        {
+            "id": 26,
+            "slug": "general-dentistry",
+            "name": "General Dentistry",
+            "count": 12,
+            "parent": 0
+        },
+        {
+            "id": 56,
+            "slug": "internal-medicine",
+            "name": "Internal Medicine",
+            "count": 12,
+            "parent": 0
+        },
+        {
+            "id": 57,
+            "slug": "nutrition",
+            "name": "Nutrition",
+            "count": 4,
+            "parent": 0
+        },
+        {
+            "id": 58,
+            "slug": "ob-gyn",
+            "name": "OB/GYN",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 78,
+            "slug": "optometry",
+            "name": "Optometry",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 59,
+            "slug": "pediatrics",
+            "name": "Pediatrics",
+            "count": 24,
+            "parent": 0
+        },
+        {
+            "id": 60,
+            "slug": "podiatry",
+            "name": "Podiatry",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 61,
+            "slug": "psychiatry",
+            "name": "Psychiatry",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 64,
+            "slug": "specialty",
+            "name": "Specialty",
+            "count": 0,
+            "parent": 0
+        },
+        {
+            "id": 62,
+            "slug": "urgent-care",
+            "name": "Urgent Care",
+            "count": 0,
+            "parent": 0
+        },
+        {
+            "id": 63,
+            "slug": "womens-health",
+            "name": "Women's Health",
+            "count": 6,
+            "parent": 0
+        }
+    ],
+    "ignyte_lang": [
+        {
+            "id": 112,
+            "slug": "cantonese",
+            "name": "Cantonese",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 125,
+            "slug": "chinese",
+            "name": "Chinese",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 102,
+            "slug": "english",
+            "name": "English",
+            "count": 144,
+            "parent": 0
+        },
+        {
+            "id": 109,
+            "slug": "farsi",
+            "name": "Farsi",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 127,
+            "slug": "french",
+            "name": "French",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 117,
+            "slug": "gujarati",
+            "name": "Gujarati",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 104,
+            "slug": "hindi",
+            "name": "Hindi",
+            "count": 28,
+            "parent": 0
+        },
+        {
+            "id": 105,
+            "slug": "hmong",
+            "name": "Hmong",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 114,
+            "slug": "igbo",
+            "name": "Igbo",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 116,
+            "slug": "japanese",
+            "name": "Japanese",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 118,
+            "slug": "kannada",
+            "name": "Kannada",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 129,
+            "slug": "konkani",
+            "name": "Konkani",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 124,
+            "slug": "korean",
+            "name": "Korean",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 115,
+            "slug": "malayalam",
+            "name": "Malayalam",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 110,
+            "slug": "mandarin",
+            "name": "Mandarin",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 106,
+            "slug": "marathi",
+            "name": "Marathi",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 126,
+            "slug": "myanmar",
+            "name": "Myanmar",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 122,
+            "slug": "nepali",
+            "name": "Nepali",
+            "count": 4,
+            "parent": 0
+        },
+        {
+            "id": 130,
+            "slug": "portuguese-some-spanish",
+            "name": "Portuguese: some Spanish",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 107,
+            "slug": "punjabi",
+            "name": "Punjabi",
+            "count": 10,
+            "parent": 0
+        },
+        {
+            "id": 121,
+            "slug": "shona",
+            "name": "Shona",
+            "count": 0,
+            "parent": 0
+        },
+        {
+            "id": 103,
+            "slug": "spanish",
+            "name": "Spanish",
+            "count": 29,
+            "parent": 0
+        },
+        {
+            "id": 113,
+            "slug": "tagalog",
+            "name": "Tagalog",
+            "count": 8,
+            "parent": 0
+        },
+        {
+            "id": 128,
+            "slug": "tagalog-some-spanish",
+            "name": "Tagalog: some Spanish",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 111,
+            "slug": "tagalog-some-spanish-ilocano",
+            "name": "Tagalog: some Spanish &amp; Ilocano",
+            "count": 0,
+            "parent": 0
+        },
+        {
+            "id": 119,
+            "slug": "tamil",
+            "name": "Tamil",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 120,
+            "slug": "telugu",
+            "name": "Telugu",
+            "count": 6,
+            "parent": 0
+        },
+        {
+            "id": 108,
+            "slug": "urdu",
+            "name": "Urdu",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 123,
+            "slug": "vietnamese",
+            "name": "Vietnamese",
+            "count": 1,
+            "parent": 0
+        }
+    ],
+    "ignyte_team_type": [
+        {
+            "id": 13,
+            "slug": "board-members",
+            "name": "Board Members",
+            "count": 12,
+            "parent": 0
+        },
+        {
+            "id": 12,
+            "slug": "executives",
+            "name": "Executives",
+            "count": 8,
+            "parent": 0
+        }
+    ],
+    "ignyte_faq_type": [
+        {
+            "id": 9,
+            "slug": "about-page",
+            "name": "About Page",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 144,
+            "slug": "career-page",
+            "name": "Career Page",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 11,
+            "slug": "location-page",
+            "name": "Location Page",
+            "count": 0,
+            "parent": 0
+        },
+        {
+            "id": 10,
+            "slug": "service-page",
+            "name": "Service Page",
+            "count": 0,
+            "parent": 0
+        }
+    ],
+    "category": [
+        {
+            "id": 138,
+            "slug": "epic-upgrade",
+            "name": "EPIC UPGRADE",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 131,
+            "slug": "patient-stories",
+            "name": "PATIENT STORIES",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 7,
+            "slug": "community",
+            "name": "COMMUNITY",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 6,
+            "slug": "events",
+            "name": "EVENTS",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 1,
+            "slug": "news",
+            "name": "NEWS",
+            "count": 6,
+            "parent": 0
+        },
+        {
+            "id": 8,
+            "slug": "team",
+            "name": "TEAM",
+            "count": 0,
+            "parent": 0
+        }
+    ],
+    "post_tag": [
+        {
+            "id": 158,
+            "slug": "a-black-white-masquerade",
+            "name": "A Black &amp; White Masquerade",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 161,
+            "slug": "adolescent-health",
+            "name": "Adolescent Health",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 165,
+            "slug": "adolescent-health-center",
+            "name": "Adolescent Health Center",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 163,
+            "slug": "behavioral-health",
+            "name": "Behavioral Health",
+            "count": 2,
+            "parent": 0
+        },
+        {
+            "id": 157,
+            "slug": "charity-gala",
+            "name": "Charity Gala",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 159,
+            "slug": "cmc-annual-gala",
+            "name": "CMC Annual Gala",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 143,
+            "slug": "cmc-events",
+            "name": "CMC events",
+            "count": 0,
+            "parent": 0
+        },
+        {
+            "id": 151,
+            "slug": "cmc-holiday-giving",
+            "name": "CMC Holiday Giving",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 148,
+            "slug": "community-medical-centers",
+            "name": "Community Medical Centers",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 160,
+            "slug": "gala-tickets",
+            "name": "Gala Tickets",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 166,
+            "slug": "integrated-care",
+            "name": "Integrated Care",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 141,
+            "slug": "media-release",
+            "name": "media release",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 142,
+            "slug": "national-health-center-week",
+            "name": "national health center week",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 150,
+            "slug": "san-joaquin-delta-college-events",
+            "name": "San Joaquin Delta College Events",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 164,
+            "slug": "stockton",
+            "name": "Stockton",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 147,
+            "slug": "stockton-community-events-saturday-october-25-2025",
+            "name": "Stockton community events Saturday october 25 2025",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 156,
+            "slug": "stockton-events",
+            "name": "Stockton Events",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 146,
+            "slug": "stockton-poetry-event",
+            "name": "Stockton poetry event",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 153,
+            "slug": "stockton-ports-sponsor",
+            "name": "Stockton Ports Sponsor",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 155,
+            "slug": "sud",
+            "name": "SUD",
+            "count": 3,
+            "parent": 0
+        },
+        {
+            "id": 149,
+            "slug": "tuleburg-press",
+            "name": "Tuleburg Press",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 154,
+            "slug": "we-paint-sponsor",
+            "name": "We Paint Sponsor",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 145,
+            "slug": "wordsoutspoken-literary-resource-fair-stockton-poetry-event-stockton-community-events-san-joaquin-delta-college-tuleburg-press-community-medical-centers",
+            "name": "WordsOutspoken Literary &amp; Resource Fair Stockton poetry event Stockton community events San Joaquin Delta College Tuleburg Press Community Medical Centers",
+            "count": 1,
+            "parent": 0
+        },
+        {
+            "id": 162,
+            "slug": "youth-health",
+            "name": "Youth Health",
+            "count": 2,
+            "parent": 0
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+---
+import Base from '../../layouts/Base.astro';
+import locations from '../../data/locations.json';
+import providers from '../../data/providers.json';
+
+export function getStaticPaths() {
+  return locations.map(loc => ({ params: { slug: loc.slug }, props: { loc } }));
+}
+
+const { loc } = Astro.props;
+const meta = loc.meta || {};
+
+const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+function getHours(m) {
+  const rows = [];
+  for (let i = 1; i <= 7; i++) {
+    if (m[`enableday${i}`] === '1' || m[`enableday${i}`] === 1) {
+      rows.push({ day: days[i-1], open: m[`open${i}`] || '', close: m[`close${i}`] || '' });
+    }
+  }
+  return rows;
+}
+const hours = getHours(meta);
+
+// Providers at this location
+const locProviders = providers.filter(p => {
+  const locs = p.meta?.['ignyte_locations[]'];
+  if (!locs) return false;
+  return Object.values(locs).some(name =>
+    typeof name === 'string' && loc.title && name.toLowerCase().includes(loc.title.toLowerCase().replace(/^cmc\s*/i, '').split(' ')[0])
+  );
+}).slice(0, 6);
+---
+<Base title={loc.title} description={`${loc.title} — Community Medical Centers clinic in the Central Valley.`}>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="/locations">Locations</a> / {loc.title}</div>
+      <h1>{loc.title}</h1>
+      {meta['offering-type'] && <p>{meta['offering-type']}</p>}
+    </div>
+  </div>
+
+  {loc.thumbnail && (
+    <div style="width:100%;max-height:400px;overflow:hidden">
+      <img src={loc.thumbnail} alt={loc.title} style="width:100%;height:400px;object-fit:cover" />
+    </div>
+  )}
+
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
+
+        <!-- Contact & Hours -->
+        <div>
+          <h2 style="margin-bottom:1.5rem;font-size:1.4rem">Contact &amp; Hours</h2>
+
+          {meta.ignyte_location_address && (
+            <div style="margin-bottom:1.25rem">
+              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Address</div>
+              <div>{meta.ignyte_location_address}</div>
+            </div>
+          )}
+
+          {meta.ignyte_location_phone && (
+            <div style="margin-bottom:1.25rem">
+              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Phone</div>
+              <a href={`tel:${meta.ignyte_location_phone.replace(/[^\d]/g,'')}`}>{meta.ignyte_location_phone}</a>
+            </div>
+          )}
+
+          {hours.length > 0 && (
+            <div style="margin-bottom:1.25rem">
+              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem">Hours</div>
+              <table class="hours-table">
+                <tbody>
+                  {hours.map(h => (
+                    <tr>
+                      <td>{h.day}</td>
+                      <td>{h.open} – {h.close}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          <div style="margin-top:2rem">
+            <a href={`https://maps.google.com/?q=${encodeURIComponent(meta.ignyte_location_address || loc.title)}`}
+               target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div style="background:var(--navy-mid);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+          {meta.gllpLatitude && meta.gllpLongitude ? (
+            <iframe
+              src={`https://maps.google.com/maps?q=${meta.gllpLatitude},${meta.gllpLongitude}&z=15&output=embed`}
+              width="100%" height="360" style="border:0;display:block" loading="lazy"
+              title={`Map of ${loc.title}`}
+            />
+          ) : (
+            <div style="height:360px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Map unavailable</div>
+          )}
+        </div>
+
+      </div>
+
+      <!-- Providers at this location -->
+      {locProviders.length > 0 && (
+        <div style="margin-top:4rem">
+          <h2 style="margin-bottom:1.5rem;font-size:1.4rem">Providers at This Location</h2>
+          <div class="grid-4">
+            {locProviders.map(p => (
+              <a href={`/providers/${p.slug}`} class="card" style="display:block">
+                <img class="provider-photo" src={p.thumbnail || '/img/placeholder-provider.jpg'} alt={p.title} loading="lazy" />
+                <div class="card-body">
+                  <div class="provider-name">{p.title}</div>
+                  <div class="provider-title">{p.meta?.['ignyte-provider-position']}</div>
+                  {p.terms?.ignyte_specialty?.[0] && <div style="font-size:0.8rem;color:var(--muted)">{p.terms.ignyte_specialty[0]}</div>}
+                </div>
+              </a>
+            ))}
+          </div>
+          <div style="margin-top:1.5rem">
+            <a href="/providers" class="btn btn-outline">View All Providers</a>
+          </div>
+        </div>
+      )}
+
+    </div>
+  </section>
+
+</Base>

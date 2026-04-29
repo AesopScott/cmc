@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import services from '../../data/services.json';
+---
+<Base title="Services" description="Community Medical Centers offers comprehensive healthcare services including primary care, dental, behavioral health, and more.">
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Health Services</h1>
+      <p>We offer a wide range of services to meet the needs of every patient, from newborns to seniors.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        {services.map(svc => (
+          <a href={`/services/${svc.slug}`} class="card" style="display:block">
+            {svc.thumbnail && <img class="card-img" src={svc.thumbnail} alt={svc.title} loading="lazy" />}
+            <div class="card-body">
+              <h3>{svc.title}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Base>

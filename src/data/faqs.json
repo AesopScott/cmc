@@ -1,0 +1,86 @@
+[
+    {
+        "id": 413,
+        "slug": "do-i-need-to-make-an-appointment",
+        "title": "Do I need to make an appointment?",
+        "url": "https://cmcenters.org/faqslist/do-i-need-to-make-an-appointment/",
+        "date": "2023-07-26 16:42:45",
+        "modified": "2025-09-02 17:00:26",
+        "excerpt": "",
+        "content": "<strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "thumbnail": null,
+        "meta": {
+            "_edit_last": "10",
+            "_edit_lock": "1757532235:10",
+            "_yoast_wpseo_primary_ignyte_faq_type": "",
+            "_yoast_wpseo_content_score": "90",
+            "_yoast_wpseo_estimated-reading-time-minutes": "1"
+        },
+        "terms": []
+    },
+    {
+        "id": 417,
+        "slug": "question-2",
+        "title": "Question 2",
+        "url": "https://cmcenters.org/faqslist/question-2/",
+        "date": "2023-07-26 18:43:55",
+        "modified": "2023-07-27 04:51:13",
+        "excerpt": "",
+        "content": "<strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "thumbnail": null,
+        "meta": {
+            "_dp_original": "413",
+            "_edit_last": "1",
+            "_edit_lock": "1690433473:1"
+        },
+        "terms": {
+            "ignyte_faq_type": [
+                "About Page"
+            ]
+        }
+    },
+    {
+        "id": 418,
+        "slug": "question-3",
+        "title": "Question 3",
+        "url": "https://cmcenters.org/faqslist/question-3/",
+        "date": "2023-07-26 18:44:59",
+        "modified": "2023-07-27 04:51:21",
+        "excerpt": "",
+        "content": "<strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "thumbnail": null,
+        "meta": {
+            "_dp_original": "417",
+            "_edit_last": "1",
+            "_edit_lock": "1690433720:1"
+        },
+        "terms": {
+            "ignyte_faq_type": [
+                "About Page"
+            ]
+        }
+    },
+    {
+        "id": 2928,
+        "slug": "whats-the-hiring-process-like",
+        "title": "What's the hiring process like?",
+        "url": "https://cmcenters.org/faqslist/whats-the-hiring-process-like/",
+        "date": "2025-09-02 17:03:13",
+        "modified": "2025-09-02 17:18:11",
+        "excerpt": "",
+        "content": "",
+        "thumbnail": null,
+        "meta": {
+            "_edit_lock": "1756918351:10",
+            "_edit_last": "12",
+            "_yoast_wpseo_primary_ignyte_faq_type": "144",
+            "_yoast_wpseo_content_score": "90",
+            "_yoast_wpseo_estimated-reading-time-minutes": "0"
+        },
+        "terms": {
+            "ignyte_faq_type": [
+                "Career Page"
+            ]
+        }
+    }
+]

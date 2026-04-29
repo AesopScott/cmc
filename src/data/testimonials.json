@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1916,
+        "slug": "alexandra-penn",
+        "title": "Alexandra Penn",
+        "url": "https://cmcenters.org/testimonial/alexandra-penn/",
+        "date": "2024-02-24 02:36:54",
+        "modified": "2024-02-25 05:25:25",
+        "excerpt": "",
+        "content": "",
+        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/staff-testimonial-ALEXANDRA-PENN-scaled.jpg",
+        "meta": {
+            "_edit_last": "1",
+            "_edit_lock": "1713393058:1",
+            "testmonial_content": "I’ve always had a desire to help others, primarily underserved communities, marginalized communities. It’s kind of personal. When I was growing up there were times when there were people who went out of their way to reach out to me. That always stuck with me.",
+            "ignyte_testimonial_name": "Alexandra Penn",
+            "ignyte_testmonial_position": "Health Equity Manager",
+            "ignyte_testmonial_location": "",
+            "_thumbnail_id": "1967"
+        },
+        "terms": []
+    },
+    {
+        "id": 444,
+        "slug": "gloria-kishi",
+        "title": "Gloria Kishi",
+        "url": "https://cmcenters.org/testimonial/gloria-kishi/",
+        "date": "2023-07-28 07:05:44",
+        "modified": "2024-02-25 05:25:52",
+        "excerpt": "",
+        "content": "",
+        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/staff-testimonial-GLORIA-KISHI.jpg",
+        "meta": {
+            "_thumbnail_id": "1966",
+            "testmonial_content": "My parents were migrant workers and it was really hard for them to go to a doctor back then. My parents didn’t understand English. I kind of wanted to be in a position to be able to help them. This is where I started to work with the Hispanic community, helping the patients. And that’s what I’m doing now: helping the patients.",
+            "ignyte_testimonial_name": "Gloria Kishi",
+            "ignyte_testmonial_position": "West Lane Medical Assistant ",
+            "ignyte_testmonial_location": "",
+            "_dp_original": "441",
+            "_edit_last": "1",
+            "_edit_lock": "1708838608:1",
+            "_wp_old_slug": "first-name-last-name-2"
+        },
+        "terms": []
+    },
+    {
+        "id": 445,
+        "slug": "marlianne-asuncion",
+        "title": "Marlianne Asuncion",
+        "url": "https://cmcenters.org/testimonial/marlianne-asuncion/",
+        "date": "2023-07-28 07:07:09",
+        "modified": "2024-02-25 05:25:40",
+        "excerpt": "",
+        "content": "",
+        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/staff-testimonial-MARLIANNE-ASUNCION.jpg",
+        "meta": {
+            "_thumbnail_id": "1969",
+            "testmonial_content": "It’s different to be part of a team where you know you’re really making a difference. We’re really working to give what we can to patients no one is really paying attention to. Everyone is deserving of care, no matter their background.",
+            "ignyte_testimonial_name": "Marlianne Asuncion",
+            "ignyte_testmonial_position": "Vacaville Center Manager",
+            "ignyte_testmonial_location": "",
+            "_dp_original": "444",
+            "_edit_last": "1",
+            "_edit_lock": "1708838598:1",
+            "_wp_old_slug": "first-name-last-name-3"
+        },
+        "terms": []
+    },
+    {
+        "id": 441,
+        "slug": "nneka-omekam",
+        "title": "Nneka Omekam",
+        "url": "https://cmcenters.org/testimonial/nneka-omekam/",
+        "date": "2023-07-28 06:57:56",
+        "modified": "2024-02-25 05:26:03",
+        "excerpt": "",
+        "content": "",
+        "thumbnail": "https://cmcenters.org/wp-content/uploads/2024/02/staff-testimonial-NNEKA-OMEKAM.jpg",
+        "meta": {
+            "_edit_last": "1",
+            "_edit_lock": "1708838824:1",
+            "_thumbnail_id": "1970",
+            "testmonial_content": "CMC has a beautifully diverse group of dietitians. And we are representative of the members of our patient population who need nutrition services the most. Our work is centered around improving the health of our patients.",
+            "ignyte_testimonial_name": "Nneka Omekam",
+            "ignyte_testmonial_position": "Registered Dietitian Team Lead",
+            "ignyte_testmonial_location": "",
+            "_wp_old_slug": "first-name-last-name"
+        },
+        "terms": []
+    }
+]

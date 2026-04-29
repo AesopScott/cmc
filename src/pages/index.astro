@@ -1,0 +1,151 @@
+---
+import Base from '../layouts/Base.astro';
+import locations from '../data/locations.json';
+import services from '../data/services.json';
+import posts from '../data/posts.json';
+
+const featuredLocations = locations.slice(0, 3);
+const featuredServices = services.slice(0, 6);
+const recentPosts = posts.slice(0, 3);
+
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+<Base title="Home" description="Community Medical Centers — Quality, compassionate healthcare for all in the Central Valley since 1968.">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">Serving the Central Valley since 1968</span>
+      <h1>Healthcare for <em>every</em> member of our community</h1>
+      <p>Community Medical Centers provides quality, compassionate care to all patients — regardless of their ability to pay.</p>
+      <div class="hero-actions">
+        <a href="/locations" class="btn btn-primary">Find a Location</a>
+        <a href="/providers" class="btn btn-outline">Meet Our Providers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Clinic Locations</div>
+        </div>
+        <div>
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Providers</div>
+        </div>
+        <div>
+          <div class="stat-number">30+</div>
+          <div class="stat-label">Languages Spoken</div>
+        </div>
+        <div>
+          <div class="stat-number">55+</div>
+          <div class="stat-label">Years of Service</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Comprehensive Health Services</h2>
+        <p>From primary care to behavioral health, dental, and beyond — we care for the whole person.</p>
+      </div>
+      <div class="grid-3">
+        {featuredServices.map(svc => (
+          <a href={`/services/${svc.slug}`} class="card" style="display:block">
+            {svc.thumbnail && <img class="card-img" src={svc.thumbnail} alt={svc.title} loading="lazy" />}
+            <div class="card-body">
+              <h3>{svc.title}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div style="text-align:center; margin-top:2.5rem">
+        <a href="/services" class="btn btn-outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Locations -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Close to Home</span>
+        <h2>Locations Throughout the Central Valley</h2>
+        <p>We have clinics in Stockton, Modesto, Vacaville, and surrounding communities.</p>
+      </div>
+      <div class="grid-3">
+        {featuredLocations.map(loc => (
+          <a href={`/locations/${loc.slug}`} class="card" style="display:block">
+            {loc.thumbnail && <img class="card-img" src={loc.thumbnail} alt={loc.title} loading="lazy" />}
+            <div class="card-body">
+              <h3>{loc.title}</h3>
+              {loc.meta?.ignyte_location_phone && (
+                <div class="location-info">
+                  <div class="location-info-row">{loc.meta.ignyte_location_phone}</div>
+                </div>
+              )}
+              {loc.meta?.ignyte_location_address && (
+                <div class="location-info-row" style="font-size:0.82rem;margin-top:0.25rem;color:var(--muted)">{loc.meta.ignyte_location_address}</div>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+      <div style="text-align:center; margin-top:2.5rem">
+        <a href="/locations" class="btn btn-outline">View All Locations</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- News -->
+  {recentPosts.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Latest</span>
+          <h2>News &amp; Stories</h2>
+        </div>
+        <div class="grid-3">
+          {recentPosts.map(post => (
+            <a href={`/news/${post.slug}`} class="card" style="display:block">
+              {post.thumbnail && <img class="card-img" src={post.thumbnail} alt={post.title} loading="lazy" />}
+              <div class="card-body">
+                {post.terms?.category?.[0] && <div class="card-eyebrow">{post.terms.category[0]}</div>}
+                <h3>{post.title}</h3>
+                {post.excerpt && <p style="margin-top:0.5rem">{post.excerpt}</p>}
+                <div style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem">{formatDate(post.date)}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div style="text-align:center; margin-top:2.5rem">
+          <a href="/news" class="btn btn-outline">All News &amp; Events</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA Banner -->
+  <section style="background:var(--navy-light);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0;text-align:center">
+    <div class="container">
+      <h2 style="margin-bottom:1rem">Ready to schedule an appointment?</h2>
+      <p style="color:var(--muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">We welcome new patients and accept most insurance plans, including Medi-Cal and Medicare.</p>
+      <a href="tel:2099444700" class="btn btn-primary" style="font-size:1.05rem">(209) 944-4700</a>
+    </div>
+  </section>
+
+</Base>
