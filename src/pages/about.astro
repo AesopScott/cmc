@@ -12,6 +12,50 @@ function stripWpBlocks(html) {
   if (!html) return '';
   return html.replace(/<!-- \/?wp:[^>]* -->/g, '').replace(/<\/?figure[^>]*>/g, '').trim();
 }
+
+// Parse title and credentials from ignyte_team_title_content and team_location
+function parseMember(member) {
+  const raw = member.meta?.ignyte_team_title_content || '';
+  const teamLoc = member.meta?.team_location || '';
+
+  // Split title from any embedded credentials (first comma separates them)
+  const commaIdx = raw.indexOf(',');
+  const title = commaIdx > -1 ? raw.slice(0, commaIdx).trim() : raw.trim();
+  const credFromTitle = commaIdx > -1 ? raw.slice(commaIdx + 1).trim() : '';
+
+  // team_location is a credential only if it's not a role descriptor
+  const NON_CRED = ['patient', 'community leader', ''];
+  const locCred = teamLoc && !NON_CRED.includes(teamLoc.toLowerCase()) ? teamLoc : '';
+
+  const credentials = [credFromTitle, locCred].filter(Boolean).join(', ');
+
+  return { title, credentials };
+}
+
+// Executives: CEO first, then alphabetical by display name
+const EXEC_OFFICER_ORDER = ['chief executive officer'];
+const sortedExecutives = [...executives].sort((a, b) => {
+  const aTitle = (a.meta?.ignyte_team_title_content || '').split(',')[0].trim().toLowerCase();
+  const bTitle = (b.meta?.ignyte_team_title_content || '').split(',')[0].trim().toLowerCase();
+  const aRank = EXEC_OFFICER_ORDER.indexOf(aTitle);
+  const bRank = EXEC_OFFICER_ORDER.indexOf(bTitle);
+  if (aRank > -1 && bRank === -1) return -1;
+  if (bRank > -1 && aRank === -1) return 1;
+  return a.title.localeCompare(b.title);
+});
+
+// Board: President → VP → Secretary → Treasurer → alpha
+const BOARD_OFFICER_ORDER = ['board president', 'board vice president', 'board secretary', 'treasurer'];
+const sortedBoard = [...board].sort((a, b) => {
+  const aTitle = (a.meta?.ignyte_team_title_content || '').split(',')[0].trim().toLowerCase();
+  const bTitle = (b.meta?.ignyte_team_title_content || '').split(',')[0].trim().toLowerCase();
+  const aRank = BOARD_OFFICER_ORDER.indexOf(aTitle);
+  const bRank = BOARD_OFFICER_ORDER.indexOf(bTitle);
+  if (aRank > -1 && bRank > -1) return aRank - bRank;
+  if (aRank > -1) return -1;
+  if (bRank > -1) return 1;
+  return a.title.localeCompare(b.title);
+});
 ---
 <Base title="About" description="Learn about Community Medical Centers — our mission, history, leadership, and commitment to the Central Valley.">
 
@@ -62,7 +106,7 @@ function stripWpBlocks(html) {
   <hr class="divider" />
 
   <!-- Leadership -->
-  {executives.length > 0 && (
+  {sortedExecutives.length > 0 && (
     <section class="section">
       <div class="container">
         <div class="section-header">
@@ -70,22 +114,28 @@ function stripWpBlocks(html) {
           <h2>Executive Team</h2>
         </div>
         <div class="grid-4">
-          {executives.map(member => (
-            <div class="card">
-              {member.thumbnail && <img class="provider-photo" src={member.thumbnail} alt={member.title} loading="lazy" />}
-              <div class="card-body">
-                <div class="provider-name">{member.title}</div>
-                <div class="provider-title">{member.meta?.ignyte_team_title || ''}</div>
+          {sortedExecutives.map(member => {
+            const { title, credentials } = parseMember(member);
+            return (
+              <div class="card">
+                {member.thumbnail && <img class="provider-photo" src={member.thumbnail} alt={member.title} loading="lazy" />}
+                <div class="card-body">
+                  <div class="provider-name">
+                    {member.title}
+                    {credentials && <span style="font-size:0.8em;font-weight:400;color:var(--muted)">, {credentials}</span>}
+                  </div>
+                  <div class="provider-title">{title}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   )}
 
   <!-- Board -->
-  {board.length > 0 && (
+  {sortedBoard.length > 0 && (
     <section class="section" style="padding-top:0">
       <div class="container">
         <div class="section-header">
@@ -93,15 +143,21 @@ function stripWpBlocks(html) {
           <h2>Board of Directors</h2>
         </div>
         <div class="grid-4">
-          {board.map(member => (
-            <div class="card">
-              {member.thumbnail && <img class="provider-photo" src={member.thumbnail} alt={member.title} loading="lazy" />}
-              <div class="card-body">
-                <div class="provider-name">{member.title}</div>
-                <div class="provider-title">{member.meta?.ignyte_team_title || ''}</div>
+          {sortedBoard.map(member => {
+            const { title, credentials } = parseMember(member);
+            return (
+              <div class="card">
+                {member.thumbnail && <img class="provider-photo" src={member.thumbnail} alt={member.title} loading="lazy" />}
+                <div class="card-body">
+                  <div class="provider-name">
+                    {member.title}
+                    {credentials && <span style="font-size:0.8em;font-weight:400;color:var(--muted)">, {credentials}</span>}
+                  </div>
+                  <div class="provider-title">{title}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
