@@ -5,6 +5,12 @@ export function stripWpBlocks(html) {
     .replace(/<\/?figure[^>]*>/g, '')
     // Make all internal cmcenters.org links root-relative so they work on any environment
     .replace(/https?:\/\/(?:www\.)?cmcenters\.org/g, '')
+    // Demote h1 → h2: every page already has its own <h1> in the page header (WCAG 1.3.1)
+    .replace(/<h1(\s[^>]*)?>/gi, '<h2$1>')
+    .replace(/<\/h1>/gi, '</h2>')
+    // Add alt="" to any <img> missing an alt attribute (WCAG 1.1.1)
+    .replace(/<img\b([^>]*)>/gi, (match, attrs) =>
+      /\balt=/i.test(attrs) ? match : `<img${attrs} alt="">`)
     .trim();
 }
 

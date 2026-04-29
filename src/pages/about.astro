@@ -3,15 +3,11 @@ import Base from '../layouts/Base.astro';
 import team from '../data/team.json';
 import timeline from '../data/timeline.json';
 import faqs from '../data/faqs.json';
+import { stripWpBlocks } from '../utils/content.js';
 
 const executives = team.filter(m => m.terms?.ignyte_team_type?.includes('Executives'));
 const board = team.filter(m => m.terms?.ignyte_team_type?.includes('Board Members'));
 const aboutFaqs = faqs.filter(f => f.terms?.ignyte_faq_type?.includes('About Page'));
-
-function stripWpBlocks(html) {
-  if (!html) return '';
-  return html.replace(/<!-- \/?wp:[^>]* -->/g, '').replace(/<\/?figure[^>]*>/g, '').trim();
-}
 
 // Words that are role descriptors, not professional credentials
 const NON_CRED_TERMS = new Set(['patient', 'community leader', 'board member']);
