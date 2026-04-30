@@ -2,6 +2,20 @@
   "env": {
     "ECC_DISABLED_HOOKS": "gateguard-fact-force"
   },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /c/Users/scott/Code/cmc && git status --porcelain | grep -q . && git add -A && git commit -m \"chore: auto-commit session changes\" && git push 2>/dev/null || true",
+            "timeout": 30,
+            "statusMessage": "Pushing changes..."
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "allow": [
       "Bash(git add *)",
