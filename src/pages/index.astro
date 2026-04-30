@@ -32,7 +32,6 @@ const heroPhoto = featuredLocations[0]?.thumbnail || '/img/2024__03__0D2A1867-sc
       <!-- Content side -->
       <div style="display:flex;align-items:center;padding:4rem 3.5rem;background:var(--teal)">
         <div>
-          <span class="hero-eyebrow">Serving the Central Valley since 1968</span>
           <h1 style="font-size:clamp(1.9rem,3.5vw,2.9rem);color:var(--navy-footer);margin-bottom:1.25rem;font-weight:700;line-height:1.2">
             Healthcare for <em style="font-style:normal;color:#fff">every</em> member of our community
           </h1>
@@ -40,8 +39,7 @@ const heroPhoto = featuredLocations[0]?.thumbnail || '/img/2024__03__0D2A1867-sc
             Community Medical Centers provides quality, compassionate care to all patients — regardless of their ability to pay.
           </p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap">
-            <a href="/locations" class="btn btn-primary">Find a Location</a>
-            <a href="/providers" class="btn btn-outline">Meet Our Providers</a>
+            <a href="/about" class="btn btn-primary">About CMC</a>
           </div>
         </div>
       </div>
@@ -78,7 +76,6 @@ const heroPhoto = featuredLocations[0]?.thumbnail || '/img/2024__03__0D2A1867-sc
       <div class="section-header">
         <span class="eyebrow">What We Offer</span>
         <h2>Comprehensive Health Services</h2>
-        <p>From primary care to behavioral health, dental, and beyond — we care for the whole person.</p>
       </div>
       <div class="grid-3">
         {featuredServices.map(svc => (
@@ -107,7 +104,6 @@ const heroPhoto = featuredLocations[0]?.thumbnail || '/img/2024__03__0D2A1867-sc
       <div class="section-header">
         <span class="eyebrow">Close to Home</span>
         <h2>Locations Throughout the Central Valley</h2>
-        <p>We have clinics in Stockton, Modesto, Vacaville, and surrounding communities.</p>
       </div>
       <div class="grid-3">
         {featuredLocations.map(loc => (
@@ -163,16 +159,6 @@ const heroPhoto = featuredLocations[0]?.thumbnail || '/img/2024__03__0D2A1867-sc
     </section>
   )}
 
-  <!-- CTA Banner -->
-  <section style="background:var(--teal);padding:4rem 0;text-align:center">
-    <div class="container">
-      <h2 style="color:var(--navy-footer);margin-bottom:1rem;font-size:clamp(1.5rem,3vw,2rem)">Ready to schedule an appointment?</h2>
-      <p style="color:rgba(26,54,79,0.8);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">
-        We welcome new patients and accept most insurance plans, including Medi-Cal and Medicare.
-      </p>
-      <a href="tel:2099444700" class="btn btn-primary" style="font-size:1.05rem">(209) 944-4700</a>
-    </div>
-  </section>
 
 </Base>
 

@@ -27,11 +27,16 @@ const path = Astro.url.pathname;
   <!-- Utility Bar -->
   <div class="utility-bar">
     <div class="utility-bar-inner">
-      <a href="tel:2099444700">(209) 944-4700</a>
-      <span class="util-divider" aria-hidden="true">|</span>
-      <a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a>
-      <span class="util-divider" aria-hidden="true">|</span>
-      <a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a>
+      <span class="util-appt">
+        Call or Text for Appointments&nbsp;&nbsp;·&nbsp;&nbsp;<a href="tel:2096365400">Medical: (209) 636-5400</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="tel:2096365555">Dental: (209) 636-5555</a>
+      </span>
+      <div class="util-links">
+        <a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a>
+        <span class="util-divider" aria-hidden="true">|</span>
+        <a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Support CMC</a>
+        <span class="util-divider" aria-hidden="true">|</span>
+        <a href="/careers">Careers</a>
+      </div>
     </div>
   </div>
 
@@ -45,14 +50,13 @@ const path = Astro.url.pathname;
         <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="/services" class={path.startsWith('/services') ? 'active' : ''}>Services</a></li>
         <li><a href="/locations" class={path.startsWith('/locations') ? 'active' : ''}>Locations</a></li>
-        <li><a href="/providers" class={path.startsWith('/providers') ? 'active' : ''}>Providers</a></li>
+        <li><a href="/services" class={path.startsWith('/services') ? 'active' : ''}>Services</a></li>
         <li><a href="/patients" class={path.startsWith('/patients') ? 'active' : ''}>Patients</a></li>
+        <li><a href="/providers" class={path.startsWith('/providers') ? 'active' : ''}>Providers</a></li>
         <li><a href="/about" class={path === '/about/' || path === '/about' ? 'active' : ''}>About</a></li>
         <li><a href="/news" class={path.startsWith('/news') ? 'active' : ''}>News</a></li>
       </ul>
-      <a href="tel:2099444700" class="nav-cta">(209) 944-4700</a>
     </div>
   </nav>
 
@@ -62,46 +66,59 @@ const path = Astro.url.pathname;
 
   <footer class="site-footer">
     <div class="container">
+
+      <!-- E-news signup -->
+      <div class="footer-enews">
+        <p class="footer-enews-label">Stay Connected — Sign up for CMC News &amp; Updates</p>
+        <div class="ctct-inline-form" data-form-id="b800fa3de98e748a6aa00c9a4b40812a"></div>
+      </div>
+
       <div class="footer-grid">
-        <div class="footer-col footer-brand">
-          <a href="/" aria-label="Community Medical Centers home">
-            <img src="/img/cmc-logo.svg" alt="Community Medical Centers" style="height:48px;width:auto" />
-          </a>
-          <p>Providing quality, compassionate healthcare to all patients regardless of their ability to pay since 1968.</p>
-        </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>Contact Us</h4>
           <ul>
-            <li><a href="/services/adult-medicine">Adult Medicine</a></li>
-            <li><a href="/services/pediatrics">Pediatrics</a></li>
-            <li><a href="/services/behavioral-health">Behavioral Health</a></li>
-            <li><a href="/services/general-dentistry">Dental</a></li>
-            <li><a href="/services">All Services →</a></li>
+            <li><a href="tel:2096365400">Medical: (209) 636-5400</a></li>
+            <li><a href="tel:2096365555">Dental: (209) 636-5555</a></li>
+            <li><a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
+            <li><a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Support CMC</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/locations">Find a Location</a></li>
-            <li><a href="/providers">Find a Provider</a></li>
-            <li><a href="/patients">Patient Resources</a></li>
+            <li><a href="/locations">Locations</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/patients">Patients</a></li>
+            <li><a href="/providers">Providers</a></li>
             <li><a href="/about">About CMC</a></li>
             <li><a href="/news">News &amp; Events</a></li>
+            <li><a href="/careers">Careers</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4>Follow Us</h4>
           <ul>
-            <li><a href="tel:2099444700">(209) 944-4700</a></li>
-            <li><a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
-            <li><a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a></li>
+            <li><a href="https://www.facebook.com/cmcenters" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.instagram.com/cmcenters.inc/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@cmcenters" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            <li><a href="http://x.com/CMCinc78" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Community Medical Centers. All rights reserved.</p>
-        <p>Federally Qualified Health Center (FQHC)</p>
+        <p>&copy; {new Date().getFullYear()} Community Medical Centers. All rights reserved. &nbsp;·&nbsp; Federally Qualified Health Center (FQHC)</p>
+        <nav aria-label="Legal links" class="footer-legal">
+          <a href="https://cmcenters.org/terms-of-use/">Terms of Use</a>
+          <span class="util-divider" aria-hidden="true">|</span>
+          <a href="https://cmcenters.org/privacy-policy/">Privacy Policy</a>
+          <span class="util-divider" aria-hidden="true">|</span>
+          <a href="https://cmcenters.org/non-discrimination-notice/">Non-Discrimination Notice</a>
+          <span class="util-divider" aria-hidden="true">|</span>
+          <a href="https://cmcenters.org/fqhc-notifications/">FQHC Notifications</a>
+        </nav>
       </div>
+
     </div>
   </footer>
 
@@ -120,5 +137,10 @@ const path = Astro.url.pathname;
       }
     });
   </script>
+
+  <!-- Constant Contact Active Forms -->
+  <script>var _ctct_m = "b800fa3de98e748a6aa00c9a4b40812a";</script>
+  <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+
 </body>
 </html>
