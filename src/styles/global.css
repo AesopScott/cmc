@@ -212,6 +212,31 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 .location-info { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
 .location-info-row { display: flex; gap: 0.5rem; font-size: 0.875rem; color: var(--text-muted); }
 
+/* Location list rows */
+.location-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 1.25rem; background: #fff;
+  border: 1px solid var(--border); border-radius: 8px;
+  margin-bottom: 0.6rem; text-decoration: none; color: inherit;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  gap: 1rem;
+}
+.location-row:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.09); border-color: var(--teal-dark); }
+.location-row-main { flex: 1; min-width: 0; }
+.location-row-name { font-size: 1rem; font-weight: 600; color: var(--text); margin: 0 0 0.25rem; line-height: 1.3; }
+.location-row-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; font-size: 0.82rem; color: var(--text-muted); }
+.location-row-right { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
+.location-row-badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.location-row-arrow { font-size: 1.1rem; color: var(--teal-dark); }
+
+.loc-badge {
+  display: inline-block; padding: 0.18rem 0.6rem; border-radius: 3px;
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+}
+.loc-badge--medical { background: #e0f5f3; color: #1a6b62; border: 1px solid #b2e0da; }
+.loc-badge--dental { background: #e8f0fb; color: #2a4fa0; border: 1px solid #bdd0f5; }
+.loc-badge--behavioral-health { background: #f3ede8; color: #7a3e1a; border: 1px solid #e2c4ac; }
+
 /* Filter bar */
 .filter-bar { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
 .filter-inner { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }

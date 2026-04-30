@@ -1,58 +1,123 @@
 ---
 import Base from '../../layouts/Base.astro';
 import locations from '../../data/locations.json';
+import services from '../../data/services.json';
 
-function getHours(meta) {
-  const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-  const rows = [];
-  for (let i = 1; i <= 7; i++) {
-    if (meta[`enableday${i}`] === '1' || meta[`enableday${i}`] === 1) {
-      rows.push({ day: days[i-1], open: meta[`open${i}`] || '', close: meta[`close${i}`] || '' });
-    }
-  }
-  return rows;
+// Build location ID → service titles map
+const locServiceMap = {};
+services.forEach(svc => {
+  Object.keys(svc.meta?.['ignyte_locations[]'] || {}).forEach(id => {
+    if (!locServiceMap[id]) locServiceMap[id] = [];
+    locServiceMap[id].push(svc.title);
+  });
+});
+
+const DENTAL = /dental|dentist|orthodont/i;
+const BEHAV  = /behavioral|mental|substance|recovery|sud/i;
+
+function parseCity(address) {
+  if (!address) return '';
+  const stripped = address.replace(/,?\s*CA\s+\d{5}.*/i, '');
+  const parts = stripped.split(',');
+  return parts[parts.length - 1].trim();
 }
+
+function getServiceBadges(locId) {
+  const svcsHere = locServiceMap[String(locId)] || [];
+  return [
+    svcsHere.some(s => !DENTAL.test(s) && !BEHAV.test(s)) && 'Medical',
+    svcsHere.some(s => DENTAL.test(s)) && 'Dental',
+    svcsHere.some(s => BEHAV.test(s)) && 'Behavioral Health',
+  ].filter(Boolean);
+}
+
+const cities = [...new Set(
+  locations.map(l => parseCity(l.meta?.ignyte_location_address)).filter(Boolean)
+)].sort();
+
+const locData = locations.map(loc => ({
+  ...loc,
+  city: parseCity(loc.meta?.ignyte_location_address),
+  badges: getServiceBadges(loc.id),
+  address: (loc.meta?.ignyte_location_address || '').replace(/,?\s*USA\s*$/i, ''),
+}));
 ---
 <Base title="Locations" description="Find a Community Medical Centers clinic near you in the Central Valley.">
 
-  <div class="page-header">
-    <div class="container">
-      <h1>Our Locations</h1>
-      <p>We have clinics throughout the Central Valley — find the one closest to you.</p>
+  <div class="filter-bar" role="search" aria-label="Filter locations">
+    <div class="filter-inner">
+      <label for="city-filter" class="sr-only">Filter by city</label>
+      <select id="city-filter">
+        <option value="">All Cities</option>
+        {cities.map(c => <option value={c}>{c}</option>)}
+      </select>
+      <label for="type-filter" class="sr-only">Filter by service type</label>
+      <select id="type-filter">
+        <option value="">All Service Types</option>
+        <option value="Medical">Medical</option>
+        <option value="Dental">Dental</option>
+        <option value="Behavioral Health">Behavioral Health</option>
+      </select>
     </div>
   </div>
 
-  <section class="section">
+  <section class="section" style="padding-top:2rem">
     <div class="container">
-      <div class="grid-3">
-        {locations.map(loc => {
-          const hours = getHours(loc.meta || {});
-          const todayHours = hours[0];
-          return (
-            <a href={`/locations/${loc.slug}`} class="card" style="display:block">
-              {loc.thumbnail && <img class="card-img" src={loc.thumbnail} alt={loc.title} loading="lazy" />}
-              <div class="card-body">
-                {loc.meta?.['offering-type'] && <div class="card-eyebrow">{loc.meta['offering-type']}</div>}
-                <h3>{loc.title}</h3>
-                <div class="location-info">
-                  {loc.meta?.ignyte_location_address && (
-                    <div class="location-info-row">{loc.meta.ignyte_location_address}</div>
-                  )}
-                  {loc.meta?.ignyte_location_phone && (
-                    <div class="location-info-row">{loc.meta.ignyte_location_phone}</div>
-                  )}
-                  {todayHours && (
-                    <div class="location-info-row" style="color:var(--gold);font-size:0.8rem">
-                      Mon–Fri {todayHours.open}–{todayHours.close}
-                    </div>
-                  )}
-                </div>
+      <div id="locations-list">
+        {locData.map(loc => (
+          <a
+            href={`/locations/${loc.slug}`}
+            class="location-row"
+            data-city={loc.city}
+            data-types={loc.badges.join(',')}
+          >
+            <div class="location-row-main">
+              <h2 class="location-row-name">{loc.title}</h2>
+              <div class="location-row-meta">
+                {loc.address && <span>{loc.address}</span>}
+                {loc.meta?.ignyte_location_phone && <span>{loc.meta.ignyte_location_phone}</span>}
               </div>
-            </a>
-          );
-        })}
+            </div>
+            <div class="location-row-right">
+              <div class="location-row-badges">
+                {loc.badges.map(b => (
+                  <span class={`loc-badge loc-badge--${b.toLowerCase().replace(/\s+/g,'-')}`}>{b}</span>
+                ))}
+              </div>
+              <span class="location-row-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+        ))}
       </div>
+      <p id="no-locations" style="display:none;text-align:center;color:var(--text-muted);padding:3rem 0">No locations match your filter.</p>
+      <p id="loc-count" aria-live="polite" aria-atomic="true" class="sr-only"></p>
     </div>
   </section>
+
+  <script>
+    const cityFilter = document.getElementById('city-filter');
+    const typeFilter = document.getElementById('type-filter');
+    const rows = document.querySelectorAll('.location-row');
+    const noResults = document.getElementById('no-locations');
+    const locCount = document.getElementById('loc-count');
+
+    function filter() {
+      const city = cityFilter.value;
+      const type = typeFilter.value;
+      let visible = 0;
+      rows.forEach(row => {
+        const matchCity = !city || row.dataset.city === city;
+        const matchType = !type || row.dataset.types.includes(type);
+        const show = matchCity && matchType;
+        row.style.display = show ? 'flex' : 'none';
+        if (show) visible++;
+      });
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+      locCount.textContent = visible === 0 ? 'No locations found.' : `${visible} location${visible === 1 ? '' : 's'} found.`;
+    }
+
+    cityFilter.addEventListener('change', filter);
+    typeFilter.addEventListener('change', filter);
+  </script>
 
 </Base>

@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import locations from '../../data/locations.json';
 import providers from '../../data/providers.json';
+import services from '../../data/services.json';
 
 export function getStaticPaths() {
   return locations.map(loc => ({ params: { slug: loc.slug }, props: { loc } }));
@@ -11,23 +12,48 @@ const { loc } = Astro.props;
 const meta = loc.meta || {};
 
 const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+
+function formatTime(raw) {
+  if (!raw) return '';
+  // Handle values like "8AM", "8:00AM", "4.30PM", "4:30 PM", "12PM"
+  const s = String(raw).trim().replace(/\s+/g, '');
+  const m = s.match(/^(\d{1,2})(?:[.:](\d{2}))?([AP]M)$/i);
+  if (!m) return raw;
+  const hr = parseInt(m[1], 10);
+  const min = m[2] || '00';
+  const period = m[3].toUpperCase();
+  return `${hr}:${min} ${period}`;
+}
+
 function getHours(m) {
   const rows = [];
   for (let i = 1; i <= 7; i++) {
     if (m[`enableday${i}`] === '1' || m[`enableday${i}`] === 1) {
-      rows.push({ day: days[i-1], open: m[`open${i}`] || '', close: m[`close${i}`] || '' });
+      rows.push({
+        day: days[i - 1],
+        open: formatTime(m[`open${i}`] || ''),
+        close: formatTime(m[`close${i}`] || ''),
+      });
     }
   }
   return rows;
 }
 const hours = getHours(meta);
 
+// Services at this location
+const locServices = services.filter(svc => {
+  const locs = svc.meta?.['ignyte_locations[]'];
+  if (!locs) return false;
+  return Object.keys(locs).includes(String(loc.id));
+});
+
 // Providers at this location
 const locProviders = providers.filter(p => {
   const locs = p.meta?.['ignyte_locations[]'];
   if (!locs) return false;
   return Object.values(locs).some(name =>
-    typeof name === 'string' && loc.title && name.toLowerCase().includes(loc.title.toLowerCase().replace(/^cmc\s*/i, '').split(' ')[0])
+    typeof name === 'string' && loc.title &&
+    name.toLowerCase().includes(loc.title.toLowerCase().replace(/^cmc\s*/i, '').split(' ')[0])
   );
 }).slice(0, 6);
 ---
@@ -37,41 +63,42 @@ const locProviders = providers.filter(p => {
     <div class="container">
       <div class="breadcrumb"><a href="/locations">Locations</a> / {loc.title}</div>
       <h1>{loc.title}</h1>
-      {meta['offering-type'] && <p>{meta['offering-type']}</p>}
     </div>
   </div>
 
   {loc.thumbnail && (
-    <div style="width:100%;max-height:400px;overflow:hidden">
-      <img src={loc.thumbnail} alt={loc.title} style="width:100%;height:400px;object-fit:cover" />
+    <div style="width:100%;height:300px;overflow:hidden">
+      <img src={loc.thumbnail} alt={loc.title} style="width:100%;height:100%;object-fit:cover;object-position:center 40%" loading="eager" />
     </div>
   )}
 
-  <section class="section">
+  <section class="section" style="padding-top:2.5rem">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start" class="loc-detail-grid">
 
         <!-- Contact & Hours -->
         <div>
-          <h2 style="margin-bottom:1.5rem;font-size:1.4rem">Contact &amp; Hours</h2>
-
           {meta.ignyte_location_address && (
-            <div style="margin-bottom:1.25rem">
-              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Address</div>
-              <div>{meta.ignyte_location_address}</div>
+            <div style="margin-bottom:1.5rem">
+              <div class="detail-label">Address</div>
+              <div>{meta.ignyte_location_address.replace(/,?\s*USA\s*$/i,'')}</div>
+              <div style="margin-top:0.75rem">
+                <a href={`https://maps.google.com/?q=${encodeURIComponent(meta.ignyte_location_address || loc.title)}`}
+                   target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.82rem;padding:0.45rem 1rem">Get Directions</a>
+              </div>
             </div>
           )}
 
           {meta.ignyte_location_phone && (
-            <div style="margin-bottom:1.25rem">
-              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Phone</div>
-              <a href={`tel:${meta.ignyte_location_phone.replace(/[^\d]/g,'')}`}>{meta.ignyte_location_phone}</a>
+            <div style="margin-bottom:1.5rem">
+              <div class="detail-label">Phone</div>
+              <a href={`tel:${meta.ignyte_location_phone.replace(/[^\d]/g,'')}`} style="font-size:1rem;font-weight:600;color:var(--teal-dark)">{meta.ignyte_location_phone}</a>
             </div>
           )}
 
           {hours.length > 0 && (
-            <div style="margin-bottom:1.25rem">
-              <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem">Hours</div>
+            <div style="margin-bottom:1.5rem">
+              <div class="detail-label">Hours</div>
               <table class="hours-table">
                 <tbody>
                   {hours.map(h => (
@@ -84,32 +111,41 @@ const locProviders = providers.filter(p => {
               </table>
             </div>
           )}
-
-          <div style="margin-top:2rem">
-            <a href={`https://maps.google.com/?q=${encodeURIComponent(meta.ignyte_location_address || loc.title)}`}
-               target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
-          </div>
         </div>
 
-        <!-- Map placeholder -->
-        <div style="background:var(--navy-mid);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+        <!-- Map -->
+        <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden">
           {meta.gllpLatitude && meta.gllpLongitude ? (
             <iframe
               src={`https://maps.google.com/maps?q=${meta.gllpLatitude},${meta.gllpLongitude}&z=15&output=embed`}
-              width="100%" height="360" style="border:0;display:block" loading="lazy"
+              width="100%" height="320" style="border:0;display:block" loading="lazy"
               title={`Map of ${loc.title}`}
             />
           ) : (
-            <div style="height:360px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Map unavailable</div>
+            <div style="height:320px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);background:var(--bg-alt)">Map unavailable</div>
           )}
         </div>
 
       </div>
 
+      <!-- Services at this location -->
+      {locServices.length > 0 && (
+        <div style="margin-top:3.5rem">
+          <h2 style="font-size:1.3rem;margin-bottom:1.25rem">Services Available</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.6rem">
+            {locServices.map(svc => (
+              <a href={`/services/${svc.slug}`} class="svc-chip">
+                {svc.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
       <!-- Providers at this location -->
       {locProviders.length > 0 && (
-        <div style="margin-top:4rem">
-          <h2 style="margin-bottom:1.5rem;font-size:1.4rem">Providers at This Location</h2>
+        <div style="margin-top:3.5rem">
+          <h2 style="font-size:1.3rem;margin-bottom:1.25rem">Providers at This Location</h2>
           <div class="grid-4">
             {locProviders.map(p => (
               <a href={`/providers/${p.slug}`} class="card" style="display:block">
@@ -117,7 +153,7 @@ const locProviders = providers.filter(p => {
                 <div class="card-body">
                   <div class="provider-name">{p.title}</div>
                   <div class="provider-title">{p.meta?.['ignyte-provider-position']}</div>
-                  {p.terms?.ignyte_specialty?.[0] && <div style="font-size:0.8rem;color:var(--muted)">{p.terms.ignyte_specialty[0]}</div>}
+                  {p.terms?.ignyte_specialty?.[0] && <div style="font-size:0.8rem;color:var(--text-muted)">{p.terms.ignyte_specialty[0]}</div>}
                 </div>
               </a>
             ))}
@@ -132,3 +168,38 @@ const locProviders = providers.filter(p => {
   </section>
 
 </Base>
+
+<style>
+  .detail-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .svc-chip {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background: var(--teal-light);
+    border: 1px solid rgba(38,122,112,0.2);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--teal-dark);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .svc-chip:hover {
+    background: #c8ecea;
+    border-color: var(--teal-dark);
+    color: var(--teal-dark);
+    filter: none;
+  }
+  @media (max-width: 768px) {
+    .loc-detail-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
