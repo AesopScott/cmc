@@ -12,9 +12,10 @@ function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-const heroPhoto = '/img/hero-home.jpg';
+const heroPhoto = '/img/hero-home.webp';
 ---
 <Base title="Home" description="Community Medical Centers — Quality, compassionate healthcare for all in the Central Valley since 1968.">
+  <link slot="head" rel="preload" as="image" href={heroPhoto} />
 
   <!-- Hero: full-teal background, floating image card left, text right -->
   <section style="background:var(--teal);overflow:hidden">
@@ -26,6 +27,7 @@ const heroPhoto = '/img/hero-home.jpg';
           alt="Community Medical Centers — caring for our community"
           style="width:100%;display:block;max-height:440px;object-fit:cover"
           loading="eager"
+          fetchpriority="high"
         />
       </div>
       <!-- Content side -->
