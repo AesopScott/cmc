@@ -1,0 +1,70 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Patient Portal" description="Access your health records, message your provider, and manage appointments through the CMC patient portal.">
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/patients">Patients</a> / Patient Portal</div>
+      <h1>Patient Portal</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:900px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start" class="responsive-2col">
+        <div>
+          <p style="color:var(--text-muted);margin-bottom:1.25rem">Access your health information anytime through our secure online portal.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.75rem">
+            {[
+              'Send and receive messages with your primary care provider',
+              'Access your health records',
+              'Request appointments',
+              'View latest test results',
+              'View, download, and share your personal health records',
+              'Search health and wellness information',
+            ].map(feature => (
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;color:var(--text-muted);font-size:0.9rem">
+                <span style="color:var(--teal-dark);flex-shrink:0;margin-top:0.15rem">✓</span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          <a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Access Patient Portal</a>
+        </div>
+
+        <div>
+          <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:2rem;margin-bottom:1.25rem">
+            <h2 style="font-size:1rem;margin-bottom:1rem;color:var(--text)">Setting Up Your Account</h2>
+            <ol style="padding-left:1.25rem;margin:0;display:flex;flex-direction:column;gap:0.75rem;color:var(--text-muted);font-size:0.9rem">
+              <li>Download the free <strong>NextGen Patient Portal</strong> app</li>
+              <li>Visit <a href="https://nextmd.com" target="_blank" rel="noopener noreferrer" style="color:var(--teal-dark)">nextmd.com</a> to create your account</li>
+              <li>Need your enrollment code? Call <a href="tel:2094306222" style="color:var(--teal-dark)">(209) 430-6222</a>, Mon–Fri 8am–5pm</li>
+            </ol>
+          </div>
+
+          <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:2rem">
+            <h2 style="font-size:1rem;margin-bottom:0.75rem;color:var(--text)">Medical Records Requests</h2>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin:0 0 0.75rem">Submit a completed form by:</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.4rem;font-size:0.875rem;color:var(--text-muted)">
+              <li>Fax: <a href="fax:2097626808" style="color:var(--teal-dark)">(209) 762-6808</a></li>
+              <li>Email: <a href="mailto:prforms@cmcenters.org" style="color:var(--teal-dark)">prforms@cmcenters.org</a></li>
+              <li>Mail: P.O. Box 779, Stockton CA 95201</li>
+            </ul>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin:0.75rem 0 0">Health Information Dept: <a href="tel:2095463870" style="color:var(--teal-dark)">(209) 546-3870</a></p>
+            <div style="margin-top:1rem">
+              <a href="/patients/patient-forms" style="font-size:0.875rem;color:var(--teal-dark);font-weight:600">Download Medical Records Request Form →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  @media (max-width: 700px) {
+    .responsive-2col { grid-template-columns: 1fr !important; }
+  }
+</style>

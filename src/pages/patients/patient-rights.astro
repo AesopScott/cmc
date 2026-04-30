@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const rights = [
+  'Be treated with dignity and respect',
+  'Fair treatment without discrimination of any kind',
+  'Make informed decisions regarding your health care',
+  'Refuse treatment and be informed of the consequences',
+  'Know the names and roles of all caregivers',
+  'Receive information in a language you understand',
+  'Access your medical records',
+  'Confidentiality of records and communications',
+  'Choose another healthcare provider',
+  'Receive an explanation of your bill',
+  'Appropriate assessment and management of pain',
+  'Receive care in a safe environment free from abuse or coercion',
+  'Voice concerns and complaints',
+  'Give or withhold informed consent',
+];
+
+const responsibilities = [
+  'Provide accurate and complete information about your health',
+  'Actively participate in decisions regarding your health care',
+  'Keep scheduled appointments or call to reschedule',
+  'Ask questions when something is unclear',
+  'Follow the treatment plan agreed upon with your provider',
+  'Treat all staff and other patients with courtesy and respect',
+  'Respect the rights, privacy, and property of others',
+  'Promptly meet any financial obligation agreed to with CMC',
+];
+---
+<Base title="Patient Rights & Responsibilities" description="Your rights and responsibilities as a patient at Community Medical Centers.">
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/patients">Patients</a> / Patient Rights &amp; Responsibilities</div>
+      <h1>Patient Rights &amp; Responsibilities</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:900px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem" class="responsive-2col">
+
+        <div>
+          <h2 style="font-size:1.1rem;color:var(--teal-dark);margin-bottom:1.25rem">Your Rights</h2>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.65rem">
+            {rights.map(r => (
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;color:var(--text-muted);font-size:0.875rem">
+                <span style="color:var(--teal-dark);flex-shrink:0;margin-top:0.15rem">·</span>
+                {r}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2 style="font-size:1.1rem;color:var(--teal-dark);margin-bottom:1.25rem">Your Responsibilities</h2>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.65rem">
+            {responsibilities.map(r => (
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;color:var(--text-muted);font-size:0.875rem">
+                <span style="color:var(--teal-dark);flex-shrink:0;margin-top:0.15rem">·</span>
+                {r}
+              </li>
+            ))}
+          </ul>
+
+          <div style="margin-top:2rem;padding:1.25rem;background:var(--bg-alt);border:1px solid var(--border);border-radius:8px">
+            <h3 style="font-size:0.9rem;font-weight:600;color:var(--text);margin:0 0 0.5rem">Patient Privacy</h3>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin:0 0 0.75rem">We value the privacy of every patient. You have rights regarding how your medical information is used and disclosed.</p>
+            <a href="https://cmcenters.org/wp-content/uploads/2024/10/2104507_Notice-Of-Privacy_pg9-10-11.pdf" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem;color:var(--teal-dark);font-weight:600">View Privacy Notice →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  @media (max-width: 700px) {
+    .responsive-2col { grid-template-columns: 1fr !important; }
+  }
+</style>

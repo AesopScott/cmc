@@ -1,0 +1,117 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const sections = [
+  {
+    slug: 'insurance',
+    title: 'Insurance & Coverage',
+    desc: 'We serve all patients regardless of ability to pay. Learn what insurance we accept and how to get coverage help.',
+    icon: '🏥',
+  },
+  {
+    slug: 'patient-portal',
+    title: 'Patient Portal',
+    desc: 'Access health records, message your provider, request appointments, and view test results online.',
+    icon: '💻',
+  },
+  {
+    slug: 'patient-forms',
+    title: 'Patient Forms',
+    desc: 'Download or complete registration, medical records, sliding fee, and other patient forms in English or Spanish.',
+    icon: '📋',
+  },
+  {
+    slug: 'patient-rights',
+    title: 'Patient Rights & Responsibilities',
+    desc: 'Understand your rights as a patient and what we ask of you in return for the best possible care.',
+    icon: '⚖️',
+  },
+  {
+    slug: 'billing',
+    title: 'Payments & Billing',
+    desc: 'Learn about accepted payment methods, the Good Faith Estimate, and our sliding fee discount program.',
+    icon: '💳',
+  },
+];
+---
+<Base title="Patients" description="Patient resources at Community Medical Centers — insurance, patient portal, forms, rights, and billing.">
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / Patients</div>
+      <h1>Patient Resources</h1>
+      <p>Everything you need to know about your care at Community Medical Centers.</p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:3rem">
+    <div class="container" style="max-width:960px">
+      <div class="grid-2" style="gap:1.25rem">
+        {sections.map(s => (
+          <a href={`/patients/${s.slug}`} class="patient-nav-card">
+            <div class="patient-nav-icon" aria-hidden="true">{s.icon}</div>
+            <div class="patient-nav-body">
+              <div class="patient-nav-title">{s.title}</div>
+              <div class="patient-nav-desc">{s.desc}</div>
+            </div>
+            <span class="patient-nav-arrow" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+
+      <div style="margin-top:3rem;padding:2rem 2.5rem;background:var(--teal-light);border-radius:10px;border:1px solid rgba(38,122,112,0.2)">
+        <h2 style="font-size:1rem;color:var(--teal-dark);margin-bottom:0.5rem">Patient-Centered Medical Home</h2>
+        <p style="font-size:0.9rem;color:var(--text-muted);margin:0 0 1rem">CMC is certified as a <strong>Patient-Centered Medical Home (PCMH)</strong>. Your care team works together — primary care, dental, behavioral health, specialty care, and assistance programs — all focused on your whole health.</p>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+          <a href="/providers" class="btn btn-primary" style="font-size:0.85rem;padding:0.5rem 1.1rem">Find a Provider</a>
+          <a href="/locations" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem">Find a Location</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .patient-nav-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.4rem 1.5rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s, border-color 0.15s;
+    box-shadow: var(--shadow);
+  }
+  .patient-nav-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    border-color: var(--teal-dark);
+    filter: none;
+  }
+  .patient-nav-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 2.5rem;
+    text-align: center;
+  }
+  .patient-nav-body { flex: 1; min-width: 0; }
+  .patient-nav-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+  .patient-nav-desc {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .patient-nav-arrow {
+    font-size: 1.1rem;
+    color: var(--teal-dark);
+    flex-shrink: 0;
+  }
+</style>
