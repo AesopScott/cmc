@@ -1,0 +1,31 @@
+{
+  "env": {
+    "ECC_DISABLED_HOOKS": "gateguard-fact-force"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(gh run *)",
+      "Bash(npm --version)",
+      "Bash(cp \"C:\\\\Users\\\\scott\\\\Desktop\\\\cmc-extract\\\\ignyte_locations.json\" \"C:\\\\Users\\\\scott\\\\Code\\\\cmc\\\\src\\\\data\\\\locations.json\")",
+      "Bash(cp \"C:\\\\Users\\\\scott\\\\Desktop\\\\cmc-extract\\\\ignyte_provider.json\" \"C:\\\\Users\\\\scott\\\\Code\\\\cmc\\\\src\\\\data\\\\providers.json\")",
+      "Bash(cp \"C:\\\\Users\\\\scott\\\\Desktop\\\\cmc-extract\\\\ignyte_services.json\" \"C:\\\\Users\\\\scott\\\\Code\\\\cmc\\\\src\\\\data\\\\services.json\")",
+      "Bash(cp \"C:\\\\Users\\\\scott\\\\Desktop\\\\cmc-extract\\\\ignyte_team.json\" \"C:\\\\Users\\\\scott\\\\Code\\\\cmc\\\\src\\\\data\\\\team.json\")",
+      "Bash(cp \"C:\\\\Users\\\\scott\\\\Desktop\\\\cmc-extract\\\\ignyte_testimonials.json\" \"C:\\\\Users\\\\scott\\\\Code\\\\cmc\\\\src\\\\data\\\\testimonials.json\")",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(npm run *)",
+      "WebFetch(domain:cmcenters.org)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "Bash(curl -L \"https://cmcenters.org/wp-content/uploads/2023/11/CMC-Home-Healthcare-Starts-With-You.jpg\" -o \"C:/Users/scott/Code/cmc/public/img/hero-home.jpg\" --silent --show-error)",
+      "Bash(curl -IL \"https://cmcenters.org/wp-content/uploads/2023/11/CMC-Home-Healthcare-Starts-With-You.jpg\")",
+      "Bash(curl -L \"https://cmcenters.org/wp-content/uploads/2023/11/CMC-Home-Healthcare-Starts-With-You.jpg\" -o \"C:/Users/scott/Code/cmc/public/img/hero-home-new.jpg\" --silent)"
+    ]
+  }
+}

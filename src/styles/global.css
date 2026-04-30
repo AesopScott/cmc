@@ -79,10 +79,11 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
   padding: 0.45rem 0;
 }
 .utility-bar-inner {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: flex-start;
   gap: 1.25rem; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
 }
-.util-appt { color: rgba(255,255,255,0.9); font-size: 0.8rem; }
+.util-appt { color: rgba(255,255,255,0.9); font-size: 0.8rem; white-space: nowrap; }
+
 .util-appt a { color: #fff; font-weight: 600; }
 .util-links { display: flex; align-items: center; gap: 1rem; }
 .utility-bar a { color: rgba(255,255,255,0.8); font-size: 0.8rem; transition: color 0.15s; }

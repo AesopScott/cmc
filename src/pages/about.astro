@@ -2,17 +2,13 @@
 import Base from '../layouts/Base.astro';
 import team from '../data/team.json';
 import timeline from '../data/timeline.json';
-import faqs from '../data/faqs.json';
-import { stripWpBlocks } from '../utils/content.js';
 
 const executives = team.filter(m => m.terms?.ignyte_team_type?.includes('Executives'));
 const board = team.filter(m => m.terms?.ignyte_team_type?.includes('Board Members'));
-const aboutFaqs = faqs.filter(f => f.terms?.ignyte_faq_type?.includes('About Page'));
 
 // Words that are role descriptors, not professional credentials
 const NON_CRED_TERMS = new Set(['patient', 'community leader', 'board member']);
 
-// Normalize a raw credential string: split on comma, strip non-cred terms, rejoin with ', '
 function formatCreds(str) {
   return str
     .split(',')
@@ -21,24 +17,32 @@ function formatCreds(str) {
     .join(', ');
 }
 
-// Parse title and credentials from ignyte_team_title_content and team_location
 function parseMember(member) {
   const raw = member.meta?.ignyte_team_title_content || '';
   const teamLoc = member.meta?.team_location || '';
-
-  // Split title from any embedded credentials after the first comma
   const commaIdx = raw.indexOf(',');
   const title = commaIdx > -1 ? raw.slice(0, commaIdx).trim() : raw.trim();
   const afterComma = commaIdx > -1 ? raw.slice(commaIdx + 1).trim() : '';
-
   const credFromTitle = afterComma ? formatCreds(afterComma) : '';
   const credFromLoc   = teamLoc   ? formatCreds(teamLoc)   : '';
-
   const credentials = [credFromTitle, credFromLoc].filter(Boolean).join(', ');
   return { title, credentials };
 }
 
-// Executives: CEO first, then alphabetical by display name
+function getInitials(name) {
+  const parts = name.trim().split(/\s+/);
+  if (parts.length === 1) return parts[0][0].toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
+// Timeline content is stored in meta.ignyte_project_casestudies_content as "casestudy_textcontent||text"
+function parseTimelineContent(entry) {
+  const raw = entry.meta?.ignyte_project_casestudies_content || '';
+  const sep = raw.indexOf('||');
+  return sep > -1 ? raw.slice(sep + 2).trim() : raw.trim();
+}
+
+// Executives: CEO first, then alphabetical
 const EXEC_OFFICER_ORDER = ['chief executive officer'];
 const sortedExecutives = [...executives].sort((a, b) => {
   const aTitle = (a.meta?.ignyte_team_title_content || '').split(',')[0].trim().toLowerCase();
@@ -62,27 +66,80 @@ const sortedBoard = [...board].sort((a, b) => {
   if (bRank > -1) return 1;
   return a.title.localeCompare(b.title);
 });
+
+const values = ['Equity', 'Kindness', 'Innovation', 'Collaboration', 'Excellence'];
+
+const principles = [
+  'We welcome all people and treat everyone with respect',
+  'We believe in the importance of human dignity',
+  'We create trust through honesty',
+  'We pursue lifelong learning',
+  'We are resilient',
+  'We care',
+];
+
+const certifications = [
+  { label: 'HRSA Advancing HIT for Quality', year: '2025' },
+  { label: 'HRSA Certification of Compliance for Operational Site Visit', year: '2024' },
+  { label: 'Joint Commission Certification', year: '' },
+  { label: 'Alliance for Health-Seeking Behaviors (AHSB) Participant', year: '' },
+];
 ---
 <Base title="About" description="Learn about Community Medical Centers — our mission, history, leadership, and commitment to the Central Valley.">
 
-  <!-- Hero -->
-  <section class="hero" style="padding:5rem 0 4rem">
+  <div class="page-header">
     <div class="container">
-      <span class="hero-eyebrow">Est. 1968</span>
-      <h1>Caring for our <em>community</em> for over 55 years</h1>
-      <p>Community Medical Centers is a Federally Qualified Health Center (FQHC) committed to providing quality healthcare regardless of ability to pay.</p>
+      <div class="breadcrumb"><a href="/">Home</a> / About</div>
+      <h1>About Community Medical Centers</h1>
     </div>
-  </section>
+  </div>
 
   <!-- Mission -->
   <section class="section-sm" style="background:var(--navy-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
     <div class="container" style="max-width:760px;text-align:center">
       <div class="eyebrow" style="display:inline-block;color:var(--gold);font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.75rem">Our Mission</div>
-      <p style="font-size:1.2rem;line-height:1.7;color:var(--cream)">
-        To provide comprehensive, high quality, culturally sensitive health care to the medically underserved populations of the Central Valley through a network of community health centers.
+      <p style="font-size:1.25rem;line-height:1.7;color:var(--cream);font-weight:500">
+        Working together to improve health and well-being in our communities.
       </p>
     </div>
   </section>
+
+  <!-- Values & Principles -->
+  <section class="section">
+    <div class="container">
+      <div class="values-grid">
+        <!-- Values -->
+        <div>
+          <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+            <span class="eyebrow">What We Stand For</span>
+            <h2>Our Values</h2>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
+            {values.map(v => (
+              <span style="display:inline-block;padding:0.5rem 1.25rem;background:var(--teal-light);color:var(--teal-dark);border-radius:2rem;font-weight:600;font-size:0.95rem">{v}</span>
+            ))}
+          </div>
+        </div>
+        <!-- Principles -->
+        <div>
+          <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+            <span class="eyebrow">How We Work</span>
+            <h2>Our Principles</h2>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem">
+            {principles.map(p => (
+              <li style="display:flex;align-items:flex-start;gap:0.75rem">
+                <span style="color:var(--teal-dark);font-size:1rem;flex-shrink:0;margin-top:0.1rem">✓</span>
+                <span style="color:var(--text)">{p}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
 
   <!-- Timeline -->
   {timeline.length > 0 && (
@@ -93,21 +150,43 @@ const sortedBoard = [...board].sort((a, b) => {
           <h2>A Legacy of Community Care</h2>
         </div>
         <div style="max-width:760px;margin:0 auto">
-          {timeline.map(entry => (
-            <div style="display:flex;gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
-              <div style="flex-shrink:0;width:80px;text-align:right">
-                <span style="color:var(--gold);font-weight:700;font-size:1.1rem">{entry.meta?.ignyte_timeline_year || ''}</span>
+          {timeline.map(entry => {
+            const content = parseTimelineContent(entry);
+            return (
+              <div style="display:flex;gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+                <div style="flex-shrink:0;width:80px;text-align:right">
+                  <span style="color:var(--gold);font-weight:700;font-size:1.1rem">{entry.title}</span>
+                </div>
+                <div>
+                  {content && <p style="color:var(--muted);font-size:0.9rem;margin:0">{content}</p>}
+                </div>
               </div>
-              <div>
-                <h3 style="font-size:1rem;margin-bottom:0.4rem">{entry.title}</h3>
-                {entry.content && <div style="color:var(--muted);font-size:0.875rem" set:html={stripWpBlocks(entry.content)} />}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   )}
+
+  <hr class="divider" />
+
+  <!-- Certifications & Awards -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Recognition</span>
+        <h2>Certifications &amp; Awards</h2>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;max-width:900px;margin:0 auto">
+        {certifications.map(cert => (
+          <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;text-align:center;min-width:200px;flex:1">
+            <div style="font-weight:600;font-size:0.9rem;color:var(--text)">{cert.label}</div>
+            {cert.year && <div style="font-size:0.8rem;color:var(--gold);margin-top:0.4rem;font-weight:600">{cert.year}</div>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <hr class="divider" />
 
@@ -119,19 +198,16 @@ const sortedBoard = [...board].sort((a, b) => {
           <span class="eyebrow">Leadership</span>
           <h2>Executive Team</h2>
         </div>
-        <div class="grid-4">
+        <div class="team-circles">
           {sortedExecutives.map(member => {
             const { title, credentials } = parseMember(member);
             return (
-              <div class="card">
-                {member.thumbnail && <img class="provider-photo" src={member.thumbnail} alt={member.title} loading="lazy" />}
-                <div class="card-body">
-                  <div class="provider-name">
-                    {member.title}
-                    {credentials && <span style="font-size:0.8em;font-weight:400;color:var(--muted)">, {credentials}</span>}
-                  </div>
-                  <div class="provider-title">{title}</div>
-                </div>
+              <div class="team-circle">
+                {member.thumbnail
+                  ? <img src={member.thumbnail} alt={member.title} class="team-circle-img" loading="lazy" />
+                  : <div class="team-circle-initials">{getInitials(member.title)}</div>}
+                <div class="team-circle-name">{member.title}{credentials && <span style="font-weight:400;color:var(--muted)">, {credentials}</span>}</div>
+                <div class="team-circle-role">{title}</div>
               </div>
             );
           })}
@@ -148,19 +224,16 @@ const sortedBoard = [...board].sort((a, b) => {
           <span class="eyebrow">Governance</span>
           <h2>Board of Directors</h2>
         </div>
-        <div class="grid-4">
+        <div class="team-circles">
           {sortedBoard.map(member => {
             const { title, credentials } = parseMember(member);
             return (
-              <div class="card">
-                {member.thumbnail && <img class="provider-photo" src={member.thumbnail} alt={member.title} loading="lazy" />}
-                <div class="card-body">
-                  <div class="provider-name">
-                    {member.title}
-                    {credentials && <span style="font-size:0.8em;font-weight:400;color:var(--muted)">, {credentials}</span>}
-                  </div>
-                  <div class="provider-title">{title}</div>
-                </div>
+              <div class="team-circle">
+                {member.thumbnail
+                  ? <img src={member.thumbnail} alt={member.title} class="team-circle-img" loading="lazy" />
+                  : <div class="team-circle-initials">{getInitials(member.title)}</div>}
+                <div class="team-circle-name">{member.title}{credentials && <span style="font-weight:400;color:var(--muted)">, {credentials}</span>}</div>
+                <div class="team-circle-role">{title}</div>
               </div>
             );
           })}
@@ -169,22 +242,63 @@ const sortedBoard = [...board].sort((a, b) => {
     </section>
   )}
 
-  <!-- FAQs -->
-  {aboutFaqs.length > 0 && (
-    <section class="section" style="background:var(--navy-mid);border-top:1px solid var(--border)">
-      <div class="container" style="max-width:760px">
-        <div class="section-header">
-          <span class="eyebrow">Questions</span>
-          <h2>Frequently Asked Questions</h2>
-        </div>
-        {aboutFaqs.map(faq => (
-          <details style="border:1px solid var(--border);border-radius:6px;margin-bottom:0.75rem;padding:1.25rem;background:var(--navy)">
-            <summary style="cursor:pointer;font-weight:600;list-style:none;color:var(--cream)">{faq.title}</summary>
-            {faq.content && <div style="margin-top:1rem;color:var(--muted);font-size:0.9rem" set:html={stripWpBlocks(faq.content)} />}
-          </details>
-        ))}
-      </div>
-    </section>
-  )}
-
 </Base>
+
+<style>
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .team-circles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 1.5rem;
+    justify-content: center;
+  }
+  .team-circle {
+    text-align: center;
+    width: 140px;
+  }
+  .team-circle-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--teal-light);
+    display: block;
+    margin: 0 auto;
+  }
+  .team-circle-initials {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: var(--teal-light);
+    color: var(--teal-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .team-circle-name {
+    font-weight: 600;
+    font-size: 0.82rem;
+    margin-top: 0.75rem;
+    line-height: 1.4;
+  }
+  .team-circle-role {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+    line-height: 1.3;
+  }
+  @media (max-width: 768px) {
+    .values-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
