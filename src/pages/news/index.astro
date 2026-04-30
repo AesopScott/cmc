@@ -4,16 +4,18 @@ import posts from '../../data/posts.json';
 
 const categories = [...new Set(posts.flatMap(p => p.terms?.category || []))].filter(Boolean);
 
+const sorted = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 ---
-<Base title="News &amp; Events" description="The latest news, stories, and events from Community Medical Centers.">
+<Base title="News" description="The latest news from Community Medical Centers.">
 
   <div class="page-header">
     <div class="container">
-      <h1>News &amp; Events</h1>
-      <p>Stories from our community, clinic updates, and upcoming events.</p>
+      <div class="breadcrumb"><a href="/">Home</a> / News</div>
+      <h1>News</h1>
     </div>
   </div>
 
@@ -30,7 +32,7 @@ function formatDate(dateStr) {
   <section class="section">
     <div class="container">
       <div class="grid-3" id="posts-grid">
-        {posts.map(post => {
+        {sorted.map(post => {
           const cat = post.terms?.category?.[0] || '';
           return (
             <a href={`/news/${post.slug}`} class="card" style="display:block" data-category={cat}>
@@ -38,8 +40,7 @@ function formatDate(dateStr) {
               <div class="card-body">
                 {cat && <div class="card-eyebrow">{cat}</div>}
                 <h3>{post.title}</h3>
-                {post.excerpt && <p style="margin-top:0.5rem;font-size:0.875rem">{post.excerpt}</p>}
-                <div style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem">{formatDate(post.date)}</div>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.5rem">{formatDate(post.date)}</div>
               </div>
             </a>
           );

@@ -16,7 +16,7 @@ const category = post.terms?.category?.[0] || '';
 
   <div class="page-header">
     <div class="container">
-      <div class="breadcrumb"><a href="/news">News &amp; Events</a> / {category || 'Article'}</div>
+      <div class="breadcrumb"><a href="/news">News</a> / {category || 'Article'}</div>
       <h1 style="max-width:760px">{post.title}</h1>
       <div style="display:flex;gap:1rem;align-items:center;margin-top:1rem;flex-wrap:wrap">
         {category && <span class="badge">{category}</span>}
