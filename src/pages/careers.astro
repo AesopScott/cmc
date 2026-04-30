@@ -1,16 +1,78 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const benefits = [
+  {
+    icon: '💰',
+    title: 'Competitive Compensation',
+    desc: 'Market-rate salaries that reflect your experience and expertise.',
+  },
+  {
+    icon: '🏖️',
+    title: 'Generous Leave',
+    desc: 'Paid vacation, sick time, and holiday coverage so you can recharge.',
+  },
+  {
+    icon: '🩺',
+    title: 'Comprehensive Insurance',
+    desc: 'Medical, dental, vision, life, AD&D, disability, EAP, and retirement plans.',
+  },
+  {
+    icon: '📚',
+    title: 'Professional Development',
+    desc: 'Ongoing education, certification support, free CME credits, and loan repayment programs.',
+  },
+];
+
+const additionalBenefits = [
+  'HRSA, SLRP, CAL HealthCares, HCAi, and Song Brown loan repayment programs',
+  'Free CME credits for clinical staff',
+  'Flexible spending accounts with dependent care matching',
+  '403(b) retirement savings plan',
+];
+
+const faqs = [
+  {
+    q: 'How do I apply?',
+    a: 'Submit your application online through the job boards below. Internal applicants can apply through Paycom ESS. Students are welcome to email their resume to careers@cmcenters.org.',
+  },
+  {
+    q: 'How long does the hiring process take?',
+    a: 'You\'ll receive an immediate confirmation from Paycom after submitting. High-volume roles typically take 4–6 weeks from application to offer.',
+  },
+  {
+    q: 'What does the interview process look like?',
+    a: 'Most interviews are conducted via Zoom with a panel format. Some administrative roles may include an in-person component.',
+  },
+  {
+    q: 'Can I apply to more than one position?',
+    a: 'Yes — you\'re welcome to apply to multiple positions simultaneously if you meet the qualifications for each.',
+  },
+  {
+    q: 'Will I hear back about my application status?',
+    a: 'Yes. We send email updates at each stage of the hiring process so you\'re never left wondering.',
+  },
+  {
+    q: 'Do I need to submit a cover letter?',
+    a: 'A cover letter is optional, but we encourage it. It\'s a great opportunity to share why you\'re passionate about community health.',
+  },
+  {
+    q: 'What loan repayment programs are available?',
+    a: 'As an FQHC, CMC qualifies for multiple federal and state loan repayment programs including HRSA NHSC, SLRP, CAL HealthCares, HCAi, and Song Brown.',
+  },
+];
 ---
 <Base title="Careers" description="Join the Community Medical Centers team. View open positions for providers and all other staff.">
 
   <div class="page-header">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a> / Careers</div>
-      <h1>Join Our Team</h1>
-      <p>Be part of a mission-driven team committed to providing quality healthcare to everyone in our community.</p>
+      <h1>Make a Difference With Your Career</h1>
+      <p>Join a mission-driven team committed to providing quality healthcare to everyone in our community.</p>
     </div>
   </div>
 
+  <!-- Job Boards -->
   <section class="section">
     <div class="container" style="max-width:860px">
 
@@ -36,12 +98,139 @@ import Base from '../layouts/Base.astro';
 
       </div>
 
-      <div style="margin-top:3rem;padding:2rem;background:var(--bg-alt);border-radius:8px;border:1px solid var(--border)">
-        <h2 style="font-size:1rem;margin-bottom:0.5rem">Why Work at CMC?</h2>
-        <p style="color:var(--text-muted);font-size:0.9rem;margin:0">Community Medical Centers is a Federally Qualified Health Center (FQHC) serving the Central Valley. We offer competitive salaries, comprehensive benefits, and the satisfaction of making a real difference in our patients' lives every day.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Benefits -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Why CMC</span>
+        <h2>Benefits &amp; Perks</h2>
+      </div>
+      <div class="grid-4" style="margin-top:2.5rem">
+        {benefits.map(b => (
+          <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center">
+            <div style="font-size:2rem;margin-bottom:0.75rem">{b.icon}</div>
+            <h3 style="font-size:0.95rem;margin-bottom:0.5rem">{b.title}</h3>
+            <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6">{b.desc}</p>
+          </div>
+        ))}
       </div>
 
+      <!-- Additional benefits -->
+      <div style="margin-top:2rem;padding:1.5rem 2rem;background:var(--teal-light);border-radius:10px;max-width:860px;margin-left:auto;margin-right:auto">
+        <h3 style="font-size:0.9rem;font-weight:700;color:var(--teal-dark);margin-bottom:1rem">Additional Benefits</h3>
+        <ul style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 2rem;list-style:none" class="additional-benefits-list">
+          {additionalBenefits.map(b => (
+            <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;color:var(--text)">
+              <span style="color:var(--teal-dark);flex-shrink:0;margin-top:0.1rem">✓</span>
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width:760px">
+      <div class="section-header">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0" class="faq-list">
+        {faqs.map((faq, i) => (
+          <details class="faq-item">
+            <summary class="faq-question">{faq.q}</summary>
+            <div class="faq-answer">{faq.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Why CMC blurb -->
+  <section class="section-sm" style="background:var(--bg-alt)">
+    <div class="container" style="max-width:760px">
+      <div class="section-header" style="margin-bottom:0">
+        <span class="eyebrow">Our Culture</span>
+        <h2>Why Work at CMC?</h2>
+      </div>
+      <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-top:1rem">
+        Community Medical Centers is a Federally Qualified Health Center (FQHC) serving the Central Valley.
+        We are a diverse, family-oriented organization where every team member has the opportunity to make a
+        real difference in the lives of patients who depend on us. From our clinical providers to our front-desk
+        staff, everyone at CMC contributes to a mission that matters.
+      </p>
+      <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-top:0.75rem">
+        Questions? Email us at <a href="mailto:careers@cmcenters.org">careers@cmcenters.org</a>.
+      </p>
     </div>
   </section>
 
 </Base>
+
+<style>
+  /* 4-column grid for benefits cards */
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* FAQ accordion */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-item:first-child {
+    border-top: 1px solid var(--border);
+  }
+  .faq-question {
+    list-style: none;
+    padding: 1.1rem 0;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+  }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-question::after {
+    content: '+';
+    font-size: 1.2rem;
+    color: var(--teal-dark);
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+  details[open] .faq-question::after { content: '−'; }
+  .faq-answer {
+    padding: 0 0 1.1rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .grid-4 {
+      grid-template-columns: 1fr 1fr;
+    }
+    .additional-benefits-list {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .grid-4 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
