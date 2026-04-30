@@ -79,13 +79,13 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
   padding: 0.45rem 0;
 }
 .utility-bar-inner {
-  display: flex; align-items: center; justify-content: flex-start;
+  display: flex; align-items: center; justify-content: space-between;
   gap: 1.25rem; padding: 0 12.5%;
 }
 .util-appt { color: rgba(255,255,255,0.9); font-size: 0.8rem; white-space: nowrap; }
 
 .util-appt a { color: #fff; font-weight: 600; }
-.util-links { display: flex; align-items: center; gap: 1rem; }
+.util-links { display: flex; align-items: center; gap: 1rem; white-space: nowrap; flex-shrink: 0; }
 .utility-bar a { color: rgba(255,255,255,0.8); font-size: 0.8rem; transition: color 0.15s; }
 .utility-bar a:hover { color: #fff; filter: none; }
 .util-divider { color: rgba(255,255,255,0.3); }
