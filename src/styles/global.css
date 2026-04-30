@@ -80,7 +80,7 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 }
 .utility-bar-inner {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 1.25rem; padding: 0 12.5%;
+  gap: 1.25rem; padding: 0 2rem;
 }
 .util-appt { color: rgba(255,255,255,0.9); font-size: 0.8rem; white-space: nowrap; }
 
