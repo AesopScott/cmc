@@ -26,19 +26,18 @@ const providerLocations = (() => {
   <div class="page-header">
     <div class="container">
       <div class="breadcrumb"><a href="/providers">Providers</a> / {p.title}</div>
-      <h1>{p.title}</h1>
-      {position && <p style="color:var(--gold);font-size:1.1rem;margin-top:0.5rem">{position}</p>}
+      <h1>{p.title}{position && <span style="font-size:0.6em;font-weight:500;opacity:0.75;margin-left:0.4em;vertical-align:middle">{position}</span>}</h1>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
-      <div style="display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start">
+      <div style="display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start" class="provider-detail-grid">
 
         <!-- Photo -->
         <div>
           <img
-            src={p.thumbnail || '/img/placeholder-provider.jpg'}
+            src={p.thumbnail || '/img/2024__11__Portrait-Placeholder.png'}
             alt={p.title}
             style="width:100%;border-radius:8px;border:1px solid var(--border)"
           />
@@ -72,7 +71,7 @@ const providerLocations = (() => {
           )}
 
           <div style="margin-top:2rem">
-            <a href="tel:2099444700" class="btn btn-primary">Schedule Appointment</a>
+            <a href="/locations" class="btn btn-outline">Find a Location</a>
           </div>
         </div>
 
@@ -81,3 +80,9 @@ const providerLocations = (() => {
   </section>
 
 </Base>
+
+<style>
+  @media (max-width: 700px) {
+    .provider-detail-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
