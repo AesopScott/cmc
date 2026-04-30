@@ -2,20 +2,6 @@
   "env": {
     "ECC_DISABLED_HOOKS": "gateguard-fact-force"
   },
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "cd /c/Users/scott/Code/cmc && git status --porcelain | grep -q . && git add -A && git commit -m \"chore: auto-commit session changes\" && git push 2>/dev/null || true",
-            "timeout": 30,
-            "statusMessage": "Pushing changes..."
-          }
-        ]
-      }
-    ]
-  },
   "permissions": {
     "allow": [
       "Bash(git add *)",
@@ -39,7 +25,22 @@
       "mcp__Claude_in_Chrome__javascript_tool",
       "Bash(curl -L \"https://cmcenters.org/wp-content/uploads/2023/11/CMC-Home-Healthcare-Starts-With-You.jpg\" -o \"C:/Users/scott/Code/cmc/public/img/hero-home.jpg\" --silent --show-error)",
       "Bash(curl -IL \"https://cmcenters.org/wp-content/uploads/2023/11/CMC-Home-Healthcare-Starts-With-You.jpg\")",
-      "Bash(curl -L \"https://cmcenters.org/wp-content/uploads/2023/11/CMC-Home-Healthcare-Starts-With-You.jpg\" -o \"C:/Users/scott/Code/cmc/public/img/hero-home-new.jpg\" --silent)"
+      "Bash(curl -L \"https://cmcenters.org/wp-content/uploads/2023/11/CMC-Home-Healthcare-Starts-With-You.jpg\" -o \"C:/Users/scott/Code/cmc/public/img/hero-home-new.jpg\" --silent)",
+      "Bash(node -e \"const f = require\\('fs'\\).readFileSync\\('C:/Users/scott/Code/cmc/.claude/settings.local.json','utf8'\\); const j = JSON.parse\\(f\\); console.log\\(j.hooks.Stop[0].hooks[0].command\\);\")"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /c/Users/scott/Code/cmc && git status --porcelain | grep -q . && git add -A && git commit -m \"chore: auto-commit session changes\" && git push 2>/dev/null || true",
+            "timeout": 30,
+            "statusMessage": "Pushing changes..."
+          }
+        ]
+      }
     ]
   }
 }
