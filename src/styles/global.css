@@ -67,7 +67,7 @@ img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 
 /* Layout */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.container { padding: 0 12.5%; }
 .section { padding: 5rem 0; }
 .section-sm { padding: 3rem 0; }
 
@@ -80,7 +80,7 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 }
 .utility-bar-inner {
   display: flex; align-items: center; justify-content: flex-start;
-  gap: 1.25rem; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+  gap: 1.25rem; padding: 0 12.5%;
 }
 .util-appt { color: rgba(255,255,255,0.9); font-size: 0.8rem; white-space: nowrap; }
 
@@ -98,7 +98,7 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
-  max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 84px;
+  padding: 0 12.5%; height: 84px;
 }
 .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
 .nav-logo img { height: 60px; width: auto; }
@@ -240,7 +240,7 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 
 /* Filter bar */
 .filter-bar { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-.filter-inner { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.filter-inner { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0 12.5%; }
 .filter-bar input, .filter-bar select {
   background: var(--bg); border: 1px solid var(--border); color: var(--text);
   padding: 0.5rem 0.875rem; border-radius: 4px; font-size: 0.875rem; font-family: inherit;
@@ -304,6 +304,7 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
+  .container, .nav-inner, .utility-bar-inner, .filter-inner { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
 
 /* Reduced motion (WCAG 2.3.3 / AAA, best practice for AA) */
