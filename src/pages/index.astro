@@ -5,8 +5,29 @@ import services from '../data/services.json';
 import posts from '../data/posts.json';
 
 const featuredLocations = locations.slice(0, 3);
-const featuredServices = services.slice(0, 6);
-const recentPosts = posts.slice(0, 3);
+
+// Same priority ordering as Services page
+const CORE_SERVICES  = ['adult-medicine', 'dental-care', 'behavioral-health'];
+const DEMO_SERVICES = ['womens-health', 'pediatrics', 'women-infant-and-children-program-wic'];
+function serviceRank(slug) {
+  const ci = CORE_SERVICES.indexOf(slug);
+  if (ci !== -1) return ci;
+  const di = DEMO_SERVICES.indexOf(slug);
+  if (di !== -1) return CORE_SERVICES.length + di;
+  return CORE_SERVICES.length + DEMO_SERVICES.length;
+}
+const featuredServices = [...services]
+  .sort((a, b) => {
+    const ra = serviceRank(a.slug), rb = serviceRank(b.slug);
+    if (ra !== rb) return ra - rb;
+    return a.title.localeCompare(b.title);
+  })
+  .slice(0, 6);
+
+// Same sort as News page: newest first
+const recentPosts = [...posts]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 3);
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -98,8 +119,7 @@ const heroPhoto = '/img/hero-home.webp';
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Close to Home</span>
-        <h2>Locations Throughout the Central Valley</h2>
+        <h2>CMC Locations</h2>
       </div>
       <div class="grid-3">
         {featuredLocations.map(loc => (
@@ -132,7 +152,7 @@ const heroPhoto = '/img/hero-home.webp';
     <div class="container" style="text-align:center;padding-top:3rem;padding-bottom:3rem">
       <h2 style="color:var(--navy-footer);margin-bottom:1rem">Support Our Mission</h2>
       <p style="font-size:1.05rem;color:rgba(26,54,79,0.85);max-width:560px;margin:0 auto 2rem">
-        Your gift helps ensure vulnerable patients across the Central Valley continue to receive quality, compassionate care.
+        Your gift helps ensure vulnerable patients continue to receive high-quality, essential care and services.
       </p>
       <a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Donate Now</a>
     </div>
@@ -145,21 +165,22 @@ const heroPhoto = '/img/hero-home.webp';
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">Latest</span>
           <h2>News</h2>
         </div>
         <div class="grid-3">
-          {recentPosts.map(post => (
-            <a href={`/news/${post.slug}`} class="card" style="display:block;color:inherit">
+          {recentPosts.map(post => {
+            const cat = post.terms?.category?.[0] || '';
+            return (
+            <a href={`/news/${post.slug}`} class="card" style="display:block;color:inherit" data-category={cat}>
               {post.thumbnail && <img class="card-img" src={post.thumbnail} alt={post.title} loading="lazy" />}
               <div class="card-body">
-                {post.terms?.category?.[0] && <div class="card-eyebrow">{post.terms.category[0]}</div>}
+                {cat && <div class="card-eyebrow">{cat}</div>}
                 <h3>{post.title}</h3>
-                {post.excerpt && <p style="margin-top:0.5rem">{post.excerpt}</p>}
-                <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.75rem">{formatDate(post.date)}</div>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.5rem">{formatDate(post.date)}</div>
               </div>
             </a>
-          ))}
+            );
+          })}
         </div>
         <div style="text-align:center;margin-top:2.5rem">
           <a href="/news" class="btn btn-outline">All News</a>

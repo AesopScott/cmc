@@ -32,11 +32,15 @@ const path = Astro.url.pathname;
         Call or Text for Appointments&nbsp;&nbsp;·&nbsp;&nbsp;<a href="tel:2096365400">Medical: (209) 636-5400</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="tel:2096365555">Dental: (209) 636-5555</a>
       </span>
       <div class="util-links">
-        <a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a>
+        <a href="/news">News</a>
         <span class="util-divider" aria-hidden="true">|</span>
-        <a href="/support-cmc/">Support CMC</a>
+        <a href="/about">About</a>
         <span class="util-divider" aria-hidden="true">|</span>
         <a href="/careers">Careers</a>
+        <span class="util-divider" aria-hidden="true">|</span>
+        <a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a>
+        <span class="util-divider" aria-hidden="true">|</span>
+        <a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a>
       </div>
     </div>
   </div>
@@ -55,8 +59,7 @@ const path = Astro.url.pathname;
         <li><a href="/services" class={path.startsWith('/services') ? 'active' : ''}>Services</a></li>
         <li><a href="/patients" class={path.startsWith('/patients') ? 'active' : ''}>Patients</a></li>
         <li><a href="/providers" class={path.startsWith('/providers') ? 'active' : ''}>Providers</a></li>
-        <li><a href="/about" class={path === '/about/' || path === '/about' ? 'active' : ''}>About</a></li>
-        <li><a href="/news" class={path.startsWith('/news') ? 'active' : ''}>News</a></li>
+        <li><a href="/support-cmc/" class={path === '/support-cmc/' || path === '/support-cmc' ? 'active' : ''}>Support CMC</a></li>
       </ul>
     </div>
   </nav>
