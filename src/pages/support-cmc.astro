@@ -4,106 +4,78 @@ import Base from '../layouts/Base.astro';
 const tiers = [
   {
     name: 'CMC Friend',
-    range: '$500 – $1,000',
-    color: 'var(--teal-light)',
-    borderColor: 'var(--teal-dark)',
-    benefits: [
-      'Annual Report access',
-      'Invitations to CMC events',
-      'CMC gift of appreciation',
-    ],
+    range: '$500 – $999',
+    url: 'https://buy.stripe.com/cNibJ3c7wfxLcKH9Tn08g00?locale=en&__embed_source=buy_btn_1ST8xePMtXr6LYlQ00KUrcWs',
   },
   {
     name: 'CMC Champion',
-    range: '$1,001 – $2,500',
-    color: '#e0f0ed',
-    borderColor: 'var(--teal-dark)',
+    range: '$1,000 – $2,499',
+    url: 'https://buy.stripe.com/14AcN70oO99n2639Tn08g01?locale=en&__embed_source=buy_btn_1ST9IWPMtXr6LYlQNsHTEMYq',
     highlight: true,
-    benefits: [
-      'All CMC Friend benefits',
-      'State of CMC virtual event invitation',
-      'Recognition in donor communications',
-    ],
   },
   {
     name: 'CMC Partner',
-    range: '$2,501+',
-    color: 'var(--navy-footer)',
-    borderColor: 'var(--navy-footer)',
+    range: '$2,500+',
+    url: 'https://buy.stripe.com/4gMcN77RggBP7qn3uZ08g02?locale=en&__embed_source=buy_btn_1ST9YkPMtXr6LYlQs4tefcgh',
     dark: true,
-    label: 'Major Gifts',
-    benefits: [
-      'All CMC Champion benefits',
-      'Optional Annual Report acknowledgment',
-      'Website recognition',
-      'Exclusive donor recognition event',
-    ],
   },
 ];
 
 const programs = [
-  { icon: '🎯', label: 'CMC The Rock', desc: 'Programs for teens & young adults' },
-  { icon: '🏠', label: 'Care for Unhoused', desc: 'Families and individuals experiencing homelessness' },
-  { icon: '🚐', label: 'CareLink Mobile', desc: 'Mobile health clinic services' },
-  { icon: '🧓', label: 'Aging Adults', desc: 'Specialized care for older community members' },
-  { icon: '👧', label: 'Children & Youth', desc: 'Pediatric and developmental care' },
-  { icon: '❤️', label: 'Uninsured Families', desc: 'Care regardless of ability to pay' },
-  { icon: '🏥', label: 'General Operating', desc: 'Sustain all CMC programs and services' },
-];
-
-const paymentOptions = [
-  { label: 'Online', desc: 'One-time or installment payments online' },
-  { label: 'Monthly Pledge', desc: 'Set up recurring monthly giving' },
-  { label: 'By Check', desc: 'Mail a check to our administration office' },
-  { label: 'Planned Giving', desc: 'Include CMC in your estate planning' },
+  'CMC The Rock — Programs for teens & young adults',
+  'Care for Unhoused — Families and individuals experiencing homelessness',
+  'CareLink Mobile — Mobile health clinic services',
+  'Aging Adults — Specialized care for older community members',
+  'Children & Youth — Pediatric and developmental care',
+  'Uninsured Families — Care regardless of ability to pay',
+  'General Operating — Sustain all CMC programs and services',
 ];
 ---
 <Base title="Support CMC" description="Support Community Medical Centers and help us provide quality healthcare to everyone in our community, regardless of ability to pay.">
 
-  <div class="page-header">
-    <div class="container">
-      <div class="breadcrumb"><a href="/">Home</a> / Support CMC</div>
-      <h1>The Gift of Health</h1>
-      <p>Your generosity helps us provide quality care to everyone in our community — regardless of ability to pay.</p>
-    </div>
-  </div>
-
-  <!-- Impact statement -->
-  <section class="section-sm" style="background:var(--bg-alt);border-bottom:1px solid var(--border)">
-    <div class="container" style="max-width:800px;text-align:center">
-      <p style="font-size:1.1rem;line-height:1.8;color:var(--text)">
-        Access to quality healthcare is slipping out of reach for so many in San Joaquin and Solano counties.
-        When you give to CMC, you ensure that every patient — insured or not — receives the compassionate care they deserve.
-      </p>
-      <a href="https://cmcenters.org/support-cmc/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:1.5rem">Donate Now</a>
+  <!-- Your gift makes a difference -->
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:1.75rem">Your gift makes a difference</h2>
+      <p>Access to quality health care is slipping out of reach for so many in San Joaquin and Solano counties.</p>
+      <p>As health insurance and other benefits are reduced, vulnerable families and hard-working people across our region are losing coverage and facing one of the most difficult moments in recent history. This is creating a ripple effect that puts thousands at risk. Now, more than ever, our community needs a lifeline.</p>
+      <p>Community Medical Centers is firm in its mission to provide comprehensive, high-quality care to every person who walks through our doors, regardless of their ability to pay.</p>
+      <p>Your gift will provide flexible, immediate support where it's needed most across our health programs. By giving once or giving monthly, you help ensure vulnerable patients continue to receive essential, life-changing care all year long. Together, we can sustain this safety net for health care and build a better future for all.</p>
+      <p style="font-style:italic;color:var(--text-muted)">Donations are tax-deductible. Please consult with your tax accountant for information on tax deductions.</p>
     </div>
   </section>
+
+  <hr class="divider" />
+
+  <!-- How you can help -->
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);margin-bottom:1.75rem">How you can help</h2>
+      <div class="help-buttons">
+        <a href="https://cmcenters.org/support-cmc/#general-giving" target="_blank" rel="noopener noreferrer" class="btn btn-primary">No gift is too small</a>
+        <a href="https://lp.constantcontactpages.com/cu/JIfUB8J/CMCahc" target="_blank" rel="noopener noreferrer" class="btn btn-primary">CMC The Rock Capital Campaign</a>
+        <a href="#transformational-giving" class="btn btn-outline">Transformational Giving</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
 
   <!-- Donor Tier Program -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Your Impact</span>
         <h2>CMC Donor Tier Program</h2>
-        <p style="color:var(--text-muted);max-width:580px;margin:0.75rem auto 0">Every level of giving makes a meaningful difference. Choose the tier that works for you.</p>
       </div>
       <div class="grid-3" style="margin-top:2.5rem">
         {tiers.map(tier => (
-          <div style={`border-radius:12px;overflow:hidden;border:2px solid ${tier.borderColor};display:flex;flex-direction:column`}>
-            <div style={`background:${tier.dark ? tier.color : tier.color};padding:1.5rem;text-align:center;border-bottom:2px solid ${tier.borderColor}`}>
-              {tier.label && <div style={`font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.4rem;color:${tier.dark ? 'rgba(255,255,255,0.7)' : 'var(--teal-dark)'}`}>{tier.label}</div>}
-              <div style={`font-size:1.25rem;font-weight:700;color:${tier.dark ? '#fff' : 'var(--teal-dark)'}`}>{tier.name}</div>
-              <div style={`font-size:0.95rem;font-weight:500;margin-top:0.4rem;color:${tier.dark ? 'rgba(255,255,255,0.85)' : 'var(--text-muted)'}`}>{tier.range}</div>
+          <div class={`tier-card${tier.dark ? ' tier-card--dark' : tier.highlight ? ' tier-card--highlight' : ''}`}>
+            <div class="tier-header">
+              <div class="tier-name">{tier.name}</div>
+              <div class="tier-range">{tier.range}</div>
             </div>
-            <div style="padding:1.25rem 1.5rem;flex:1;background:#fff">
-              <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem">
-                {tier.benefits.map(b => (
-                  <li style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.88rem;color:var(--text)">
-                    <span style="color:var(--teal-dark);flex-shrink:0;margin-top:0.1rem">✓</span>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
+            <div class="tier-body">
+              <a href={tier.url} target="_blank" rel="noopener noreferrer" class={`btn ${tier.dark ? 'btn-primary' : 'btn-outline'}`} style="width:100%;text-align:center">Donate</a>
             </div>
           </div>
         ))}
@@ -113,73 +85,30 @@ const paymentOptions = [
 
   <hr class="divider" />
 
-  <!-- Beneficiary Programs -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Choose Your Impact</span>
-        <h2>Beneficiary Program Areas</h2>
-        <p style="color:var(--text-muted);max-width:580px;margin:0.75rem auto 0">Direct your gift to the programs and populations that matter most to you.</p>
-      </div>
-      <div class="grid-3" style="margin-top:2.5rem;gap:1.25rem">
-        {programs.map(p => (
-          <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start">
-            <span style="font-size:1.5rem;flex-shrink:0">{p.icon}</span>
-            <div>
-              <div style="font-weight:600;font-size:0.9rem;color:var(--text)">{p.label}</div>
-              <div style="font-size:0.82rem;color:var(--text-muted);margin-top:0.2rem">{p.desc}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- Payment Options + Planned Giving -->
+  <!-- Beneficiary Programs + Giving by Check -->
   <section class="section">
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start" class="support-split">
 
-        <!-- Payment Options -->
+        <!-- Choose Beneficiary Program -->
         <div>
-          <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
-            <span class="eyebrow">Flexibility</span>
-            <h2>Payment Options</h2>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:1rem">
-            {paymentOptions.map(opt => (
-              <div style="display:flex;gap:1rem;align-items:flex-start">
-                <div style="width:8px;height:8px;border-radius:50%;background:var(--teal-dark);flex-shrink:0;margin-top:0.45rem"></div>
-                <div>
-                  <div style="font-weight:600;font-size:0.9rem">{opt.label}</div>
-                  <div style="font-size:0.85rem;color:var(--text-muted)">{opt.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div style="margin-top:1.75rem">
-            <a href="https://cmcenters.org/support-cmc/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Give Online</a>
-          </div>
+          <h2 style="font-size:1.3rem;margin-bottom:1.25rem">Choose Beneficiary Program</h2>
+          <ul class="program-list">
+            {programs.map(p => <li>{p}</li>)}
+          </ul>
         </div>
 
-        <!-- Major Gifts Contact -->
+        <!-- Giving by Check -->
         <div>
-          <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
-            <span class="eyebrow">Major Gifts &amp; Planned Giving</span>
-            <h2>Partner With Us</h2>
-          </div>
-          <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem">
-            Interested in a major gift, legacy giving, or including CMC in your estate plan?
-            Our Development Director would love to connect with you.
-          </p>
-          <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:1.5rem;display:flex;flex-direction:column;gap:0.75rem">
-            <div style="font-weight:700;font-size:0.95rem">Jennie Rodriguez</div>
-            <div style="font-size:0.82rem;color:var(--text-muted)">Development Director</div>
-            <a href="tel:2093732454" style="font-size:0.88rem;font-weight:600;color:var(--teal-dark)">(209) 373-2454</a>
-            <a href="mailto:jrmoore@cmcenters.org" style="font-size:0.88rem;color:var(--teal-dark)">jrmoore@cmcenters.org</a>
-          </div>
+          <h2 style="font-size:1.3rem;margin-bottom:1.25rem">Giving by Check</h2>
+          <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;margin-bottom:1rem">Checks can be made payable to <strong>Community Medical Centers</strong> and mailed to:</p>
+          <address style="font-style:normal;background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;font-size:0.92rem;line-height:1.8;color:var(--text)">
+            Community Medical Centers<br />
+            Attn: Development Department<br />
+            7210 Murray Drive<br />
+            Stockton, CA 95210
+          </address>
+          <p style="color:var(--text-muted);font-size:0.875rem;line-height:1.6;margin-top:1rem">Please include any designation or instructions with your gift so we can ensure it supports the area most meaningful to you.</p>
         </div>
 
       </div>
@@ -188,25 +117,85 @@ const paymentOptions = [
 
   <hr class="divider" />
 
-  <!-- Signature Event -->
-  <section class="section-sm" style="background:var(--navy-footer)">
-    <div class="container" style="max-width:760px;text-align:center">
-      <div class="eyebrow" style="display:inline-block;color:var(--teal);font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.75rem">Signature Event</div>
-      <h2 style="color:#fff;margin-bottom:0.75rem">Annual Gala: A Black &amp; White Masquerade</h2>
-      <p style="color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.7;margin-bottom:1.5rem">
-        Join us each year for our signature fundraising gala. A celebration of community, compassion, and the future of healthcare in the Central Valley.
-      </p>
-      <a href="https://cmcenters.org/support-cmc/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Learn About Sponsorships</a>
+  <!-- Transformational Giving -->
+  <section class="section" id="transformational-giving">
+    <div class="container" style="max-width:860px">
+      <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);margin-bottom:1.5rem">Transformational Giving</h2>
+      <p>Transformational gifts help Community Medical Centers expand access to care, strengthen services, and invest in the future health of our communities. Major gifts and planned gifts—such as bequests, beneficiary designations, and other legacy gifts—can make a lasting difference for patients and families across the communities we serve.</p>
+      <p>To learn more about making a major or planned gift, contact Director of Development Jennie Rodriguez at <a href="mailto:jrmoore@cmcenters.org" style="color:var(--teal-dark)">jrmoore@cmcenters.org</a> or <a href="tel:2093732454" style="color:var(--teal-dark)">(209) 373-2454</a>.</p>
     </div>
   </section>
 
 </Base>
 
 <style>
+  p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.1rem; }
+  .help-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .tier-card {
+    border: 2px solid var(--teal-dark);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .tier-card--highlight {
+    border-color: var(--teal-dark);
+    box-shadow: 0 4px 20px rgba(38,122,112,0.18);
+  }
+  .tier-card--dark {
+    border-color: var(--navy-footer);
+  }
+  .tier-header {
+    background: var(--teal-light);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--teal-dark);
+  }
+  .tier-card--dark .tier-header {
+    background: var(--navy-footer);
+    border-bottom-color: var(--navy-footer);
+  }
+  .tier-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--teal-dark);
+  }
+  .tier-card--dark .tier-name { color: #fff; }
+  .tier-range {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+  }
+  .tier-card--dark .tier-range { color: rgba(255,255,255,0.8); }
+  .tier-body {
+    padding: 1.25rem 1.5rem;
+    background: #fff;
+  }
+  .program-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .program-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .program-list li::before {
+    content: '·';
+    color: var(--teal-dark);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
   @media (max-width: 768px) {
-    .support-split {
-      grid-template-columns: 1fr !important;
-      gap: 2.5rem !important;
-    }
+    .support-split { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
   }
 </style>
