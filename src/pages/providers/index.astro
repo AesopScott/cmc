@@ -7,13 +7,6 @@ const specialties = taxonomies.ignyte_specialty.filter(s => s.count > 0).map(s =
 ---
 <Base title="Providers" description="Find a Community Medical Centers healthcare provider near you.">
 
-  <div class="page-header">
-    <div class="container">
-      <h1>Our Providers</h1>
-      <p>Meet the dedicated physicians, nurse practitioners, and specialists who serve our community.</p>
-    </div>
-  </div>
-
   <div class="filter-bar" role="search" aria-label="Search providers">
     <div class="filter-inner">
       <label for="search" class="sr-only">Search by provider name</label>
@@ -28,23 +21,23 @@ const specialties = taxonomies.ignyte_specialty.filter(s => s.count > 0).map(s =
 
   <section class="section">
     <div class="container">
-      <div class="grid-4" id="provider-grid">
+      <div class="provider-grid" id="provider-grid">
         {providers.map(p => {
           const specialty = p.terms?.ignyte_specialty?.[0] || '';
           const langs = (p.terms?.ignyte_lang || []).join(', ');
           const credential = p.meta?.['ignyte-provider-position'] || '';
           const displayName = credential ? `${p.title}, ${credential}` : p.title;
           return (
-            <a href={`/providers/${p.slug}`} class="card" style="display:flex;flex-direction:column"
+            <a href={`/providers/${p.slug}`} class="provider-card"
                data-name={p.title.toLowerCase()}
                data-specialty={specialty.toLowerCase()}>
-              <img class="provider-photo" src={p.thumbnail || '/img/2024__11__Portrait-Placeholder.png'} alt={p.title} loading="lazy" />
-              <div class="card-body" style="flex:1;display:flex;flex-direction:column">
-                <div class="provider-name" style="font-size:clamp(0.8rem,1.4vw,0.95rem);line-height:1.35;overflow-wrap:break-word;hyphens:auto">{displayName}</div>
-                <div style="margin-top:auto;padding-top:0.5rem">
-                  {specialty && <div class="badge">{specialty}</div>}
-                  {langs && <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem">{langs}</div>}
-                </div>
+              <div class="provider-circle-wrap">
+                <img class="provider-circle-img" src={p.thumbnail || '/img/provider-placeholder.svg'} alt={p.title} loading="lazy" />
+              </div>
+              <div class="provider-card-body">
+                <div class="provider-name">{displayName}</div>
+                {specialty && <div class="badge" style="margin-top:0.4rem">{specialty}</div>}
+                {langs && <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.4rem">{langs}</div>}
               </div>
             </a>
           );

@@ -18,33 +18,36 @@ const position = meta['ignyte-provider-position'] || '';
 const providerLocations = (() => {
   const locMap = meta['ignyte_locations[]'];
   if (!locMap || typeof locMap !== 'object') return [];
-  return Object.values(locMap).filter(Boolean);
+  return Object.entries(locMap)
+    .filter(([, name]) => name)
+    .map(([id, name]) => {
+      const loc = locations.find(l => String(l.id) === String(id));
+      return { name: String(name), slug: loc?.slug || null };
+    });
 })();
 ---
 <Base title={p.title} description={`${p.title}, ${position} — Community Medical Centers provider.`}>
 
-  <div class="page-header">
-    <div class="container">
-      <div class="breadcrumb"><a href="/providers">Providers</a> / {p.title}</div>
-      <h1>{p.title}{position && <span style="font-size:0.6em;font-weight:500;opacity:0.75;margin-left:0.4em;vertical-align:middle">{position}</span>}</h1>
-    </div>
-  </div>
-
   <section class="section">
     <div class="container">
-      <div style="display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start" class="provider-detail-grid">
+      <div style="display:grid;grid-template-columns:220px 1fr;gap:3rem;align-items:start" class="provider-detail-grid">
 
-        <!-- Photo -->
-        <div>
-          <img
-            src={p.thumbnail || '/img/2024__11__Portrait-Placeholder.png'}
-            alt={p.title}
-            style="width:100%;border-radius:8px;border:1px solid var(--border)"
-          />
+        <!-- Circular Photo -->
+        <div style="text-align:center">
+          <div class="provider-detail-circle">
+            <img
+              src={p.thumbnail || '/img/provider-placeholder.svg'}
+              alt={p.title}
+              class="provider-detail-img"
+            />
+          </div>
         </div>
 
         <!-- Details -->
         <div>
+          <h1 style="font-size:1.75rem;margin-bottom:0.25rem">{p.title}</h1>
+          {position && <div style="font-size:1rem;color:var(--text-muted);margin-bottom:1.5rem">{position}</div>}
+
           {specialty && (
             <div style="margin-bottom:1.5rem">
               <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Specialty</div>
@@ -65,14 +68,17 @@ const providerLocations = (() => {
             <div style="margin-bottom:1.5rem">
               <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Locations</div>
               <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem">
-                {providerLocations.map(name => <li style="color:var(--muted)">{name}</li>)}
+                {providerLocations.map(loc => (
+                  <li>
+                    {loc.slug
+                      ? <a href={`/locations/${loc.slug}`} style="color:var(--teal-dark);font-weight:500">{loc.name}</a>
+                      : <span style="color:var(--muted)">{loc.name}</span>
+                    }
+                  </li>
+                ))}
               </ul>
             </div>
           )}
-
-          <div style="margin-top:2rem">
-            <a href="/locations" class="btn btn-outline">Find a Location</a>
-          </div>
         </div>
 
       </div>
@@ -82,6 +88,21 @@ const providerLocations = (() => {
 </Base>
 
 <style>
+  .provider-detail-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--teal-light);
+    margin: 0 auto;
+  }
+  .provider-detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
   @media (max-width: 700px) {
     .provider-detail-grid { grid-template-columns: 1fr !important; }
   }

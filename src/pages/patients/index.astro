@@ -36,16 +36,8 @@ const sections = [
 ---
 <Base title="Patients" description="Patient resources at Community Medical Centers — insurance, patient portal, forms, rights, and billing.">
 
-  <div class="page-header">
-    <div class="container">
-      <div class="breadcrumb"><a href="/">Home</a> / Patients</div>
-      <h1>Patient Resources</h1>
-      <p>Everything you need to know about your care at Community Medical Centers.</p>
-    </div>
-  </div>
-
   <section class="section" style="padding-top:3rem">
-    <div class="container" style="max-width:960px">
+    <div class="container">
       <div class="grid-2" style="gap:1.25rem">
         {sections.map(s => (
           <a href={`/patients/${s.slug}`} class="patient-nav-card">
