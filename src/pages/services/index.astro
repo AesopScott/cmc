@@ -2,9 +2,6 @@
 import Base from '../../layouts/Base.astro';
 import services from '../../data/services.json';
 
-// Only show services with photos (self-referable)
-const withPhoto = services.filter(s => s.thumbnail);
-
 // Priority ordering
 const CORE  = ['adult-medicine', 'dental-care', 'behavioral-health'];
 const DEMOS = ['womens-health', 'pediatrics', 'women-infant-and-children-program-wic'];
@@ -17,7 +14,7 @@ function rank(slug) {
   return CORE.length + DEMOS.length;
 }
 
-const sorted = [...withPhoto].sort((a, b) => {
+const sorted = [...services].sort((a, b) => {
   const ra = rank(a.slug), rb = rank(b.slug);
   if (ra !== rb) return ra - rb;
   return a.title.localeCompare(b.title);
@@ -25,19 +22,12 @@ const sorted = [...withPhoto].sort((a, b) => {
 ---
 <Base title="Services" description="Community Medical Centers offers comprehensive healthcare services including primary care, dental, behavioral health, and more.">
 
-  <div class="page-header">
-    <div class="container">
-      <div class="breadcrumb"><a href="/">Home</a> / Services</div>
-      <h1>Our Services</h1>
-    </div>
-  </div>
-
   <section class="section" style="padding-top:3rem">
     <div class="container">
       <div class="grid-3">
         {sorted.map(svc => (
           <a href={`/services/${svc.slug}`} class="card" style="display:flex;flex-direction:column;color:inherit">
-            <img class="card-img" src={svc.thumbnail} alt={svc.title} loading="lazy" />
+            {svc.thumbnail && <img class="card-img" src={svc.thumbnail} alt={svc.title} loading="lazy" />}
             <div class="card-body">
               <h3>{svc.title}</h3>
             </div>
