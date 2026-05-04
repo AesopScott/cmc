@@ -71,22 +71,19 @@ const path = Astro.url.pathname;
   <footer class="site-footer">
     <div class="container">
 
-      <!-- E-news signup -->
-      <div class="footer-enews">
-        <p class="footer-enews-label">Stay Connected — Sign up for CMC News &amp; Updates</p>
-        <div class="ctct-inline-form" data-form-id="b800fa3de98e748a6aa00c9a4b40812a"></div>
-      </div>
-
       <div class="footer-grid">
+
+        <!-- For Stockton Residents -->
         <div class="footer-col">
-          <h4>Contact Us</h4>
-          <ul>
-            <li><a href="tel:2096365400">Medical: (209) 636-5400</a></li>
-            <li><a href="tel:2096365555">Dental: (209) 636-5555</a></li>
-            <li><a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
-            <li><a href="/support-cmc/">Support CMC</a></li>
-          </ul>
+          <h4>For Stockton Residents</h4>
+          <p class="footer-mcr-label">Mobile Community Response</p>
+          <p class="footer-mcr-text">In partnership with the City of Stockton, Community Medical Centers offers an alternative to 911 for Stockton citizens in need of behavioral health services. If you or someone you know is experiencing mental distress, please call:</p>
+          <a href="tel:8333112273" class="footer-mcr-phone">(833) 311-2273</a>
+          <p class="footer-mcr-hours">7 days a week, 8:00 am – 11:00 pm</p>
+          <p class="footer-mcr-note">This helpline is for non-violent individuals with mild to moderate symptoms.</p>
         </div>
+
+        <!-- Quick Links -->
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
@@ -94,12 +91,16 @@ const path = Astro.url.pathname;
             <li><a href="/services">Services</a></li>
             <li><a href="/patients">Patients</a></li>
             <li><a href="/providers">Providers</a></li>
-            <li><a href="/about">About CMC</a></li>
+            <li><a href="/support-cmc/">Support CMC</a></li>
             <li><a href="/news">News</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/careers">Careers</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a></li>
+            <li><a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
           </ul>
         </div>
+
+        <!-- Follow Us + E-news -->
         <div class="footer-col">
           <h4>Follow Us</h4>
           <ul>
@@ -108,7 +109,12 @@ const path = Astro.url.pathname;
             <li><a href="https://www.youtube.com/@cmcenters" target="_blank" rel="noopener noreferrer">YouTube</a></li>
             <li><a href="http://x.com/CMCinc78" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
           </ul>
+          <div class="footer-enews">
+            <h4>Get News Updates</h4>
+            <div class="ctct-inline-form" data-form-id="b800fa3de98e748a6aa00c9a4b40812a"></div>
+          </div>
         </div>
+
       </div>
 
       <div class="footer-bottom">

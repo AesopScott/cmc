@@ -266,13 +266,21 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 
 /* Footer */
 .site-footer { background: var(--navy-footer); padding: 4rem 0 2rem; }
-.footer-enews { border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 2.5rem; margin-bottom: 2.5rem; }
-.footer-enews-label { color: rgba(255,255,255,0.9); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; }
-.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-bottom: 3rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
 .footer-col h4 { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 600; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
 .footer-col a { color: rgba(255,255,255,0.88); font-size: 0.875rem; transition: color 0.15s; }
 .footer-col a:hover { color: #fff; filter: none; }
+/* Mobile Community Response */
+.footer-mcr-label { color: var(--teal); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.footer-mcr-text { color: rgba(255,255,255,0.78); font-size: 0.82rem; line-height: 1.6; margin-bottom: 0.75rem; }
+.footer-mcr-phone { display: inline-block; color: #fff; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.4rem; text-decoration: none; }
+.footer-mcr-phone:hover { color: var(--teal); }
+.footer-mcr-hours { color: rgba(255,255,255,0.88); font-size: 0.82rem; font-weight: 600; margin-bottom: 0.4rem; }
+.footer-mcr-note { color: rgba(255,255,255,0.6); font-size: 0.78rem; font-style: italic; }
+/* E-news inside Follow Us column */
+.footer-enews { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); }
+.footer-enews h4 { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 600; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.75); }
 .footer-legal { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
