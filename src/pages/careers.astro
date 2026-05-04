@@ -3,81 +3,83 @@ import Base from '../layouts/Base.astro';
 
 const benefits = [
   {
-    icon: '💰',
     title: 'Competitive Compensation',
     desc: 'Market-rate salaries that reflect your experience and expertise.',
   },
   {
-    icon: '🏖️',
     title: 'Generous Leave',
     desc: 'Paid vacation, sick time, and holiday coverage so you can recharge.',
   },
   {
-    icon: '🩺',
     title: 'Comprehensive Insurance',
     desc: 'Medical, dental, vision, life, AD&D, disability, EAP, and retirement plans.',
   },
   {
-    icon: '📚',
     title: 'Professional Development',
-    desc: 'Ongoing education, certification support, free CME credits, and loan repayment programs.',
+    desc: 'Grow alongside us, advancing your skills with continued education and certification support.',
   },
-];
-
-const additionalBenefits = [
-  'HRSA, SLRP, CAL HealthCares, HCAi, and Song Brown loan repayment programs',
-  'Free CME credits for clinical staff',
-  'Flexible spending accounts with dependent care matching',
-  '403(b) retirement savings plan',
 ];
 
 const faqs = [
   {
+    q: "What's the hiring process like?",
+    a: 'Apply – Submit your application online\nReview – Recruiters assess your qualifications.\nNext Steps – If you\'re a match, we\'ll reach out for an interview.\nInterviews – Zoom or in-person, often with a panel.\nOffer – Sent via Paycom; respond within 3 business days.\nPre-Employment – Background check, reference check, and physical exam.',
+    list: true,
+  },
+  {
     q: 'How do I apply?',
-    a: 'Submit your application online through the job boards below. Internal applicants can apply through Paycom ESS. Students are welcome to email their resume to careers@cmcenters.org.',
+    a: 'External: cmcenters.org/careers\nInternal: Log into ESS via Paycom.\nStudents: Apply online and send your resume to careers@cmcenters.org.',
+    list: true,
   },
   {
-    q: 'How long does the hiring process take?',
-    a: 'You\'ll receive an immediate confirmation from Paycom after submitting. High-volume roles typically take 4–6 weeks from application to offer.',
+    q: 'What qualifications do I need?',
+    a: 'Check the job description for required skill and experience before applying.',
   },
   {
-    q: 'What does the interview process look like?',
-    a: 'Most interviews are conducted via Zoom with a panel format. Some administrative roles may include an in-person component.',
+    q: 'How long until I hear back?',
+    a: 'Immediate email confirmation from Paycom after applying. High-volume roles: 4–6 weeks. Recruiters will contact you if more info is needed.',
   },
   {
-    q: 'Can I apply to more than one position?',
-    a: 'Yes — you\'re welcome to apply to multiple positions simultaneously if you meet the qualifications for each.',
+    q: 'Can I apply for more than one role?',
+    a: "Yes, you'll be considered for all positions that fit your background.",
   },
   {
-    q: 'Will I hear back about my application status?',
-    a: 'Yes. We send email updates at each stage of the hiring process so you\'re never left wondering.',
+    q: "Will I know if I'm not selected?",
+    a: 'Yes, we send email notifications at various stages.',
   },
   {
-    q: 'Do I need to submit a cover letter?',
-    a: 'A cover letter is optional, but we encourage it. It\'s a great opportunity to share why you\'re passionate about community health.',
+    q: "What's the interview process like?",
+    a: 'Most interviews are done via Zoom with at least two panelists. Some take place in-person, especially for administrative roles.',
   },
   {
-    q: 'What loan repayment programs are available?',
-    a: 'As an FQHC, CMC qualifies for multiple federal and state loan repayment programs including HRSA NHSC, SLRP, CAL HealthCares, HCAi, and Song Brown.',
+    q: 'Do I need a cover letter?',
+    a: 'Optional, but a great way to stand out.',
+  },
+  {
+    q: 'What benefits does CMC offer?',
+    a: 'Loan repayment programs (HRSA, SLRP, CAL HealthCares, HCAi, Song Brown)\nFree CME\nMedical, dental, vision insurance (Kaiser/Sutter options)\nFlexible spending accounts + dependent care match\nLife & disability insurance\n403(b) retirement savings\nPaid time off, sick leave, and holidays',
+    list: true,
   },
 ];
 ---
 <Base title="Careers" description="Join the Community Medical Centers team. View open positions for providers and all other staff.">
 
-  <div class="page-header">
+  <!-- Join Us -->
+  <section class="section">
     <div class="container">
-      <div class="breadcrumb"><a href="/">Home</a> / Careers</div>
-      <h1>Make a Difference With Your Career</h1>
-      <p>Join a mission-driven team committed to providing quality healthcare to everyone in our community.</p>
+      <h1 style="font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:1.25rem">Join Us</h1>
+      <p style="font-size:1.05rem;color:var(--text-muted);line-height:1.8;max-width:760px">
+        A job at CMC is more than just a career. It's an opportunity to make a difference in your community. We are a mission-driven team committed to providing quality healthcare to everyone in our community.
+      </p>
     </div>
-  </div>
+  </section>
+
+  <hr class="divider" />
 
   <!-- Job Boards -->
   <section class="section">
-    <div class="container" style="max-width:860px">
-
+    <div class="container">
       <div class="grid-2" style="gap:2rem">
-
         <div class="card" style="display:flex;flex-direction:column">
           <div style="height:8px;background:var(--teal-dark)"></div>
           <div class="card-body" style="flex:1;display:flex;flex-direction:column;gap:1rem">
@@ -86,7 +88,6 @@ const faqs = [
             <a href="https://jobs.inline.group/cmc/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="align-self:flex-start">View Provider Jobs</a>
           </div>
         </div>
-
         <div class="card" style="display:flex;flex-direction:column">
           <div style="height:8px;background:var(--teal-dark)"></div>
           <div class="card-body" style="flex:1;display:flex;flex-direction:column;gap:1rem">
@@ -95,9 +96,7 @@ const faqs = [
             <a href="https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=2121B43BA8B8BCA134017BE7125D3DCC" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="align-self:flex-start">View All Jobs</a>
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
 
@@ -107,30 +106,17 @@ const faqs = [
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Why CMC</span>
-        <h2>Benefits &amp; Perks</h2>
+        <h2>Benefits</h2>
       </div>
-      <div class="grid-4" style="margin-top:2.5rem">
+      <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:1.25rem">
         {benefits.map(b => (
-          <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center">
-            <div style="font-size:2rem;margin-bottom:0.75rem">{b.icon}</div>
-            <h3 style="font-size:0.95rem;margin-bottom:0.5rem">{b.title}</h3>
-            <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6">{b.desc}</p>
+          <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.25rem 0;border-bottom:1px solid var(--border)">
+            <div>
+              <div style="font-weight:600;font-size:1rem;color:var(--text);margin-bottom:0.3rem">{b.title}</div>
+              <div style="font-size:0.9rem;color:var(--text-muted);line-height:1.6">{b.desc}</div>
+            </div>
           </div>
         ))}
-      </div>
-
-      <!-- Additional benefits -->
-      <div style="margin-top:2rem;padding:1.5rem 2rem;background:var(--teal-light);border-radius:10px;max-width:860px;margin-left:auto;margin-right:auto">
-        <h3 style="font-size:0.9rem;font-weight:700;color:var(--teal-dark);margin-bottom:1rem">Additional Benefits</h3>
-        <ul style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 2rem;list-style:none" class="additional-benefits-list">
-          {additionalBenefits.map(b => (
-            <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;color:var(--text)">
-              <span style="color:var(--teal-dark);flex-shrink:0;margin-top:0.1rem">✓</span>
-              <span>{b}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   </section>
@@ -139,65 +125,38 @@ const faqs = [
 
   <!-- FAQ -->
   <section class="section">
-    <div class="container" style="max-width:760px">
+    <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Common Questions</span>
         <h2>Frequently Asked Questions</h2>
       </div>
       <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0" class="faq-list">
-        {faqs.map((faq, i) => (
+        {faqs.map(faq => (
           <details class="faq-item">
             <summary class="faq-question">{faq.q}</summary>
-            <div class="faq-answer">{faq.a}</div>
+            <div class="faq-answer">
+              {faq.list
+                ? <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;padding:0">
+                    {faq.a.split('\n').map(line => <li style="display:flex;gap:0.5rem"><span style="color:var(--teal-dark);flex-shrink:0">–</span>{line}</li>)}
+                  </ul>
+                : faq.a
+              }
+            </div>
           </details>
         ))}
       </div>
     </div>
   </section>
 
-  <hr class="divider" />
-
-  <!-- Why CMC blurb -->
-  <section class="section-sm" style="background:var(--bg-alt)">
-    <div class="container" style="max-width:760px">
-      <div class="section-header" style="margin-bottom:0">
-        <span class="eyebrow">Our Culture</span>
-        <h2>Why Work at CMC?</h2>
-      </div>
-      <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-top:1rem">
-        Community Medical Centers is a Federally Qualified Health Center (FQHC) serving the Central Valley.
-        We are a diverse, family-oriented organization where every team member has the opportunity to make a
-        real difference in the lives of patients who depend on us. From our clinical providers to our front-desk
-        staff, everyone at CMC contributes to a mission that matters.
-      </p>
-      <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-top:0.75rem">
-        Questions? Email us at <a href="mailto:careers@cmcenters.org">careers@cmcenters.org</a>.
-      </p>
-    </div>
-  </section>
-
 </Base>
 
 <style>
-  /* 4-column grid for benefits cards */
-  .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-  }
-
-  /* FAQ accordion */
-  .faq-item {
-    border-bottom: 1px solid var(--border);
-  }
-  .faq-item:first-child {
-    border-top: 1px solid var(--border);
-  }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:first-child { border-top: 1px solid var(--border); }
   .faq-question {
     list-style: none;
     padding: 1.1rem 0;
     font-weight: 600;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -205,32 +164,7 @@ const faqs = [
     color: var(--text);
   }
   .faq-question::-webkit-details-marker { display: none; }
-  .faq-question::after {
-    content: '+';
-    font-size: 1.2rem;
-    color: var(--teal-dark);
-    flex-shrink: 0;
-    margin-left: 1rem;
-  }
+  .faq-question::after { content: '+'; font-size: 1.2rem; color: var(--teal-dark); flex-shrink: 0; margin-left: 1rem; }
   details[open] .faq-question::after { content: '−'; }
-  .faq-answer {
-    padding: 0 0 1.1rem;
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
-
-  @media (max-width: 768px) {
-    .grid-4 {
-      grid-template-columns: 1fr 1fr;
-    }
-    .additional-benefits-list {
-      grid-template-columns: 1fr !important;
-    }
-  }
-  @media (max-width: 480px) {
-    .grid-4 {
-      grid-template-columns: 1fr;
-    }
-  }
+  .faq-answer { padding: 0 0 1.1rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
 </style>
