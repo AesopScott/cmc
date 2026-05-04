@@ -117,6 +117,53 @@ const programs = [
 
   <hr class="divider" />
 
+  <!-- Signature Event -->
+  <section class="gala-section">
+    <div class="gala-banner">
+      <img src="/img/gala-banner.jpg" alt="Annual Gala — A Black & White Masquerade" class="gala-img" loading="lazy" />
+    </div>
+    <div class="container" style="padding-top:3rem;padding-bottom:3rem">
+      <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);margin-bottom:1rem">Signature Event</h2>
+      <p>We are grateful to everyone who made this year's event possible. Your support helps expand access to care and strengthens the health of our community. Special thanks to our gala sponsors:</p>
+
+      <div class="sponsors-grid">
+        <div class="sponsor-tier">
+          <h3 class="sponsor-tier-name">Opal</h3>
+          <ul class="sponsor-list">
+            <li>Merino Computer Concepts</li>
+            <li>University of the Pacific | Health Sciences</li>
+          </ul>
+        </div>
+        <div class="sponsor-tier">
+          <h3 class="sponsor-tier-name">Pearl</h3>
+          <ul class="sponsor-list">
+            <li>AllCare IPA</li>
+            <li>Cambridge Investments/Nationwide</li>
+            <li>Health Plan of San Joaquin</li>
+            <li>USI Insurance Services</li>
+            <li>WMB Architects</li>
+          </ul>
+        </div>
+        <div class="sponsor-tier">
+          <h3 class="sponsor-tier-name">Onyx</h3>
+          <ul class="sponsor-list">
+            <li>Bank of Stockton</li>
+            <li>EM Consulting</li>
+            <li>F&amp;M Bank</li>
+            <li>Health Net</li>
+            <li>Medi-Tek, Inc.</li>
+            <li>Patterson Dental</li>
+            <li>Quest Diagnostics</li>
+            <li>Touro University</li>
+            <li>Wipfli</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
   <!-- Transformational Giving -->
   <section class="section" id="transformational-giving">
     <div class="container" style="max-width:860px">
@@ -195,7 +242,37 @@ const programs = [
     font-weight: 700;
     flex-shrink: 0;
   }
+  .gala-section { width: 100%; }
+  .gala-banner { width: 100%; overflow: hidden; max-height: 420px; }
+  .gala-img { width: 100%; display: block; object-fit: cover; object-position: center; max-height: 420px; }
+  .sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+  .sponsor-tier-name {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--teal-light);
+  }
+  .sponsor-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .sponsor-list li {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
   @media (max-width: 768px) {
     .support-split { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+    .sponsors-grid { grid-template-columns: 1fr !important; }
   }
 </style>
