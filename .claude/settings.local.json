@@ -33,7 +33,9 @@
       "Bash(magick --version)",
       "Bash(convert --version)",
       "Bash(node -e \"require\\('sharp'\\); console.log\\('sharp available'\\)\")",
-      "Bash(node -e \"const locs = require\\('./src/data/locations.json'\\); locs.forEach\\(l => console.log\\(l.id, l.slug, l.title\\)\\)\")"
+      "Bash(node -e \"const locs = require\\('./src/data/locations.json'\\); locs.forEach\\(l => console.log\\(l.id, l.slug, l.title\\)\\)\")",
+      "Bash(node -e \"const locs = require\\('./src/data/locations.json'\\); console.log\\(JSON.stringify\\(locs[0].meta['ignyte_locations[]'] || locs[0], null, 2\\)\\)\")",
+      "Bash(node -e \"const p = require\\('./src/data/providers.json'\\); const m = p[0].meta; console.log\\('loc keys:', Object.keys\\(m['ignyte_locations[]'] || {}\\)\\); console.log\\('loc vals:', Object.values\\(m['ignyte_locations[]'] || {}\\)\\)\")"
     ]
   },
   "hooks": {
