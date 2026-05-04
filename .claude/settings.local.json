@@ -32,7 +32,8 @@
       "Bash(node -e ' *)",
       "Bash(magick --version)",
       "Bash(convert --version)",
-      "Bash(node -e \"require\\('sharp'\\); console.log\\('sharp available'\\)\")"
+      "Bash(node -e \"require\\('sharp'\\); console.log\\('sharp available'\\)\")",
+      "Bash(node -e \"const locs = require\\('./src/data/locations.json'\\); locs.forEach\\(l => console.log\\(l.id, l.slug, l.title\\)\\)\")"
     ]
   },
   "hooks": {
