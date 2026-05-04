@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Contact Us" description="Contact Community Medical Centers — administration, media inquiries, medical records, patient portal support, and patient relations.">
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / Contact Us</div>
+      <h1>Contact Us</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <div class="contact-grid">
+
+        <!-- Administration -->
+        <div class="contact-card">
+          <h2>Administration</h2>
+          <ul class="contact-list">
+            <li>P.O. Box 779, Stockton CA 95201</li>
+            <li>Phone: <a href="tel:2093732800">(209) 373-2800</a></li>
+            <li>Email: <a href="mailto:info@cmcenters.org">info@cmcenters.org</a></li>
+          </ul>
+        </div>
+
+        <!-- Media Inquiries -->
+        <div class="contact-card">
+          <h2>Media Inquiries</h2>
+          <ul class="contact-list">
+            <li>Phone: <a href="tel:2093732435">(209) 373-2435</a></li>
+            <li>Email: <a href="mailto:info@cmcenters.org">info@cmcenters.org</a></li>
+          </ul>
+        </div>
+
+        <!-- Medical Records -->
+        <div class="contact-card">
+          <h2>Medical Records</h2>
+          <ul class="contact-list">
+            <li>P.O. Box 779, Stockton CA 95201</li>
+            <li>Phone: <a href="tel:2095463870">(209) 546-3870</a></li>
+            <li>Fax: (209) 762-6808</li>
+          </ul>
+        </div>
+
+        <!-- Patient Portal Support -->
+        <div class="contact-card">
+          <h2>Patient Portal Support</h2>
+          <ul class="contact-list">
+            <li>Phone: <a href="tel:2094306222">(209) 430-6222</a></li>
+          </ul>
+        </div>
+
+        <!-- Patient Relations -->
+        <div class="contact-card">
+          <h2>Patient Relations</h2>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:patientrelations@cmcenters.org">patientrelations@cmcenters.org</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .contact-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.75rem 2rem;
+  }
+  .contact-card h2 {
+    font-size: 1.05rem;
+    color: var(--teal-dark);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .contact-list a {
+    color: var(--teal-dark);
+    text-decoration: none;
+  }
+  .contact-list a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 640px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
