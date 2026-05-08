@@ -116,32 +116,29 @@ const heroPhoto = '/img/hero-home.webp';
   <hr class="divider" />
 
   <!-- Locations -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>CMC Locations</h2>
-      </div>
-      <div class="grid-3">
-        {featuredLocations.map(loc => (
-          <a href={`/locations/${loc.slug}`} class="card" style="display:block;color:inherit">
-            {loc.thumbnail && <img class="card-img" src={loc.thumbnail} alt={loc.title} loading="lazy" />}
-            <div class="card-body">
-              <h3>{loc.title}</h3>
-              {loc.meta?.ignyte_location_phone && (
-                <div class="location-info">
-                  <div class="location-info-row">{loc.meta.ignyte_location_phone}</div>
-                </div>
-              )}
-              {loc.meta?.ignyte_location_address && (
-                <div class="location-info-row" style="font-size:0.82rem;margin-top:0.25rem">{loc.meta.ignyte_location_address}</div>
-              )}
+  <section class="section" style="padding-top:3rem;padding-bottom:3rem">
+    <div class="section-header container">
+      <h2>CMC Locations</h2>
+    </div>
+    <div style="padding:0 12.5%;margin-top:1.5rem">
+      {featuredLocations.map(loc => {
+        const addr = (loc.meta?.ignyte_location_address || '').replace(/,?\s*USA\s*$/i, '');
+        return (
+          <a href={`/locations/${loc.slug}`} class="location-row">
+            <div class="location-row-main">
+              <h2 class="location-row-name">{loc.title}</h2>
+              <div class="location-row-meta">
+                {addr && <span>{addr}</span>}
+                {loc.meta?.ignyte_location_phone && <span>{loc.meta.ignyte_location_phone}</span>}
+              </div>
             </div>
+            <span class="location-row-arrow" aria-hidden="true">→</span>
           </a>
-        ))}
-      </div>
-      <div style="text-align:center;margin-top:2.5rem">
-        <a href="/locations" class="btn btn-outline">View All Locations</a>
-      </div>
+        );
+      })}
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="/locations" class="btn btn-outline">View All Locations</a>
     </div>
   </section>
 
@@ -163,11 +160,11 @@ const heroPhoto = '/img/hero-home.webp';
   <!-- News -->
   {recentPosts.length > 0 && (
     <section class="section">
-      <div class="container">
+      <div class="container" style="text-align:center">
         <div class="section-header">
           <h2>News</h2>
         </div>
-        <div class="grid-3">
+        <div class="grid-3" style="text-align:left">
           {recentPosts.map(post => {
             const cat = post.terms?.category?.[0] || '';
             return (
@@ -182,7 +179,7 @@ const heroPhoto = '/img/hero-home.webp';
             );
           })}
         </div>
-        <div style="text-align:center;margin-top:2.5rem">
+        <div style="margin-top:2.5rem">
           <a href="/news" class="btn btn-outline">All News</a>
         </div>
       </div>

@@ -25,6 +25,9 @@ const path = Astro.url.pathname;
   <!-- Skip link (WCAG 2.4.1) -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- Sticky site header: utility bar + main nav -->
+  <header class="site-header">
+
   <!-- Utility Bar -->
   <div class="utility-bar">
     <div class="utility-bar-inner">
@@ -64,6 +67,8 @@ const path = Astro.url.pathname;
     </div>
   </nav>
 
+  </header><!-- /.site-header -->
+
   <main id="main-content" tabindex="-1">
     <slot />
   </main>
@@ -76,17 +81,13 @@ const path = Astro.url.pathname;
         <!-- For Stockton Residents -->
         <div class="footer-col">
           <h4>For Stockton Residents</h4>
-          <p class="footer-mcr-label">Mobile Community Response</p>
-          <p class="footer-mcr-text">In partnership with the City of Stockton, Community Medical Centers offers an alternative to 911 for Stockton citizens in need of behavioral health services. If you or someone you know is experiencing mental distress, please call:</p>
-          <a href="tel:8333112273" class="footer-mcr-phone">(833) 311-2273</a>
-          <p class="footer-mcr-hours">7 days a week, 8:00 am – 11:00 pm</p>
-          <p class="footer-mcr-note">This helpline is for non-violent individuals with mild to moderate symptoms.</p>
+          <p class="footer-mcr-text"><strong>Mobile Community Response:</strong> In partnership with the City of Stockton, Community Medical Centers offers an alternative to 911 for Stockton citizens in need of behavioral health services. If you or someone you know is experiencing mental distress, please call <a href="tel:8333112273" style="color:rgba(255,255,255,0.85);font-weight:600">(833) 311-2273</a>, 7 days a week, 8:00 am to 11:00 pm. This helpline is for non-violent individuals with mild to moderate symptoms.</p>
         </div>
 
         <!-- Quick Links -->
         <div class="footer-col">
           <h4>Quick Links</h4>
-          <ul>
+          <ul class="footer-links-list">
             <li><a href="/locations">Locations</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/patients">Patients</a></li>
@@ -95,6 +96,7 @@ const path = Astro.url.pathname;
             <li><a href="/news">News</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact Us</a></li>
             <li><a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer">Donate</a></li>
             <li><a href="https://mychart.ochin.org/cmcenters/Authentication/Login?" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
           </ul>
@@ -103,7 +105,7 @@ const path = Astro.url.pathname;
         <!-- Follow Us + E-news -->
         <div class="footer-col">
           <h4>Follow Us</h4>
-          <ul>
+          <ul class="footer-links-list">
             <li><a href="https://www.facebook.com/cmcenters" target="_blank" rel="noopener noreferrer">Facebook</a></li>
             <li><a href="https://www.instagram.com/cmcenters.inc/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             <li><a href="https://www.youtube.com/@cmcenters" target="_blank" rel="noopener noreferrer">YouTube</a></li>

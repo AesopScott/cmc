@@ -171,95 +171,6 @@
     "terms": []
   },
   {
-    "id": 2099,
-    "slug": "dental-hygiene",
-    "title": "Dental Hygiene",
-    "url": "https://cmcenters.org/health-services/dental-hygiene/",
-    "date": "2024-04-11 12:28:06",
-    "modified": "2024-04-11 12:28:06",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "_edit_lock": "1712838371:1",
-      "ignyte_locations[]": {
-        "611": "611",
-        "634": "634",
-        "635": "635"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": ""
-    },
-    "terms": []
-  },
-  {
-    "id": 2090,
-    "slug": "dermatology",
-    "title": "Dermatology",
-    "url": "https://cmcenters.org/health-services/dermatology/",
-    "date": "2024-04-09 12:14:02",
-    "modified": "2024-04-09 12:14:02",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "_edit_lock": "1712664702:1",
-      "ignyte_locations[]": {
-        "636": "636"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": ""
-    },
-    "terms": []
-  },
-  {
-    "id": 2091,
-    "slug": "endocrinology",
-    "title": "Endocrinology",
-    "url": "https://cmcenters.org/health-services/endocrinology/",
-    "date": "2024-04-09 12:14:37",
-    "modified": "2024-04-09 12:14:37",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "_edit_lock": "1712691481:1",
-      "ignyte_locations[]": {
-        "636": "636"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": ""
-    },
-    "terms": []
-  },
-  {
     "id": 374,
     "slug": "enrollment-assistance",
     "title": "Health Coverage Counseling",
@@ -334,106 +245,6 @@
       "_yoast_wpseo_wordproof_timestamp": "",
       "_yoast_wpseo_content_score": "90",
       "_thumbnail_id": "3460"
-    },
-    "terms": []
-  },
-  {
-    "id": 2084,
-    "slug": "nutrition",
-    "title": "Nutrition",
-    "url": "https://cmcenters.org/health-services/nutrition/",
-    "date": "2024-04-09 11:38:33",
-    "modified": "2024-04-09 11:38:33",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "_edit_lock": "1746635147:10",
-      "ignyte_locations[]": {
-        "611": "611",
-        "613": "613",
-        "614": "614",
-        "620": "620",
-        "623": "623",
-        "624": "624",
-        "629": "629",
-        "631": "631",
-        "636": "636"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": ""
-    },
-    "terms": []
-  },
-  {
-    "id": 2083,
-    "slug": "ob-gyn",
-    "title": "OB/GYN",
-    "url": "https://cmcenters.org/health-services/ob-gyn/",
-    "date": "2024-04-09 11:30:31",
-    "modified": "2024-04-09 11:30:31",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "_edit_lock": "1746635157:10",
-      "ignyte_locations[]": {
-        "611": "611",
-        "620": "620",
-        "623": "623",
-        "624": "624",
-        "629": "629",
-        "636": "636"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": ""
-    },
-    "terms": []
-  },
-  {
-    "id": 2085,
-    "slug": "optometry",
-    "title": "Optometry",
-    "url": "https://cmcenters.org/health-services/optometry/",
-    "date": "2024-04-09 11:39:29",
-    "modified": "2024-04-09 11:39:29",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "_edit_lock": "1712662819:1",
-      "ignyte_locations[]": {
-        "611": "611"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": ""
     },
     "terms": []
   },
@@ -517,38 +328,6 @@
     "terms": []
   },
   {
-    "id": 2088,
-    "slug": "podiatry",
-    "title": "Podiatry",
-    "url": "https://cmcenters.org/health-services/podiatry/",
-    "date": "2024-04-09 12:06:29",
-    "modified": "2024-04-09 12:06:29",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "_edit_lock": "1746635118:10",
-      "ignyte_locations[]": {
-        "623": "623",
-        "629": "629",
-        "631": "631",
-        "636": "636"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": ""
-    },
-    "terms": []
-  },
-  {
     "id": 1953,
     "slug": "recovery",
     "title": "Recovery / SUD Services",
@@ -579,39 +358,6 @@
       "_yoast_wpseo_metadesc": "If you need ongoing treatment for a substance use disorder, we have the resources and support you need to face the challenges throughout the recovery process. Our recovery specialists offer personalized care every step of the way.",
       "_yoast_wpseo_content_score": "90",
       "_yoast_wpseo_estimated-reading-time-minutes": "1"
-    },
-    "terms": []
-  },
-  {
-    "id": 2089,
-    "slug": "sud-substance-use-disorder",
-    "title": "SUD (Substance Use Disorder)",
-    "url": "https://cmcenters.org/health-services/sud-substance-use-disorder/",
-    "date": "2024-04-09 12:11:26",
-    "modified": "2024-04-09 12:11:26",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "ignyte_locations[]": {
-        "625": "625",
-        "626": "626",
-        "628": "628",
-        "631": "631",
-        "634": "634"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": "",
-      "_edit_lock": "1770847667:10"
     },
     "terms": []
   },
@@ -692,35 +438,6 @@
       "_yoast_wpseo_content_score": "90",
       "_yoast_wpseo_estimated-reading-time-minutes": "1",
       "_yoast_wpseo_wordproof_timestamp": ""
-    },
-    "terms": []
-  },
-  {
-    "id": 2086,
-    "slug": "x-ray",
-    "title": "X-ray",
-    "url": "https://cmcenters.org/health-services/x-ray/",
-    "date": "2024-04-09 11:46:10",
-    "modified": "2024-04-09 11:46:10",
-    "excerpt": "",
-    "content": "",
-    "thumbnail": null,
-    "meta": {
-      "_edit_last": "1",
-      "ignyte_locations[]": {
-        "611": "611"
-      },
-      "home-checkbox": null,
-      "location-model-checkbox": "yes",
-      "ignyte_model_alternative": "",
-      "ignyte_service_address": null,
-      "ignyte_service_phone": null,
-      "ignyte-service-meta-image": "",
-      "ignyte_bottom_shortcode_content": "",
-      "ignyte-service-fallback-image": "",
-      "_yoast_wpseo_estimated-reading-time-minutes": "0",
-      "_yoast_wpseo_wordproof_timestamp": "",
-      "_edit_lock": "1746635134:10"
     },
     "terms": []
   }

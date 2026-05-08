@@ -109,8 +109,8 @@ const locProviders = providers.filter(p => {
         <!-- Image + Map -->
         <div>
           {loc.thumbnail && (
-            <div style="border-radius:8px;overflow:hidden;margin-bottom:1rem">
-              <img src={loc.thumbnail} alt={loc.title} style="width:100%;display:block;max-height:260px;object-fit:cover;object-position:center 40%" loading="eager" />
+            <div style="border-radius:8px;overflow:hidden;margin-bottom:1rem;aspect-ratio:3/2">
+              <img src={loc.thumbnail} alt={loc.title} style="width:100%;height:100%;display:block;object-fit:cover;object-position:center 40%" loading="eager" />
             </div>
           )}
           <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden">

@@ -90,11 +90,15 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 .utility-bar a:hover { color: #fff; filter: none; }
 .util-divider { color: rgba(255,255,255,0.3); }
 
+/* Sticky site header wraps utility bar + nav */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
 /* Nav */
 .site-nav {
-  position: sticky; top: 0; z-index: 100;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -274,15 +278,11 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
 .footer-col h4 { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 600; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links-list { gap: 0.2rem !important; }
 .footer-col a { color: rgba(255,255,255,0.88); font-size: 0.875rem; transition: color 0.15s; }
 .footer-col a:hover { color: #fff; filter: none; }
 /* Mobile Community Response */
-.footer-mcr-label { color: var(--teal); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-.footer-mcr-text { color: rgba(255,255,255,0.78); font-size: 0.82rem; line-height: 1.6; margin-bottom: 0.75rem; }
-.footer-mcr-phone { display: inline-block; color: #fff; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.4rem; text-decoration: none; }
-.footer-mcr-phone:hover { color: var(--teal); }
-.footer-mcr-hours { color: rgba(255,255,255,0.88); font-size: 0.82rem; font-weight: 600; margin-bottom: 0.4rem; }
-.footer-mcr-note { color: rgba(255,255,255,0.6); font-size: 0.78rem; font-style: italic; }
+.footer-mcr-text { color: rgba(255,255,255,0.78); font-size: 0.82rem; line-height: 1.65; margin-bottom: 0.75rem; }
 /* E-news inside Follow Us column */
 .footer-enews { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); }
 .footer-enews h4 { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 600; }

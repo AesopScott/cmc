@@ -4,7 +4,7 @@ import locations from '../../data/locations.json';
 import services from '../../data/services.json';
 
 // Build location ID → service titles map
-const locServiceMap = {};
+const locServiceMap: Record<string, string[]> = {};
 services.forEach(svc => {
   Object.keys(svc.meta?.['ignyte_locations[]'] || {}).forEach(id => {
     if (!locServiceMap[id]) locServiceMap[id] = [];
@@ -12,24 +12,17 @@ services.forEach(svc => {
   });
 });
 
-const DENTAL = /dental|dentist|orthodont/i;
-const BEHAV  = /behavioral|mental|substance|recovery|sud/i;
-
-function parseCity(address) {
+function parseCity(address: string | undefined) {
   if (!address) return '';
   const stripped = address.replace(/,?\s*CA\s+\d{5}.*/i, '');
   const parts = stripped.split(',');
   return parts[parts.length - 1].trim();
 }
 
-function getServiceBadges(locId) {
-  const svcsHere = locServiceMap[String(locId)] || [];
-  return [
-    svcsHere.some(s => !DENTAL.test(s) && !BEHAV.test(s)) && 'Medical',
-    svcsHere.some(s => DENTAL.test(s)) && 'Dental',
-    svcsHere.some(s => BEHAV.test(s)) && 'Behavioral Health',
-  ].filter(Boolean);
-}
+// Collect all unique service names across all locations (sorted)
+const allServiceNames = [...new Set(
+  Object.values(locServiceMap).flat()
+)].sort();
 
 const cities = [...new Set(
   locations.map(l => parseCity(l.meta?.ignyte_location_address)).filter(Boolean)
@@ -38,7 +31,7 @@ const cities = [...new Set(
 const locData = locations.map(loc => ({
   ...loc,
   city: parseCity(loc.meta?.ignyte_location_address),
-  badges: getServiceBadges(loc.id),
+  services: locServiceMap[String(loc.id)] || [],
   address: (loc.meta?.ignyte_location_address || '').replace(/,?\s*USA\s*$/i, ''),
 }));
 ---
@@ -51,12 +44,10 @@ const locData = locations.map(loc => ({
         <option value="">All Cities</option>
         {cities.map(c => <option value={c}>{c}</option>)}
       </select>
-      <label for="type-filter" class="sr-only">Filter by service type</label>
-      <select id="type-filter">
-        <option value="">All Service Types</option>
-        <option value="Medical">Medical</option>
-        <option value="Dental">Dental</option>
-        <option value="Behavioral Health">Behavioral Health</option>
+      <label for="svc-filter" class="sr-only">Filter by service</label>
+      <select id="svc-filter">
+        <option value="">All Services</option>
+        {allServiceNames.map(s => <option value={s}>{s}</option>)}
       </select>
     </div>
   </div>
@@ -69,7 +60,7 @@ const locData = locations.map(loc => ({
             href={`/locations/${loc.slug}`}
             class="location-row"
             data-city={loc.city}
-            data-types={loc.badges.join(',')}
+            data-services={loc.services.join('|')}
           >
             <div class="location-row-main">
               <h2 class="location-row-name">{loc.title}</h2>
@@ -78,14 +69,7 @@ const locData = locations.map(loc => ({
                 {loc.meta?.ignyte_location_phone && <span>{loc.meta.ignyte_location_phone}</span>}
               </div>
             </div>
-            <div class="location-row-right">
-              <div class="location-row-badges">
-                {loc.badges.map(b => (
-                  <span class={`loc-badge loc-badge--${b.toLowerCase().replace(/\s+/g,'-')}`}>{b}</span>
-                ))}
-              </div>
-              <span class="location-row-arrow" aria-hidden="true">→</span>
-            </div>
+            <span class="location-row-arrow" aria-hidden="true">→</span>
           </a>
         ))}
       </div>
@@ -95,20 +79,20 @@ const locData = locations.map(loc => ({
   </section>
 
   <script>
-    const cityFilter = document.getElementById('city-filter');
-    const typeFilter = document.getElementById('type-filter');
-    const rows = document.querySelectorAll('.location-row');
-    const noResults = document.getElementById('no-locations');
-    const locCount = document.getElementById('loc-count');
+    const cityFilter = document.getElementById('city-filter') as HTMLSelectElement;
+    const svcFilter = document.getElementById('svc-filter') as HTMLSelectElement;
+    const rows = document.querySelectorAll<HTMLElement>('.location-row');
+    const noResults = document.getElementById('no-locations')!;
+    const locCount = document.getElementById('loc-count')!;
 
     function filter() {
       const city = cityFilter.value;
-      const type = typeFilter.value;
+      const svc = svcFilter.value;
       let visible = 0;
       rows.forEach(row => {
         const matchCity = !city || row.dataset.city === city;
-        const matchType = !type || row.dataset.types.includes(type);
-        const show = matchCity && matchType;
+        const matchSvc = !svc || (row.dataset.services || '').split('|').includes(svc);
+        const show = matchCity && matchSvc;
         row.style.display = show ? 'flex' : 'none';
         if (show) visible++;
       });
@@ -117,7 +101,7 @@ const locData = locations.map(loc => ({
     }
 
     cityFilter.addEventListener('change', filter);
-    typeFilter.addEventListener('change', filter);
+    svcFilter.addEventListener('change', filter);
   </script>
 
 </Base>

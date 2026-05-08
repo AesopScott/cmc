@@ -24,9 +24,10 @@ const sorted = [...services].sort((a, b) => {
 
   <section class="section" style="padding-top:3rem">
     <div class="container">
+      <h1 style="font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:2rem;color:var(--text)">Our Services</h1>
       <div class="grid-3">
         {sorted.map(svc => (
-          <a href={`/services/${svc.slug}`} class="card" style="display:flex;flex-direction:column;color:inherit">
+          <a href={`/services/${svc.slug}`} class="card" style="display:flex;flex-direction:column;color:inherit;text-align:left">
             {svc.thumbnail && <img class="card-img" src={svc.thumbnail} alt={svc.title} loading="lazy" />}
             <div class="card-body">
               <h3>{svc.title}</h3>
