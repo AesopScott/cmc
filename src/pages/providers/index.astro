@@ -24,7 +24,6 @@ const specialties = taxonomies.ignyte_specialty.filter(s => s.count > 0).map(s =
       <div class="provider-grid" id="provider-grid">
         {providers.map(p => {
           const specialty = p.terms?.ignyte_specialty?.[0] || '';
-          const langs = (p.terms?.ignyte_lang || []).join(', ');
           const credential = p.meta?.['ignyte-provider-position'] || '';
           const displayName = credential ? `${p.title}, ${credential}` : p.title;
           return (
@@ -37,7 +36,6 @@ const specialties = taxonomies.ignyte_specialty.filter(s => s.count > 0).map(s =
               <div class="provider-card-body">
                 <div class="provider-name">{displayName}</div>
                 {specialty && <div class="badge" style="margin-top:0.4rem">{specialty}</div>}
-                {langs && <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.4rem">{langs}</div>}
               </div>
             </a>
           );

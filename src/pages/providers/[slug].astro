@@ -22,7 +22,7 @@ const providerLocations = (() => {
     .filter(([, name]) => name)
     .map(([id, name]) => {
       const loc = locations.find(l => String(l.id) === String(id));
-      return { name: String(name), slug: loc?.slug || null };
+      return { name: loc?.title || String(name), slug: loc?.slug || null };
     });
 })();
 ---
@@ -45,11 +45,10 @@ const providerLocations = (() => {
 
         <!-- Details -->
         <div>
-          <h1 style="font-size:1.75rem;margin-bottom:0.25rem">{p.title}</h1>
-          {position && <div style="font-size:1rem;color:var(--text-muted);margin-bottom:1.5rem">{position}</div>}
+          <h1 style="font-size:1.75rem;margin-bottom:0.1rem">{p.title}{position ? `, ${position}` : ''}</h1>
 
           {specialty && (
-            <div style="margin-bottom:1.5rem">
+            <div style="margin-bottom:1.5rem;margin-top:1.25rem">
               <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Specialty</div>
               <div>{specialty}</div>
             </div>

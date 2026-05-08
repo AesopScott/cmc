@@ -6,18 +6,33 @@ const tiers = [
     name: 'CMC Friend',
     range: '$500 – $999',
     url: 'https://buy.stripe.com/cNibJ3c7wfxLcKH9Tn08g00?locale=en&__embed_source=buy_btn_1ST8xePMtXr6LYlQ00KUrcWs',
+    benefits: [
+      'Recognition in the CMC Annual Report',
+      'Quarterly e-newsletter updates',
+    ],
   },
   {
     name: 'CMC Champion',
     range: '$1,000 – $2,499',
     url: 'https://buy.stripe.com/14AcN70oO99n2639Tn08g01?locale=en&__embed_source=buy_btn_1ST9IWPMtXr6LYlQNsHTEMYq',
     highlight: true,
+    benefits: [
+      'All CMC Friend benefits',
+      'Invitation to CMC Signature Event',
+      'Recognition on CMC website',
+    ],
   },
   {
     name: 'CMC Partner',
     range: '$2,500+',
     url: 'https://buy.stripe.com/4gMcN77RggBP7qn3uZ08g02?locale=en&__embed_source=buy_btn_1ST9YkPMtXr6LYlQs4tefcgh',
     dark: true,
+    benefits: [
+      'All CMC Champion benefits',
+      'VIP reception invitation',
+      'Name recognition at Signature Event',
+      'Personal update from CMC leadership',
+    ],
   },
 ];
 
@@ -35,7 +50,7 @@ const programs = [
 
   <!-- Your gift makes a difference -->
   <section class="section">
-    <div class="container" style="max-width:860px">
+    <div class="container">
       <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:1.75rem">Your gift makes a difference</h2>
       <p>Access to quality health care is slipping out of reach for so many in San Joaquin and Solano counties.</p>
       <p>As health insurance and other benefits are reduced, vulnerable families and hard-working people across our region are losing coverage and facing one of the most difficult moments in recent history. This is creating a ripple effect that puts thousands at risk. Now, more than ever, our community needs a lifeline.</p>
@@ -49,10 +64,10 @@ const programs = [
 
   <!-- How you can help -->
   <section class="section">
-    <div class="container" style="max-width:860px">
+    <div class="container">
       <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);margin-bottom:1.75rem">How you can help</h2>
       <div class="help-buttons">
-        <a href="https://cmcenters.org/support-cmc/#general-giving" target="_blank" rel="noopener noreferrer" class="btn btn-primary">No gift is too small</a>
+        <a href="https://communitymedicalcenters.networkforgood.com/projects/198038-communitymedical-center-inc-general-giving" target="_blank" rel="noopener noreferrer" class="btn btn-primary">No gift is too small</a>
         <a href="https://lp.constantcontactpages.com/cu/JIfUB8J/CMCahc" target="_blank" rel="noopener noreferrer" class="btn btn-primary">CMC The Rock Capital Campaign</a>
         <a href="#transformational-giving" class="btn btn-outline">Transformational Giving</a>
       </div>
@@ -75,7 +90,10 @@ const programs = [
               <div class="tier-range">{tier.range}</div>
             </div>
             <div class="tier-body">
-              <a href={tier.url} target="_blank" rel="noopener noreferrer" class={`btn ${tier.dark ? 'btn-primary' : 'btn-outline'}`} style="width:100%;text-align:center">Donate</a>
+              <ul class="tier-benefits">
+                {tier.benefits.map(b => <li>{b}</li>)}
+              </ul>
+              <a href={tier.url} target="_blank" rel="noopener noreferrer" class={`btn ${tier.dark ? 'btn-primary' : 'btn-outline'}`} style="width:100%;text-align:center;display:block">Donate</a>
             </div>
           </div>
         ))}
@@ -166,7 +184,7 @@ const programs = [
 
   <!-- Transformational Giving -->
   <section class="section" id="transformational-giving">
-    <div class="container" style="max-width:860px">
+    <div class="container">
       <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);margin-bottom:1.5rem">Transformational Giving</h2>
       <p>Transformational gifts help Community Medical Centers expand access to care, strengthen services, and invest in the future health of our communities. Major gifts and planned gifts—such as bequests, beneficiary designations, and other legacy gifts—can make a lasting difference for patients and families across the communities we serve.</p>
       <p>To learn more about making a major or planned gift, contact Director of Development Jennie Rodriguez at <a href="mailto:jrmoore@cmcenters.org" style="color:var(--teal-dark)">jrmoore@cmcenters.org</a> or <a href="tel:2093732454" style="color:var(--teal-dark)">(209) 373-2454</a>.</p>
@@ -225,7 +243,7 @@ const programs = [
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.35rem;
   }
   .program-list li {
     display: flex;
@@ -233,8 +251,7 @@ const programs = [
     gap: 0.6rem;
     font-size: 0.92rem;
     color: var(--text-muted);
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 0.2rem 0;
   }
   .program-list li::before {
     content: '·';
@@ -242,9 +259,34 @@ const programs = [
     font-weight: 700;
     flex-shrink: 0;
   }
+  .tier-benefits {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+    padding: 0;
+  }
+  .tier-benefits li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .tier-benefits li::before {
+    content: '✓';
+    color: var(--teal-dark);
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+  }
+  .tier-card--dark .tier-benefits li { color: rgba(255,255,255,0.8); }
+  .tier-card--dark .tier-benefits li::before { color: var(--teal); }
   .gala-section { width: 100%; }
-  .gala-banner { width: 100%; overflow: hidden; max-height: 420px; }
-  .gala-img { width: 100%; display: block; object-fit: cover; object-position: center; max-height: 420px; }
+  .gala-banner { width: 100%; overflow: hidden; aspect-ratio: 3/2; max-height: 560px; }
+  .gala-img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
   .sponsors-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
