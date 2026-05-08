@@ -28,8 +28,9 @@ const faqs = [
   },
   {
     q: 'How do I apply?',
-    a: 'External: cmcenters.org/careers\nInternal: Log into ESS via Paycom.\nStudents: Apply online and send your resume to careers@cmcenters.org.',
+    a: 'External: <a href="https://cmcenters.org/careers" target="_blank" rel="noopener noreferrer" style="color:var(--teal-dark)">cmcenters.org/careers</a>\nInternal: Log into ESS via Paycom.\nStudents: Apply online and send your resume to <a href="mailto:careers@cmcenters.org" style="color:var(--teal-dark)">careers@cmcenters.org</a>.',
     list: true,
+    html: true,
   },
   {
     q: 'What qualifications do I need?',
@@ -136,7 +137,15 @@ const faqs = [
             <div class="faq-answer">
               {faq.list
                 ? <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;padding:0">
-                    {faq.a.split('\n').map(line => <li style="display:flex;gap:0.5rem"><span style="color:var(--teal-dark);flex-shrink:0">–</span>{line}</li>)}
+                    {faq.a.split('\n').map(line => (
+                      <li style="display:flex;gap:0.5rem">
+                        <span style="color:var(--teal-dark);flex-shrink:0">–</span>
+                        {faq.html
+                          ? <span set:html={line} />
+                          : line
+                        }
+                      </li>
+                    ))}
                   </ul>
                 : faq.a
               }
