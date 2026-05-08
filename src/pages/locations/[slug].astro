@@ -149,7 +149,7 @@ const locProviders = providers.filter(p => {
           <div class="grid-4">
             {locProviders.map(p => (
               <a href={`/providers/${p.slug}`} class="card" style="display:block">
-                <img class="provider-photo" src={p.thumbnail || '/img/placeholder-provider.jpg'} alt={p.title} loading="lazy" />
+                <img class="provider-photo" src={p.thumbnail || '/img/provider-placeholder.svg'} alt={p.title} loading="lazy" />
                 <div class="card-body">
                   <div class="provider-name">{p.title}</div>
                   <div class="provider-title">{p.meta?.['ignyte-provider-position']}</div>
