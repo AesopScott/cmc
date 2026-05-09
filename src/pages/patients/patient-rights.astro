@@ -1,33 +1,7 @@
----
+﻿---
 import Base from '../../layouts/Base.astro';
-
-const rights = [
-  'Be treated with dignity and respect',
-  'Fair treatment without discrimination of any kind',
-  'Make informed decisions regarding your health care',
-  'Refuse treatment and be informed of the consequences',
-  'Know the names and roles of all caregivers',
-  'Receive information in a language you understand',
-  'Access your medical records',
-  'Confidentiality of records and communications',
-  'Choose another healthcare provider',
-  'Receive an explanation of your bill',
-  'Appropriate assessment and management of pain',
-  'Receive care in a safe environment free from abuse or coercion',
-  'Voice concerns and complaints',
-  'Give or withhold informed consent',
-];
-
-const responsibilities = [
-  'Provide accurate and complete information about your health',
-  'Actively participate in decisions regarding your health care',
-  'Keep scheduled appointments or call to reschedule',
-  'Ask questions when something is unclear',
-  'Follow the treatment plan agreed upon with your provider',
-  'Treat all staff and other patients with courtesy and respect',
-  'Respect the rights, privacy, and property of others',
-  'Promptly meet any financial obligation agreed to with CMC',
-];
+import patients from '../../data/patients.json';
+const { rights, responsibilities } = patients;
 ---
 <Base title="Patient Rights & Responsibilities" description="Your rights and responsibilities as a patient at Community Medical Centers.">
 

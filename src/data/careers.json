@@ -1,0 +1,62 @@
+﻿{
+  "benefits": [
+    {
+      "title": "Competitive Compensation",
+      "desc": "Market-rate salaries that reflect your experience and expertise."
+    },
+    {
+      "title": "Generous Leave",
+      "desc": "Paid vacation, sick time, and holiday coverage so you can recharge."
+    },
+    {
+      "title": "Comprehensive Insurance",
+      "desc": "Medical, dental, vision, life, AD&D, disability, EAP, and retirement plans."
+    },
+    {
+      "title": "Professional Development",
+      "desc": "Grow alongside us, advancing your skills with continued education and certification support."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the hiring process like?",
+      "a": "Apply – Submit your application online\nReview – Recruiters assess your qualifications.\nNext Steps – If you're a match, we'll reach out for an interview.\nInterviews – Zoom or in-person, often with a panel.\nOffer – Sent via Paycom; respond within 3 business days.\nPre-Employment – Background check, reference check, and physical exam.",
+      "list": true
+    },
+    {
+      "q": "How do I apply?",
+      "a": "External: <a href=\"https://cmcenters.org/careers\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--teal-dark)\">cmcenters.org/careers</a>\nInternal: Log into ESS via Paycom.\nStudents: Apply online and send your resume to <a href=\"mailto:careers@cmcenters.org\" style=\"color:var(--teal-dark)\">careers@cmcenters.org</a>.",
+      "list": true,
+      "html": true
+    },
+    {
+      "q": "What qualifications do I need?",
+      "a": "Check the job description for required skill and experience before applying."
+    },
+    {
+      "q": "How long until I hear back?",
+      "a": "Immediate email confirmation from Paycom after applying. High-volume roles: 4–6 weeks. Recruiters will contact you if more info is needed."
+    },
+    {
+      "q": "Can I apply for more than one role?",
+      "a": "Yes, you'll be considered for all positions that fit your background."
+    },
+    {
+      "q": "Will I know if I'm not selected?",
+      "a": "Yes, we send email notifications at various stages."
+    },
+    {
+      "q": "What's the interview process like?",
+      "a": "Most interviews are done via Zoom with at least two panelists. Some take place in-person, especially for administrative roles."
+    },
+    {
+      "q": "Do I need a cover letter?",
+      "a": "Optional, but a great way to stand out."
+    },
+    {
+      "q": "What benefits does CMC offer?",
+      "a": "Loan repayment programs (HRSA, SLRP, CAL HealthCares, HCAi, Song Brown)\nFree CME\nMedical, dental, vision insurance (Kaiser/Sutter options)\nFlexible spending accounts + dependent care match\nLife & disability insurance\n403(b) retirement savings\nPaid time off, sick leave, and holidays",
+      "list": true
+    }
+  ]
+}

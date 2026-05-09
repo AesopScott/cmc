@@ -1,5 +1,6 @@
----
+﻿---
 import Base from '../../layouts/Base.astro';
+import patients from '../../data/patients.json';
 ---
 <Base title="Insurance & Coverage" description="Health coverage assistance at Community Medical Centers. We serve all patients regardless of ability to pay.">
 
@@ -26,13 +27,7 @@ import Base from '../../layouts/Base.astro';
         <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:2rem">
           <h2 style="font-size:1rem;margin-bottom:1.25rem;color:var(--text)">Insurance Accepted</h2>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem">
-            {[
-              'Medi-Cal',
-              'Medi-Cal Managed Care (Health Plan of San Joaquin, Health Net, Partnership Health Plan of California)',
-              'Medicare',
-              'Medicare Advantage Plans',
-              'Covered California',
-            ].map(ins => (
+            {patients.insurance.map(ins => (
               <li style="display:flex;align-items:flex-start;gap:0.6rem;color:var(--text-muted);font-size:0.9rem">
                 <span style="color:var(--teal-dark);flex-shrink:0;margin-top:0.15rem">✓</span>
                 {ins}
