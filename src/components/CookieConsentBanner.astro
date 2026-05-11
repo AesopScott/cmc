@@ -1,0 +1,184 @@
+---
+// Cookie Consent Banner
+// Only shown to users who haven't enabled DNT/GPC
+// Allows users to consent/reject tracking cookies
+---
+
+<div id="cookie-consent-banner" class="cookie-banner" style="display: none;">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <h3>Cookie Consent</h3>
+      <p>We use cookies to enhance your experience. By accepting, you consent to our use of cookies for analytics and marketing.</p>
+    </div>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-reject" class="cookie-btn cookie-reject-btn">Reject</button>
+      <button id="cookie-accept" class="cookie-btn cookie-accept-btn">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Cookie consent management
+  (function() {
+    const CONSENT_KEY = 'cmc-cookie-consent';
+    const banner = document.getElementById('cookie-consent-banner');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const rejectBtn = document.getElementById('cookie-reject');
+
+    function hasConsent() {
+      const stored = localStorage.getItem(CONSENT_KEY);
+      return stored === 'accepted';
+    }
+
+    function setConsent(accepted) {
+      localStorage.setItem(CONSENT_KEY, accepted ? 'accepted' : 'rejected');
+      hideBanner();
+      if (accepted) {
+        loadTrackingScripts();
+      }
+    }
+
+    function hideBanner() {
+      if (banner) {
+        banner.style.display = 'none';
+      }
+    }
+
+    function showBanner() {
+      if (banner) {
+        banner.style.display = 'flex';
+      }
+    }
+
+    function loadTrackingScripts() {
+      // Load Constant Contact if not already loaded
+      if (!window._ctct_m) {
+        window._ctct_m = "b800fa3de98e748a6aa00c9a4b40812a";
+        const script = document.createElement('script');
+        script.id = 'signupScript';
+        script.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+    }
+
+    // Event listeners
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => setConsent(true));
+    }
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', () => setConsent(false));
+    }
+
+    // Show banner only if:
+    // 1. User hasn't set DNT/GPC
+    // 2. User hasn't already made a consent choice
+    window.addEventListener('load', () => {
+      const dntEnabled = window.privacyMode?.isEnabled;
+      const alreadyConsented = hasConsent();
+
+      if (!dntEnabled && !alreadyConsented) {
+        showBanner();
+      } else if (hasConsent()) {
+        loadTrackingScripts();
+      }
+    });
+  })();
+</script>
+
+<style>
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 54, 79, 0.95);
+    color: white;
+    padding: 1.25rem;
+    z-index: 9999;
+    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.15);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .cookie-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .cookie-banner h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .cookie-banner p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+
+  .cookie-banner-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .cookie-btn {
+    padding: 0.6rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .cookie-accept-btn {
+    background: #00a896;
+    color: white;
+  }
+
+  .cookie-accept-btn:hover {
+    background: #008b7a;
+    transform: translateY(-1px);
+  }
+
+  .cookie-reject-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .cookie-reject-btn:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media (max-width: 768px) {
+    .cookie-banner-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+
+    .cookie-banner-text {
+      order: 1;
+    }
+
+    .cookie-banner-buttons {
+      order: 2;
+      justify-content: stretch;
+    }
+
+    .cookie-btn {
+      flex: 1;
+    }
+  }
+</style>

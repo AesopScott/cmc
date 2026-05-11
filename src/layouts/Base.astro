@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CookieConsentBanner from '../components/CookieConsentBanner.astro';
 
 export interface Props {
   title: string;
@@ -167,19 +168,8 @@ const path = Astro.url.pathname;
     });
   </script>
 
-  <!-- Constant Contact Active Forms - respects Do Not Track / Global Privacy Control -->
-  <script>
-    // Only load Constant Contact if user has not enabled privacy controls
-    if (!window.privacyMode.isEnabled) {
-      var _ctct_m = "b800fa3de98e748a6aa00c9a4b40812a";
-      var script = document.createElement('script');
-      script.id = 'signupScript';
-      script.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
-      script.async = true;
-      script.defer = true;
-      document.body.appendChild(script);
-    }
-  </script>
+  <!-- Cookie Consent Banner -->
+  <CookieConsentBanner />
 
 </body>
 </html>
