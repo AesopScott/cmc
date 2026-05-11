@@ -121,6 +121,9 @@ const path = Astro.url.pathname;
 
       <div class="footer-bottom">
         <p>&copy; {new Date().getFullYear()} Community Medical Centers. All rights reserved. &nbsp;·&nbsp; Federally Qualified Health Center (FQHC)</p>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem">
+          We respect your privacy: This site honors Do Not Track (DNT) and Global Privacy Control (GPC) signals. If your browser or device has privacy settings enabled, tracking will not occur.
+        </p>
         <nav aria-label="Legal links" class="footer-legal">
           <a href="https://cmcenters.org/terms-of-use/">Terms of Use</a>
           <span class="util-divider" aria-hidden="true">|</span>
@@ -138,6 +141,17 @@ const path = Astro.url.pathname;
   </footer>
 
   <script>
+    // Privacy detection: check for DNT and GPC signals
+    window.privacyMode = {
+      doNotTrack: navigator.doNotTrack === '1' || navigator.doNotTrack === 'yes',
+      globalPrivacyControl: navigator.globalPrivacyControl === true,
+      get isEnabled() {
+        return this.doNotTrack || this.globalPrivacyControl;
+      }
+    };
+  </script>
+
+  <script>
     const toggle = document.getElementById('nav-toggle');
     const links = document.getElementById('nav-links');
     toggle?.addEventListener('click', () => {
@@ -153,9 +167,19 @@ const path = Astro.url.pathname;
     });
   </script>
 
-  <!-- Constant Contact Active Forms -->
-  <script>var _ctct_m = "b800fa3de98e748a6aa00c9a4b40812a";</script>
-  <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+  <!-- Constant Contact Active Forms - respects Do Not Track / Global Privacy Control -->
+  <script>
+    // Only load Constant Contact if user has not enabled privacy controls
+    if (!window.privacyMode.isEnabled) {
+      var _ctct_m = "b800fa3de98e748a6aa00c9a4b40812a";
+      var script = document.createElement('script');
+      script.id = 'signupScript';
+      script.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  </script>
 
 </body>
 </html>
