@@ -6,31 +6,31 @@ const sections = [
     slug: 'insurance',
     title: 'Insurance & Coverage',
     desc: 'We serve all patients regardless of ability to pay. Learn what insurance we accept and how to get coverage help.',
-    icon: '🏥',
+    icon: '/img/Insurance & Coverage.jpg',
   },
   {
     slug: 'patient-portal',
     title: 'Patient Portal',
     desc: 'Access health records, message your provider, request appointments, and view test results online.',
-    icon: '💻',
+    icon: '/img/Patient Portal.jpg',
   },
   {
     slug: 'patient-forms',
     title: 'Patient Forms',
     desc: 'Download or complete registration, medical records, sliding fee, and other patient forms in English or Spanish.',
-    icon: '📋',
+    icon: '/img/Patient Forms.jpg',
   },
   {
     slug: 'patient-rights',
     title: 'Patient Rights & Responsibilities',
     desc: 'Understand your rights as a patient and what we ask of you in return for the best possible care.',
-    icon: '⚖️',
+    icon: '/img/Patient R&R.jpg',
   },
   {
     slug: 'billing',
     title: 'Payments & Billing',
     desc: 'Learn about accepted payment methods, the Good Faith Estimate, and our sliding fee discount program.',
-    icon: '💳',
+    icon: '/img/Payments & Billing.jpg',
   },
 ];
 ---
@@ -41,7 +41,7 @@ const sections = [
       <div class="grid-2" style="gap:1.25rem">
         {sections.map(s => (
           <a href={`/patients/${s.slug}`} class="patient-nav-card">
-            <div class="patient-nav-icon" aria-hidden="true">{s.icon}</div>
+            <img src={s.icon} alt="" class="patient-nav-icon" loading="lazy" />
             <div class="patient-nav-body">
               <div class="patient-nav-title">{s.title}</div>
               <div class="patient-nav-desc">{s.desc}</div>
@@ -84,10 +84,10 @@ const sections = [
     filter: none;
   }
   .patient-nav-icon {
-    font-size: 2rem;
+    width: 60px;
+    height: 60px;
     flex-shrink: 0;
-    width: 2.5rem;
-    text-align: center;
+    object-fit: contain;
   }
   .patient-nav-body { flex: 1; min-width: 0; }
   .patient-nav-title {
